@@ -1,47 +1,35 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+    <!-- Header -->
+    @include('masterPages.headers.header')
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <div class="container col-md-4 m-t-50">
+        <!-- Notif sukses -->
+        @if (session('status'))
+            <div class="alert bdr-20 alert-success" style="padding: 0.5px" role="alert">
+                <p class="text-center m-t-20">
+                    Cek email Anda untuk mengganti password.
+                </p>
             </div>
-        </div>
+        @endif
+        <form action="{{ route('password.email') }}" method="POST">
+            @csrf
+            <p class="text-center fs-32 f-b f-blk">Lupa Password</p>
+            <p class="text-center m-t-20 f-blk" style="margin-top: -1%">Masukan E-mail untuk mengganti password</p>
+        
+            <!-- E-mail -->
+            <div class="mt-10">
+                <input type="email" class="input single-input-primary @error('email') is-invalid @enderror" name="email" required="" autofocus 
+                placeholder="E-mail" oninvalid="this.setCustomValidity('E-mail tidak boleh kosong!')" oninput="setCustomValidity('')"/>
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>E-mail belum terdaftar</strong>
+                    </span>
+                @enderror
+            </div>
+
+            <button class="genric-btn primary circle btn-block m-t-20 bdr-20">Kirim</button>
+        </form>
     </div>
-</div>
 @endsection
