@@ -1,0 +1,112 @@
+/* Search Bar */
+.form-control:focus {
+    box-shadow: none;
+}
+
+.form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
+    color: black;
+}
+
+/* Fonts */
+.josefin {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.pacifico {
+    font-family: 'Pacifico', cursive;
+}
+
+.sans {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.apple {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+}
+
+/* Pre Loader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #fff;
+}
+
+.preloader .loading {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    font: 14px arial;
+}
+
+/* Font */
+.f-b {
+    font-weight: bolder;
+}
+
+.f-blk {
+    color: black;
+}
+
+.f-red{
+    color: #F74854;
+}
+
+/* Position */
+.justify {
+    display: block;
+    margin: auto;
+}
+
+.input {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Border */
+.bdr-5 {
+    border-radius: 5px;
+}
+
+.bdr-10 {
+    border-radius: 10px;
+}
+
+.bdr-15 {
+    border-radius: 15px;
+}
+
+.bdr-20 {
+    border-radius: 20px;
+}
+
+.no-b {
+    border: none;
+}
+
+/* Margin */
+.m-l-17 {
+    margin-left: 10%;
+}
+
+.m-r-17 {
+    margin-right: 17%;
+}
+
+
+/* Background */
+.loginimage {
+    background-image: url('../images/loginimage2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    /* background-repeat: repeat; */
+}

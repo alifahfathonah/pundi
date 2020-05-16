@@ -8,8 +8,6 @@
     <meta name="author" content="">
     <title>Document</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
