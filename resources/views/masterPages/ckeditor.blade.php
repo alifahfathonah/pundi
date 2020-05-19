@@ -8,12 +8,15 @@
     <meta name="author" content="">
     <title>Document</title>
 
-    <!-- JS -->
-    <script type="text/javascript" src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <!-- CDN JS -->
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 </head>
 
 <body>
-    <textarea class="ckeditor" name="isi" cols="100" id="ckedtor"></textarea>
+    <textarea name="editor1"></textarea>
+    <script>
+            CKEDITOR.replace( 'editor1' );
+    </script>
 </body>
 
 </html>
