@@ -78,7 +78,7 @@
                 </div>
 
                 <!-- Header Bottom -->
-                <div class="header-mid d-none d-md-block shadow" style="background-color: #F74854">
+                <div class="header-mid d-none d-md-block shadow">
                    <div class="container">
                         <div class="row d-flex align-items-center">
                             <!-- Logo -->
@@ -105,11 +105,15 @@
                 <div class="header-sticky">
                     <div class="container">
                         <div class="row d-flex align-items-center">
+                            <!-- Logo -->
                             <div class="col-xl-3 col-lg-3 col-md-3">
                                 <div class="sticky-logo">
-                                    <a href="{{ url('/') }}"><img src="{{ asset('images\logo.png') }}" width="200px" alt="" style="margin-bottom: -5%"></a>
+                                    <a href="{{ url('/') }}">
+                                        <img src="{{ asset('images\logo.png') }}" width="180px" alt="Logo">
+                                    </a>
                                 </div>
                             </div>   
+                            <!-- Navigation -->
                             <div class="col-xl-9 col-lg-9 col-md-9">
                                 <div class="sticky-logo">
                                     <div class="header-banner f-right ">
@@ -119,15 +123,18 @@
                                     </div>
                                 </div>
                             </div> 
+                            <!-- Mobile -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-md-none">
+                                    <div style="display: none">
+                                        @include('masterPages.headers.nav-mobile')
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Mobile Menu -->
-                <div class="col-12">
-                    <div class="mobile_menu d-block d-md-none"></div>
-                </div>
-
+                
             </div>
        </div>
     </header>

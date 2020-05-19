@@ -10,7 +10,7 @@
             </ul>
         </li>
         <li>
-            <a href="categori.html">Indepth</a>
+            <a href="#">Indepth</a>
             <ul class="submenu">
                 <li><a href="#">Essay</a></li>
                 <li><a href="#">Kolom</a></li>
@@ -19,7 +19,7 @@
             </ul>
         </li>
         <li>
-            <a href="about.html">Kebijakan</a>
+            <a href="#">Kebijakan</a>
             <ul class="submenu">
                 <li><a href="#">Analisis</a></li>
                 <li><a href="#">Suara Guru</a></li>

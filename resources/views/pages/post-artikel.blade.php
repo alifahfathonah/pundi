@@ -76,7 +76,7 @@
             <!-- Isi -->
             <div class="m-t-25">
                 <label for="" class="f-b fs-20">ISI ARTIKEL</label>
-                @include('pages.ckeditor')
+                @include('masterPages.ckeditor')
             </div>
 
             <!-- Button -->
