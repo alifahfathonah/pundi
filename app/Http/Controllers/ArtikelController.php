@@ -3,16 +3,28 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\Artikel;
-
-use Illuminate\Support\Facades\Auth;
+use App\Models\kategori;
+use App\Models\Sub_Kategori;
 
 class ArtikelController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('pages.post-artikel');
+        // Kategori
+        $kategori = kategori::select('id', 'n_kategori')->get();
+        $kategori_id = ($request->kategori_id == '' ? '0' : $request->kategori_id);
+
+        // Sub Kategori
+        $sub_kategori = Sub_Kategori::select('id', 'kategori_id', 'n_sub_kategori')->where('kategori_id', $kategori_id)->get();
+
+        return view('pages.post-artikel', compact(
+            'kategori',
+            'kategori_id',
+            'sub_kategori'
+        ));
     }
 
     public function tambah_artikel(Request $request)
@@ -38,6 +50,7 @@ class ArtikelController extends Controller
         $artikel->save();
 
         return redirect()
-            ->route('home', Auth::user()->id);
+            ->route('artikel', Auth::user()->id)
+            ->withSuccess('Selamat! Tulisan berhasil terkirim');
     }
 }

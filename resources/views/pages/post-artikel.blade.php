@@ -6,30 +6,29 @@
 
     <!-- Alert Success -->
     @if (session()->has('success'))
-    <div class="alert alert-success alert-dismissible fade show text-center bdr-20 m-t-30" role="alert">
-        {{ session('success') }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
+        <div class="alert alert-success alert-dismissible fade show text-center bdr-20 m-t-30 col-md-6 container" role="alert">
+            {{ session('success') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     @endif
 
     <!-- Alert Errors -->
     @if (count($errors) > 0)
-    <div class="alert alert-danger m-t-30">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        <strong>Whoops Error!</strong>&nbsp;
-        <span>You have {{ $errors->count() }} error</span>
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
+        <div class="alert alert-danger m-t-30">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Whoops Error!</strong>&nbsp;
+            <span>You have {{ $errors->count() }} error</span>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
     @endif
-
 
     <div class="container m-t-50">
         <form action="{{ route('artikel.tambah_artikel', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
@@ -50,13 +49,22 @@
             <!-- Kategori -->
             <div class="m-t-25">
                 <label for="" class="f-b fs-20">KATEGORI</label><br>
-                <select class="input single-input-primary col-md-6" name="kategori_id" id="kategori_id">
-                    <option value="1">Headline</option>
-                    <option value="2">Indepth</option>
-                    <option value="3">Infografis</option>
-                    <option value="4">Moderasi Islam</option>
-                    <option value="5">Tadarus</option>
-                </select>
+                <div class="row">
+                    <select class="input single-input-primary col-md-3" name="kategori_id" id="kategori_id" onchange="selectOnChange()">
+                        <option value="">Pilih Kategori</option>
+                        @foreach ($kategori as $i)
+                            <option value="{{ $i->id }}" @if ($kategori_id == $i->id) selected="selected"@endif>
+                                {{ $i->n_kategori }}
+                            </option>
+                        @endforeach
+                    </select>
+                    <select class="input single-input-primary col-md-3" name="sub_kategori_id" id="sub_kategori_id" onchange="selectOnChange()">
+                        <option value="">Pilih Sub Kategori</option>
+                        @foreach ($sub_kategori as $i)
+                            <option value="{{ $i->id }}">{{ $i->n_sub_kategori }}</option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
 
             <!-- Gambar -->
@@ -87,8 +95,9 @@
         </form>
     </div>
 </div>
+@endsection
 
-<!-- Sweet Alert -->
+@section('script')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script type="text/javascript">
     // file name preview
@@ -132,6 +141,12 @@
                 )
             }
         }
+    }
+
+    // Select Kategori
+    function selectOnChange(){
+        kategori_id = $('#kategori_id').val();
+        document.location.href = "{{ route('artikel') }}?kategori_id=" + kategori_id;
     }
 
 </script>
