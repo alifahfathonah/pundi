@@ -18,5 +18,12 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::get('/', 'WelcomeController@index')->name('/');
 Route::get('/home', 'HomeController@index')->name('home');
+
+/* Proteksi Auth */
+Route::group(['middleware' => ['auth']], function () {
+    // Artikel
+    Route::get('artikel', 'ArtikelController@index')->name('artikel');
+    Route::post('artikel', 'ArtikelController@tambah_artikel')->name('artikel.tambah_artikel');
+});

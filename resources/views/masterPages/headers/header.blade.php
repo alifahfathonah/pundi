@@ -50,7 +50,7 @@
                                                         </a>
                                                         <ul class="submenu">
                                                             <li><a href="elements.html">Edit Profil</a></li>
-                                                            {{-- <li><a href="{{ route('artikel') }}">Kirim Tulisan</a></li> --}}
+                                                            <li><a href="{{ route('artikel') }}">Kirim Tulisan</a></li>
                                                             <li><a href="single-blog.html">Ketentuan</a></li>
                                                             <li> 
                                                                 <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">

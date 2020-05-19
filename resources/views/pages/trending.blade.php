@@ -9,12 +9,9 @@
                         <!-- <p>Rem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
                         <div class="trending-animated">
                             <ul id="js-news" class="js-hidden">
-                                {{-- @foreach ($get_artikel->take(3) as $i)
+                                @foreach ($get_artikel->take(3) as $i)
                                     <li class="news-item">{{ $i->judul }}</li>
-                                @endforeach --}}
-                                <li class="news-item">Bangladesh dolor sit amet, consectetur adipisicing elit.</li>
-                                <li class="news-item">Spondon IT sit amet, consectetur.......</li>
-                                <li class="news-item">Rem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                @endforeach
                             </ul>
                         </div>
                         
@@ -23,7 +20,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="trending-top mb-30">
+                    {{-- <div class="trending-top mb-30">
                         <div class="trend-top-img">
                             <img src="assets/img/trending/trending_top.jpg" alt="">
                             <div class="trend-top-cap">
@@ -31,9 +28,9 @@
                                 <h2><a href="details.html">Welcome To The Best Model Winner<br> Contest At Look of the year</a></h2>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- Trending Top -->
-                    {{-- @foreach ($get_artikel->take(1) as $i)
+                    @foreach ($get_artikel->take(1) as $i)
                         <div class="trending-top mb-30">
                             <div class="trend-top-img">
                                 <input type="hidden" value="{{ $i->id }}" name="id">
@@ -44,7 +41,7 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach --}}
+                    @endforeach
 
                     <!-- Trending Bottom -->
                     <div class="trending-bottom">

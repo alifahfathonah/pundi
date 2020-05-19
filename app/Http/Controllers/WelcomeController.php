@@ -2,18 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artikel;
 use Illuminate\Http\Request;
 
-use App\Models\Artikel;
-
-class HomeController extends Controller
+class WelcomeController extends Controller
 {
-    // Middleware
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     // Index
     public function index()
     {
