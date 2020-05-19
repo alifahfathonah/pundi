@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\Artikel;
-use App\Models\kategori;
+use App\Models\Kategori;
 use App\Models\Sub_Kategori;
 
 class ArtikelController extends Controller
@@ -14,7 +14,7 @@ class ArtikelController extends Controller
     public function index(Request $request)
     {
         // Kategori
-        $kategori = kategori::select('id', 'n_kategori')->get();
+        $kategori = Kategori::select('id', 'n_kategori')->get();
         $kategori_id = ($request->kategori_id == '' ? '0' : $request->kategori_id);
 
         // Sub Kategori
