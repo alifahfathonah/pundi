@@ -2398,8 +2398,8 @@ hr {
 }
 
 .footer-padding {
-    padding-top: 140px;
-    padding-bottom: 50px
+    padding-top: 70px;
+    padding-bottom: 10px
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -3841,14 +3841,16 @@ hr {
 
 .footer-bottom-area .footer-border {
     border-top: 1px solid #242323;
-    padding: 40px 0px 23px
+    padding: 20px
 }
 
 @media (max-width: 767px) {
-    .footer-bottom-area .footer-border {
-        padding: 35px 0px 20px
+    .footer-bottom-area .footer-border{
+        padding: 35px 0px 20px;
+        text-align: center;
     }
 }
+
 
 .footer-bottom-area .footer-copy-right p {
     color: #838383;
@@ -3880,8 +3882,12 @@ hr {
 }
 
 @media (max-width: 767px) {
-    .footer-menu ul li {
-        margin-left: 17px
+    .footer-menu ul {
+        margin-left: 100px;
+    }
+
+    .footer-menu ul li{
+        margin-left: 5px;
     }
 }
 

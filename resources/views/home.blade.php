@@ -9,5 +9,8 @@
 
         <!-- Weekely Trending --> 
         @include('pages.berita-mingguan')
+
+        <!-- Foote -->
+        @include('masterPages.footer')
     </div>
 @endsection
