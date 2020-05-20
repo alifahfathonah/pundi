@@ -75,7 +75,7 @@
                                 <!-- Isi -->
                                 <div class="m-t-25">
                                     <label for="" class="f-b fs-17">ISI ARTIKEL<span class="text-danger ml-1">*</span></label>
-                                    @include('masterPages.ckeditor')
+                                    @include('masterPages.summernote')
                                 </div>
                                 <!-- Gambar -->
                                 <div class="alert alert-dismissible" id="message" data-target="#exampleModal" role="alert"></div>
