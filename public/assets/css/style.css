@@ -3885,7 +3885,8 @@ hr {
 /* Footer Size Mobile */
 @media (max-width: 767px) {
     .footer-menu {
-        margin-left: 70px;
+        float: none;
+        margin-left: 0px;
     }
 
     .footer-menu ul li{
@@ -3905,7 +3906,7 @@ hr {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .footer-menu ul li a{
+    .footer-menu{
         float: left
     }
 }
@@ -3916,11 +3917,6 @@ hr {
     }
 }
 
-@media (max-width: 767px) {
-    .footer-menu {
-        float: left
-    }
-}
 
 .pagination-area .page-item {
     margin: 0
