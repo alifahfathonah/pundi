@@ -31,8 +31,8 @@
                                 <p>2020 pundi.ID - kanal pendidikan tajam dan mencerahkan</p>
                             </div>
                         </div>
-                        <div class="col-lg-6 tengah">
-                            <div class="footer-menu f-right">
+                        <div class="col-lg-6">
+                            <div class="footer-menu f-right" style="margin-top: -15px; text-align: center !important">
                                 <ul>
                                     <li><a href="#">Tentang Kami</a></li>
                                     <li><a href="#">Disclaimer</a></li>
