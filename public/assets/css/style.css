@@ -3852,6 +3852,16 @@ hr {
     }
 }
 
+@media (max-width: 767px) {
+    .footer-copy-right p {
+        color: #838383;
+        font-weight: 300;
+        font-size: 14px !important;
+        line-height: 2;
+        margin-bottom: 20px !important
+    }
+}
+
 
 .footer-bottom-area .footer-copy-right p {
     color: #838383;
