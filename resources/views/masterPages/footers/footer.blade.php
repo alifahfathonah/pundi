@@ -16,7 +16,7 @@
         <div class="footer-area footer-padding fix">
             <div class="container">
                 <div class="text-center">
-                    <h1 class="f-wht">Pegiat Pendidikan Indonesia</h1>
+                    <h2 class="f-wht">Pegiat Pendidikan Indonesia</h2>
                     <p class="f-wht">Tajam dan Mencerahkan</p>
                 </div>
             </div>
