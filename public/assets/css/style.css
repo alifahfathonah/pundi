@@ -6059,10 +6059,7 @@ del {
 }
 
 .ordered-list li {
-    list-style-type: decimal-leading-zero;
-    color: #222;
-    font-weight: 500;
-    line-height: 1.82em !important
+    list-style-type: decimal;
 }
 
 .ordered-list li span {

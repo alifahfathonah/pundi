@@ -26,4 +26,9 @@ Route::group(['middleware' => ['auth']], function () {
     // Artikel
     Route::get('artikel', 'ArtikelController@index')->name('artikel');
     Route::post('artikel', 'ArtikelController@tambah_artikel')->name('artikel.tambah_artikel');
+
+    // Ketentuan Tulisan
+    Route::get('/ketentuan-tulisan', function () {
+        return view('pages.ketentuan-tulisan');
+    });
 });

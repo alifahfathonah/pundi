@@ -123,3 +123,7 @@
         margin-right: 15px !important;
     }
 }
+
+ol.alamat{
+	list-style-type: upper-alpha !important;  /* list dengan bentuk alpha */
+}
