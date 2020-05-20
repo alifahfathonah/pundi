@@ -55,7 +55,7 @@
                                 <div class="m-t-25">
                                     <label for="" class="f-b fs-17">KATEGORI<span class="text-danger ml-1">*</span></label><br>
                                     <div class="row">
-                                        <select class="single-input border col-md-5 m-r-30 m-l-14" name="kategori_id" id="kategori_id" onchange="selectOnChange()">
+                                        <select class="single-input border col-md-5 m-r-15 m-l-14 kategori" name="kategori_id" id="kategori_id" onchange="selectOnChange()">
                                             <option value="">- Pilih Kategori -</option>
                                             @foreach ($kategori as $i)
                                                 <option value="{{ $i->id }}" @if ($kategori_id == $i->id) selected="selected"@endif>
@@ -63,7 +63,7 @@
                                                 </option>
                                             @endforeach
                                         </select>
-                                        <select class="single-input border col-md-5" name="sub_kategori_id" id="sub_kategori_id">
+                                        <select class="single-input border col-md-5 kategori1" name="sub_kategori_id" id="sub_kategori_id">
                                             <option value="">- Pilih Sub Kategori -</option>
                                             @foreach ($sub_kategori as $i)
                                                 <option value="{{ $i->id }}">{{ $i->n_sub_kategori }}</option>

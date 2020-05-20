@@ -16,7 +16,7 @@
         </aside>
 
         <aside class="single_sidebar_widget popular_post_widget">
-            <h3 class="widget_title">Recent Post</h3>
+            <h3 class="widget_title">Berita & Artikel Terbaru</h3>
             <div class="media post_item">
                 <img src="assets/img/post/post_1.png" alt="post">
                 <div class="media-body">
@@ -55,7 +55,7 @@
             </div>
         </aside>
         <aside class="single_sidebar_widget tag_cloud_widget">
-            <h4 class="widget_title">Tag Clouds</h4>
+            <h4 class="widget_title">Tag</h4>
             <ul class="list">
                 <li>
                     <a href="#">project</a>

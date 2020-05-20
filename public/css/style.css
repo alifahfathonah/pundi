@@ -109,3 +109,17 @@
     padding: 0 10px;
     cursor: pointer;
 }
+
+/* Kategori */
+@media (max-width: 767px) {
+    .kategori{
+        margin-left: 14px !important;
+        margin-top: 10px !important;
+        margin-right: 15px !important;
+    }
+    .kategori1{
+        margin-left: 14px !important;
+        margin-top: 10px !important;
+        margin-right: 15px !important;
+    }
+}
