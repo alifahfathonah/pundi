@@ -9,7 +9,6 @@
 <section class="blog_area section-padding" style="margin-top: -80px; margin-bottom: -100px">
     <div class="container">
         <div class="row">
-
             <!-- Kirim Tulisan -->
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
@@ -57,7 +56,7 @@
                                     <label for="" class="f-b fs-17">KATEGORI<span class="text-danger ml-1">*</span></label><br>
                                     <div class="row">
                                         <select class="single-input border col-md-5 m-r-30 m-l-14" name="kategori_id" id="kategori_id" onchange="selectOnChange()">
-                                            <option value="">Pilih Kategori</option>
+                                            <option value="">- Pilih Kategori -</option>
                                             @foreach ($kategori as $i)
                                                 <option value="{{ $i->id }}" @if ($kategori_id == $i->id) selected="selected"@endif>
                                                     {{ $i->n_kategori }}
@@ -65,7 +64,7 @@
                                             @endforeach
                                         </select>
                                         <select class="single-input border col-md-5" name="sub_kategori_id" id="sub_kategori_id">
-                                            <option value="">Pilih Sub Kategori</option>
+                                            <option value="">- Pilih Sub Kategori -</option>
                                             @foreach ($sub_kategori as $i)
                                                 <option value="{{ $i->id }}">{{ $i->n_sub_kategori }}</option>
                                             @endforeach
@@ -111,7 +110,7 @@
 </section>
 <!-- Footer -->
 <div>
-    @include('masterPages.footer')
+    @include('masterPages.footers.footer')
 </div>
 @endsection
 

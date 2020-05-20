@@ -5,12 +5,12 @@
         @include('masterPages.headers.header')
 
         <!-- Page Trending -->
-        @include('pages.trending')
+        @include('pages.includes.trending')
 
         <!-- Weekely Trending --> 
-        @include('pages.berita-mingguan')
+        @include('pages.includes.berita-mingguan')
 
         <!-- Foote -->
-        @include('masterPages.footer')
+        @include('masterPages.footers.footer')
     </div>
 @endsection
