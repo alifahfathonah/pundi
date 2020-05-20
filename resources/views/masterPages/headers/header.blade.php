@@ -15,7 +15,7 @@
             <div class="main-header ">
 
                 <!-- Header Top -->
-                <div class="header-top black-bg d-none d-md-block">
+                <div class="header-top black-bg d-none d-md-block" style=" background: linear-gradient(to right,#F8476C,#FE7D3D);">
                    <div class="container">
                        <div class="col-xl-12">
                             <div class="row d-flex justify-content-between align-items-center">
@@ -76,9 +76,8 @@
                        </div>
                    </div>
                 </div>
-
                 <!-- Header Bottom -->
-                <div class="header-mid d-none d-md-block shadow">
+                <div class="header-mid d-none d-md-block shadow" style=" background: linear-gradient(to right,#F8476C,#FE7D3D);">
                    <div class="container">
                         <div class="row d-flex align-items-center">
                             <!-- Logo -->

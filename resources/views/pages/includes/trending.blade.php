@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" style="margin-top: 0px">
                 <div class="col-lg-8">
                     {{-- <div class="trending-top mb-30">
                         <div class="trend-top-img">
