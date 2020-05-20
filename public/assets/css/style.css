@@ -3845,7 +3845,7 @@ hr {
 }
 
 @media (max-width: 767px) {
-    .footer-bottom-area .footer-border ul li{
+    .footer-bottom-area .footer-border{
         padding: 20px 0px 20px;
         text-align: center;
         
@@ -3885,7 +3885,7 @@ hr {
 /* Footer Size Mobile */
 @media (max-width: 767px) {
     .footer-menu {
-        margin-left: 0px;
+        margin-left: 50px;
     }
 
     .footer-menu ul li{
