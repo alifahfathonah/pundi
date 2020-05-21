@@ -1,4 +1,4 @@
-<div class="weekly-news-area pt-50">
+<div class="weekly-news-area pt-25">
     <div class="container">
        <div class="weekly-wrapper">
             <!-- section Tittle -->
@@ -19,7 +19,11 @@
                                 </div>
                                 <div class="weekly-caption">
                                     <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">{{ $i->kategori->n_kategori }}</span>
-                                    <h4><a href="#">{{ $i->judul }}</a></h4>
+                                    <h4>
+                                        <a href="{{ route('artikel') .'?post='.$i->id}}">
+                                            {{ $i->judul }}
+                                        </a>
+                                    </h4>
                                 </div>
                             </div> 
                         @endforeach

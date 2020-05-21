@@ -23,9 +23,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 /* Proteksi Auth */
 Route::group(['middleware' => ['auth']], function () {
-    // Artikel
-    Route::get('artikel', 'ArtikelController@index')->name('artikel');
-    Route::post('artikel', 'ArtikelController@tambah_artikel')->name('artikel.tambah_artikel');
+
+    // Kirim Tulisan
+    Route::get('kirim-tulisan', 'ArtikelController@index')->name('kirim-tulisan');
+    Route::post('kirim-tulisan', 'ArtikelController@tambah_artikel')->name('kirim-tulisan.tambah');
+
+    // Isi Artikel
+    Route::get('artikel', 'ArtikelController@artikel')->name('artikel');
 
     // Ketentuan Tulisan
     Route::get('/ketentuan-tulisan', function () {

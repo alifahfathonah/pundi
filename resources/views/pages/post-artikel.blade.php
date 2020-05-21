@@ -38,7 +38,7 @@
                     @endif
                 
                     <div class="m-t-50">
-                        <form action="{{ route('artikel.tambah_artikel', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('kirim-tulisan.tambah', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             {{ method_field('POST') }}
                             <p class="f-blk fs-30 f-b" style="margin-top: -40px">Upload Tulisan</p>
@@ -160,7 +160,7 @@
     // Select Kategori
     function selectOnChange(){
         kategori_id = $('#kategori_id').val();
-        document.location.href = "{{ route('artikel') }}?kategori_id=" + kategori_id;
+        document.location.href = "{{ route('kirim-tulisan') }}?kategori_id=" + kategori_id;
     }
 
 </script>

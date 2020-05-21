@@ -23,7 +23,7 @@
                         </P>
                         <ol class="ordered-list">
                             <li>Naskah ditulis dalam 500-1000 kata.</li>
-                            <li>Kirim tulisanmu cukup dengan klik link berikut <a class="f-red" href="{{ route('artikel') }}">“Kirim Tulisan”</a> atau pilih menu kirim tulisan di bagian header.</li>
+                            <li>Kirim tulisanmu cukup dengan klik link berikut <a class="f-red" href="{{ route('kirim-tulisan') }}">“Kirim Tulisan”</a> atau pilih menu kirim tulisan di bagian header.</li>
                             <li>Bagi Penulis/Kontributor yang belum pernah mendaftar, silahkan daftar dengan klik link berikut <a class="f-red" href="{{ route('register') }}">“Register”</a>.</li>
                             <li>Penulis yang karyanya mencapai 1000 views dalam waktu 2 x 24 jam, bisa menghubungi PUNDI.ID untuk mendapatkan honorarium melalui CP berikut: 0857-8646-1500.</li>
                         </ol>
@@ -57,7 +57,7 @@
             <!-- Right Sidebar -->
             @include('masterPages.right-sidebar')
         </div>
-    </>
+    </div>
 </section>
 <!-- Footer -->
 <div>

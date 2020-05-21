@@ -52,7 +52,15 @@ class ArtikelController extends Controller
         $artikel->save();
 
         return redirect()
-            ->route('artikel', Auth::user()->id)
+            ->route('kirim-tulisan', Auth::user()->id)
             ->withSuccess('Selamat! Tulisan berhasil terkirim');
+    }
+
+    public function artikel(Request $request)
+    {
+        $artikel = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'penulis_id', 'gambar', 'isi', 'tag')->whereid($request->post)->first();
+        // dd($artikel->judul);
+
+        return view('pages.artikel', compact('artikel'));
     }
 }

@@ -53,7 +53,7 @@
                 </a>
                 <ul class="submenu">
                     <li><a href="#">Profil</a></li>
-                    <li><a href="{{ route('artikel') }}">Kirim Tulisan</a></li>
+                    <li><a href="{{ route('kirim-tulisan') }}">Kirim Tulisan</a></li>
                     <li><a href="single-blog.html">Ketentuan Tulisan</a></li>
                     <li>
                         <a href="{{ route('logout') }}"

@@ -11,7 +11,11 @@
                                 <img src="{{ asset('post/' . $i->gambar) }}" alt="">
                                 <div class="trend-top-cap">
                                     <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">{{ $i->kategori->n_kategori }}</span>
-                                    <h2><a href="#">{{ $i->judul }}</a></h2>
+                                    <h2>
+                                        <a href="{{ route('artikel') .'?post='.$i->id}}">
+                                            {{ $i->judul }}
+                                        </a>
+                                    </h2>
                                 </div>
                             </div>
                         </div>
@@ -27,7 +31,11 @@
                                         </div>
                                         <div class="trend-bottom-cap">
                                             <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">{{ $i->kategori->n_kategori }}</span>
-                                            <h4><a href="#">{{ $i->judul }}</a></h4>
+                                            <h4>
+                                                <a href="{{ route('artikel') .'?post='.$i->id}}">
+                                                    {{ $i->judul }}
+                                                </a>
+                                            </h4>
                                         </div>
                                     </div>
                                 </div>
@@ -44,7 +52,11 @@
                         </div>
                         <div class="trand-right-cap">
                             <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">{{ $i->kategori->n_kategori }}</span>
-                            <h4><a href="#">{{ $i->judul }}</a></h4>
+                            <h4>
+                                <a href="{{ route('artikel') .'?post='.$i->id}}">
+                                    {{ $i->judul }}
+                                </a>
+                            </h4>
                         </div>
                     </div>
                     @endforeach
