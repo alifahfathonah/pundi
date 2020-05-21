@@ -11,7 +11,7 @@ class Artikel extends Model
 
     public function kategori()
     {
-        return $this->belongsTo(kategori::class, 'kategori_id');
+        return $this->belongsTo(Kategori::class, 'kategori_id');
     }
 
     public function sub_kategori()
