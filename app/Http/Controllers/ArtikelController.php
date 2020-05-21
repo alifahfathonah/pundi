@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Artikel;
 use App\Models\Kategori;
 use App\Models\Sub_Kategori;
+use Illuminate\Support\Facades\DB;
 
 class ArtikelController extends Controller
 {
@@ -58,8 +59,10 @@ class ArtikelController extends Controller
 
     public function artikel(Request $request)
     {
-        $artikel = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'penulis_id', 'gambar', 'isi', 'tag')->whereid($request->post)->first();
-        // dd($artikel->judul);
+        $artikel = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'penulis_id', 'gambar', 'isi', 'tag', 'artikel_view', 'created_at')->whereid($request->post)->first();
+
+        // Counter pengungjung
+        DB::update('UPDATE artikel SET artikel_view = artikel_view + 1 WHERE id = "' . $request->post . '"');
 
         return view('pages.artikel', compact('artikel'));
     }

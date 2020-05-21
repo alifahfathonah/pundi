@@ -5,17 +5,40 @@
 <div>
     @include('masterPages.headers.header')
 </div>
-
-<section class="blog_area section-padding" style="margin-top: -80px">
+<!-- Navigation -->
+<div class="container m-t-25">
+    <span class="fa fa-home"></span>
+    <a class="m-l-8 m-r-8 f-red fs-14 non-hover" href="{{ route('/') }}">
+        <span>Home</span>
+    </a>
+    <span class="fa fa-angle-right"></span>
+    <a class="m-l-8 m-r-8 f-red fs-14 non-hover" href="{{ route('/') }}">
+        <span>{{ $artikel->kategori->n_kategori }}</span>
+    </a>
+    <span class="fa fa-angle-right"></span>
+    <span class="m-l-8 m-r-8 fs-14">{{substr($artikel->judul, 0, 20)}}...</span>
+</div>
+<section class="blog_area section-padding" style="margin-top: -70px">
     <div class="container">
         <div class="row">
             <!-- Left Sidebar -->
-            <div class="col-lg-8 posts-list" style="margin-top: -40px">
+            <div class="col-lg-8 posts-list">
                 <div class="single-post">
-                    <div class="blog_details">
-                        <h2>{{ $artikel->judul }}</h2>
-                        <div class="m-b-30">
-                            <img class="img-fluid bdr-5" style="text-align: center" width="" height="" src="{{ asset('post/'. $artikel->gambar) }}" alt="">
+                    <div class="blog_detail">
+                        <h3 class="f-b m-b-20">{{ $artikel->judul }}</h3>
+                        <span class="bdr-5 fs-12 f-b" style="background-color: #FC5300 !important; color: white !important; padding: 7px; text-transform: uppercase">
+                            {{ $artikel->kategori->n_kategori }}
+                        </span>
+                        <img src="{{ asset('images/boy.png') }}" class="rounded-circle m-l-30" width="45" alt="">
+                        <span class="fs-14 f-b m-l-10">{{ $artikel->user->name }}</span>
+                        <span class="fa fa-clock m-l-15"></span>
+                        <span class="fs-14">{{ substr($artikel->created_at, 0, 10) }}</span>
+                        <span class="fa fa-comments m-l-15"></span>
+                        <span class="fs-14">0 comments</span>
+                        <span class="fa fa-fire m-l-15" style="color: #FC5300"></span>
+                        <span class="f-red fs-14">{{ $artikel->artikel_view }}</span>
+                        <div class="m-b-30 m-t-30">
+                            <img class="img-fluid bdr-5" width="800" height="" src="{{ asset('post/'. $artikel->gambar) }}" alt="">
                         </div>
                         <ul class="blog-info-link mt-3 mb-4">
                             <li><a href="#"><i class="fa fa-user"></i>{{$artikel->kategori->n_kategori }}</a></li>
@@ -221,7 +244,6 @@
         </div>
     </div>
 </section>
-
 <!-- Footer -->
 <div>
     @include('masterPages.footers.footer')

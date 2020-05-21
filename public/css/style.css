@@ -138,3 +138,7 @@
     line-height: 42px;
     letter-spacing: 0.45px;
 }
+
+.non-hover:hover {
+    color: #F74854;
+}
