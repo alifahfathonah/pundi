@@ -19,6 +19,8 @@ class HomeController extends Controller
     {
         $get_artikel = Artikel::select('id', 'judul', 'kategori_id', 'gambar', 'penulis_id')->get();
 
-        return view('home', compact('get_artikel'));
+        return view('home', compact(
+            'get_artikel'
+        ));
     }
 }

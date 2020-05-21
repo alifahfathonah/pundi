@@ -5,49 +5,24 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle mb-30">
-                        <h3>Weekly Top News</h3>
+                        <h3 style="color: #FC5300 !important; ">INDEPT OF ISSUES</h3>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="weekly-news-active dot-style d-flex dot-style">
-                        <div class="weekly-single">
-                            <div class="weekly-img">
-                                <img src="assets/img/news/weeklyNews2.jpg" alt="">
-                            </div>
-                            <div class="weekly-caption">
-                                <span class="color1">Strike</span>
-                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                            </div>
-                        </div> 
-                        <div class="weekly-single active">
-                            <div class="weekly-img">
-                                    <img src="assets/img/news/weeklyNews1.jpg" alt="">
-                            </div>
-                            <div class="weekly-caption">
-                                <span class="color1">Strike</span>
-                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                            </div>
-                        </div>
-                        <div class="weekly-single">
-                            <div class="weekly-img">
-                                    <img src="assets/img/news/weeklyNews3.jpg" alt="">
-                            </div>
-                            <div class="weekly-caption">
-                                <span class="color1">Strike</span>
-                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                            </div>
-                        </div>
-                        <div class="weekly-single">
-                            <div class="weekly-img">
-                                <img src="assets/img/news/weeklyNews1.jpg" alt="">
-                            </div>
-                            <div class="weekly-caption">
-                                <span class="color1">Strike</span>
-                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                            </div>
-                        </div>
+                        @foreach ($get_artikel->take(5) as $i)
+                            <div class="weekly-single">
+                                <div class="weekly-img">
+                                    <img src="{{ asset('post/' . $i->gambar) }}" width="" height="300" alt="">
+                                </div>
+                                <div class="weekly-caption">
+                                    <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">{{ $i->kategori->n_kategori }}</span>
+                                    <h4><a href="#">{{ $i->judul }}</a></h4>
+                                </div>
+                            </div> 
+                        @endforeach
                     </div>
                 </div>
             </div>

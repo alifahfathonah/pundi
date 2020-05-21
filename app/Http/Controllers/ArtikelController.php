@@ -37,9 +37,11 @@ class ArtikelController extends Controller
         ]);
 
         $artikel = new Artikel();
-        $artikel->judul       = $request->judul;
-        $artikel->kategori_id = $request->kategori_id;
-        $artikel->isi         = $request->isi;
+        $artikel->judul           = $request->judul;
+        $artikel->kategori_id     = $request->kategori_id;
+        $artikel->sub_kategori_id = $request->sub_kategori_id;
+        $artikel->isi             = $request->isi;
+        $artikel->tag             = $request->tag;
 
         $file     = $request->file('gambar');
         $fileName = time() . "." . $file->getClientOriginalName();

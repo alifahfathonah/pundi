@@ -17,7 +17,9 @@
 </head>
 
 <body>
-    <div id="summernote"></div>
+    <div>
+        <textarea name="isi" id="summernote"></textarea>
+    </div>
 </body>
 <script>
     $('#summernote').summernote({

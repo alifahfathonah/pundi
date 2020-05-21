@@ -124,6 +124,9 @@
     }
 }
 
-ol.alamat{
-	list-style-type: upper-alpha !important;  /* list dengan bentuk alpha */
+@media (max-width: 767px){
+    .test{
+        font-size: 10px !important;
+        color: black;
+    }
 }

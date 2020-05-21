@@ -14,7 +14,7 @@
                 <div class="blog_left_sidebar">
                     <!-- Alert Success -->
                     @if (session()->has('success'))
-                        <div class="alert alert-success alert-dismissible fade show text-center bdr-20 m-t-30 col-md-6 container" role="alert">
+                        <div class="alert alert-success alert-dismissible fade show text-center bdr-20 col-md-12 container" role="alert">
                             {{ session('success') }}
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -88,7 +88,7 @@
                             <!-- Tag -->
                             <div class="m-t-25">
                                 <label for="" class="f-b fs-17">TAGS</label>
-                                <input type="text" class="single-input border bdr-5 col-md-12" name="judul" id="judul"
+                                <input type="text" class="single-input border bdr-5 col-md-12" name="tag" id="tag"
                                     required="" oninvalid="this.setCustomValidity('Judul artikel tidak boleh kosong')"
                                     oninput="setCustomValidity('')" />
                                 <i class="fs-12 f-red">Pisahkan dengan koma (,)</i>
