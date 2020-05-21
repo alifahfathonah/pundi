@@ -32,7 +32,7 @@
                         <img src="{{ asset('images/boy.png') }}" class="rounded-circle m-l-30" width="45" alt="">
                         <span class="fs-14 f-b m-l-10">{{ $artikel->user->name }}</span>
                         <span class="fa fa-clock m-l-15"></span>
-                        <span class="fs-14">{{ substr($artikel->created_at, 0, 10) }}</span>
+                        <span class="fs-14">{{ substr($artikel->created_at, 0, 40) }}</span>
                         <span class="fa fa-comments m-l-15"></span>
                         <span class="fs-14">0 comments</span>
                         <span class="fa fa-fire m-l-15" style="color: #FC5300"></span>
@@ -47,76 +47,38 @@
                         <div style="text-align: justify">
                             {!! $artikel->isi !!}
                         </div>
+                        <span class="f-b f-blk">
+                            <i>Editor: </i>
+                            <i class="f-red">Fauzul Adim</i>    
+                        </span>
                     </div>
                 </div>
-               
-                <div class="navigation-top">
-                    <div class="d-sm-flex justify-content-between text-center">
-                        <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4
-                            people like this</p>
-                        <div class="col-sm-4 text-center my-2 my-sm-0">
-                            <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
-                        </div>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="navigation-area">
-                        <div class="row">
-                            <div
-                                class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img class="img-fluid" src="assets/img/post/preview.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="arrow">
-                                    <a href="#">
-                                        <span class="lnr text-white ti-arrow-left"></span>
-                                    </a>
-                                </div>
-                                <div class="detials">
-                                    <p>Prev Post</p>
-                                    <a href="#">
-                                        <h4>Space The Final Frontier</h4>
-                                    </a>
-                                </div>
-                            </div>
-                            <div
-                                class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
-                                <div class="detials">
-                                    <p>Next Post</p>
-                                    <a href="#">
-                                        <h4>Telescopes 101</h4>
-                                    </a>
-                                </div>
-                                <div class="arrow">
-                                    <a href="#">
-                                        <span class="lnr text-white ti-arrow-right"></span>
-                                    </a>
-                                </div>
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img class="img-fluid" src="assets/img/post/next.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card m-b-30 m-t-30" style="padding: 20px; text-align: center; background: linear-gradient(to bottom,#FA5C59 ,#FE9B69); color: white">
+                    <span>
+                        Dihidupi oleh jaringan penulis dan editor yang memerlukan dukungan untuk bisa menerbitkan tulisan secara berkala. 
+                        Agar kami bisa terus memproduksi artikel-artikel keislaman yang mencerahkan, silakan sisihkan sedikit donasi untuk keberlangsungan kami.
+                    </span>
+                    <span class="m-t-50">
+                        Transfer Donasi ke Mandiri xxxx-xxxx-xxx A.n PUNDI.ID.
+                    </span>
                 </div>
-                <div class="blog-author">
+                <span class="bdr-20 fs-17" style="background-color: #FC5300 !important; color: white !important; padding:4px 12px">
+                    Tags :
+                </span>
+                @foreach (explode(',', $artikel->tag) as $tags)
+                    <span class="bdr-20 fs-17 m-l-15" style="background-color: white !important; color: #AAAAAA !important; border: 1px solid #AAAAAA !important; padding:4px 12px">
+                        {{ $tags }}
+                    </span>
+                @endforeach
+                <hr>
+                <div class="blog-author" style="margin-top: -20px; margin-bottom: -25px">
                     <div class="media align-items-center">
-                        <img src="assets/img/blog/author.png" alt="">
-                        <div class="media-body">
+                        <img class="rounded-circle" src="{{ asset('images/boy.png') }}" width="70" alt="">
+                        <div class="media-body m-l-40 m-t-20">
                             <a href="#">
-                                <h4>Harvard milan</h4>
+                                <span class="fs-15 f-b non-hover f-blk">{{ $artikel->user->name }}</span>
                             </a>
-                            <p>Second divided from form fish beast made. Every of seas all gathered use saying you're,
-                                he
-                                our dominion twon Second divided from</p>
+                            <p>Pegiat Jurnalisme Pesantren.</p>
                         </div>
                     </div>
                 </div>
