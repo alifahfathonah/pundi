@@ -1,11 +1,16 @@
-<div class="weekly-news-area pt-25">
+<div class="weekly-news-area pt-20">
     <div class="container">
        <div class="weekly-wrapper">
             <!-- section Tittle -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-tittle mb-30">
-                        <h3 style="color: #FC5300 !important; ">INDEPT OF ISSUES</h3>
+                    <div class="section-tittle m-b-20">
+                        <div style="margin-bottom: -15px">
+                            <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FC5300 !important"></i>
+                        </div>
+                        <span class="fs-20 m-l-15" style="color: #FC5300 !important; font-weight: 700 !important "> 
+                            INDEPT OF ISSUES
+                        </span>
                     </div>
                 </div>
             </div>
@@ -24,6 +29,14 @@
                                             {{ $i->judul }}
                                         </a>
                                     </h4>
+                                    <i class="fa fa-user" style="background-color: transparent !important; color: black"></i>
+                                    <a href="#" class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: black">
+                                        {{ $i->user->name }}
+                                    </a>
+                                    <i class="fas fa-clock m-l-25" style="background-color: transparent !important; color: black"></i>
+                                    <a class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: black">
+                                        {{ $i->created_at }}
+                                    </a>
                                 </div>
                             </div> 
                         @endforeach
