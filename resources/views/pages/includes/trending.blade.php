@@ -4,22 +4,30 @@
             <div class="row" style="margin-top: 40px">
                 <div class="col-lg-8">
                     <!-- Trending Top -->
-                    @foreach ($get_artikel->take(1) as $i)
+
                         <div class="trending-top mb-30">
                             <div class="trend-top-img">
-                                <input type="hidden" value="{{ $i->id }}" name="id">
-                                <img src="{{ asset('post/' . $i->gambar) }}" alt="">
+                                <input type="hidden" value="{{ $trending_top->id }}" name="id">
+                                <img src="{{ asset('post/' . $trending_top->gambar) }}" alt="">
                                 <div class="trend-top-cap">
-                                    <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">{{ $i->kategori->n_kategori }}</span>
+                                    <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">{{ $trending_top->kategori->n_kategori }}</span>
                                     <h2>
-                                        <a href="{{ route('artikel') .'?post='.$i->id}}">
-                                            {{ $i->judul }}
+                                        <a href="{{ route('artikel') .'?post='.$trending_top->id}}">
+                                            {{ $trending_top->judul }}
                                         </a>
                                     </h2>
+                                    <i class="fa fa-user" style="background-color: transparent !important; color: white"></i>
+                                    <a href="#" class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: white">
+                                        {{ $trending_top->user->name }}
+                                    </a>
+                                    <i class="fas fa-clock m-l-25" style="background-color: transparent !important; color: white"></i>
+                                    <a class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: white">
+                                        {{ $trending_top->created_at }}
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                   
                     <!-- Trending Bottom -->
                     <div class="trending-bottom">
                         <div class="row">

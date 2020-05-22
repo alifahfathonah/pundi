@@ -2,7 +2,7 @@
     <nav>
         <ul>
             <li>
-                <a href="#" style="color: black !important">Headline</a>
+                <a href="#" style="color: black !important;">HEADLINE <span style="size: 10px" class="fa fa-angle-down m-l-5"></span></a>
                 <ul class="submenu">
                     <li><a href="#">News</a></li>
                     <li><a href="#">Editorial</a></li>
@@ -11,7 +11,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" style="color: black !important">Indepth</a>
+                <a href="#" style="color: black !important">INDEPTH <span class="fa fa-angle-down m-l-5"></span></a>
                 <ul class="submenu">
                     <li><a href="#">Essay</a></li>
                     <li><a href="#">Kolom</a></li>
@@ -20,7 +20,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" style="color: black !important">Kebijakan</a>
+                <a href="#" style="color: black !important">KEBIJAKAN <span class="fa fa-angle-down m-l-5"></span></a>
                 <ul class="submenu">
                     <li><a href="#">Analisis</a></li>
                     <li><a href="#">Suara Guru</a></li>
@@ -29,7 +29,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" style="color: black !important">Serba serbi</a>
+                <a href="#" style="color: black !important">SERBA SERBI <span class="fa fa-angle-down m-l-5"></span></a>
                 <ul class="submenu">
                     <li><a href="#">Feature</a></li>
                     <li><a href="#">Motivasi</a></li>
@@ -39,7 +39,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" style="color: black !important">Konsultasi</a>
+                <a href="#" style="color: black !important">KONSULTASI <span class="fa fa-angle-down m-l-5"></span></a>
                 <ul class="submenu">
                     <li><a href="#">Curhat Remaja</a></li>
                     <li><a href="#">Curhat Anak</a></li>
