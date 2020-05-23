@@ -35,15 +35,23 @@
                                 <div class="col-lg-4">
                                     <div class="single-bottom mb-35">
                                         <div class="trend-bottom-img mb-30">
-                                            <img src="{{ asset('post/'. $i->gambar) }}" alt="">
+                                            <img src="{{ asset('post/'. $i->gambar) }}" height="150" alt="">
                                         </div>
-                                        <div class="trend-bottom-cap">
-                                            <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">{{ $i->kategori->n_kategori }}</span>
-                                            <h4>
+                                        <div class="trend-bottom-cap" style="margin-top: -20px">
+                                            <p class="fs-13" style="color: #FC5300 !important; text-transform: uppercase">
+                                                {{ $i->kategori->n_kategori }}
+                                            </p>
+                                            <h4 style="font-size: 15px !important; margin-top: -10px">
                                                 <a href="{{ route('artikel') .'?post='.$i->id}}">
                                                     {{ $i->judul }}
                                                 </a>
                                             </h4>
+                                            <div style="color: gray; margin-left: -25px">
+                                            <i class="fas fa-clock fa-xs m-l-25" style="background-color: transparent !important"></i>
+                                            <a class="fs-13 m-l-5" style="background-color: transparent !important">
+                                                {{substr($trending_top->created_at, 0, 10)}}
+                                            </a>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -58,13 +66,21 @@
                         <div class="trand-right-img">
                             <img src="{{ asset('post/'. $i->gambar) }}" width="150" height="100" alt="">
                         </div>
-                        <div class="trand-right-cap">
-                            <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">{{ $i->kategori->n_kategori }}</span>
-                            <h4>
+                        <div class="trand-right-cap" style="margin-top: -8px">
+                            <p class="fs-13" style="color: #FC5300 !important; text-transform: uppercase">
+                                {{ $i->kategori->n_kategori }}
+                            </p>
+                            <h4 style="font-size: 15px !important; margin-top: -10px">
                                 <a href="{{ route('artikel') .'?post='.$i->id}}">
                                     {{ $i->judul }}
                                 </a>
                             </h4>
+                            <div style="color: gray; margin-left: -25px">
+                                <i class="fas fa-clock fa-xs m-l-25" style="background-color: transparent !important"></i>
+                                <a class="fs-13 m-l-5" style="background-color: transparent !important">
+                                    {{substr($trending_top->created_at, 0, 10)}}
+                                </a>
+                            </div>
                         </div>
                     </div>
                     @endforeach

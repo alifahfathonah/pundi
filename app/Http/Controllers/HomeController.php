@@ -17,7 +17,7 @@ class HomeController extends Controller
     // Index
     public function index()
     {
-        $get_artikel = Artikel::select('id', 'judul', 'kategori_id', 'gambar', 'penulis_id')->get();
+        $get_artikel = Artikel::select('id', 'judul', 'kategori_id', 'gambar', 'penulis_id', 'created_at')->get();
 
         $trending_top = Artikel::select('id', 'judul', 'kategori_id', 'gambar', 'penulis_id', 'created_at')->orderBy('created_at', 'asc')->first();
 

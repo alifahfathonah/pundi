@@ -8,7 +8,7 @@
                         <div style="margin-bottom: -15px">
                             <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FC5300 !important"></i>
                         </div>
-                        <span class="fs-20 m-l-15" style="color: #FC5300 !important; font-weight: 700 !important "> 
+                        <span class="fs-18 m-l-15" style="color: #FC5300 !important; font-weight: 700 !important "> 
                             INDEPT OF ISSUES
                         </span>
                     </div>
@@ -29,14 +29,16 @@
                                             {{ $i->judul }}
                                         </a>
                                     </h4>
-                                    <i class="fa fa-user" style="background-color: transparent !important; color: black"></i>
-                                    <a href="#" class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: black">
-                                        {{ $i->user->name }}
-                                    </a>
-                                    <i class="fas fa-clock m-l-25" style="background-color: transparent !important; color: black"></i>
-                                    <a class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: black">
-                                        {{ $i->created_at }}
-                                    </a>
+                                    <div style="color: gray">
+                                        <i class="fa fa-user" style="background-color: transparent !important"></i>
+                                        <a href="#" class="fs-13 m-l-5" style="background-color: transparent !important; color:gray">
+                                            {{ $i->user->name }}
+                                        </a>
+                                        <i class="fas fa-clock m-l-10" style="background-color: transparent !important"></i>
+                                        <a class="fs-13 m-l-5" style="background-color: transparent !important">
+                                            {{ substr($i->created_at, 0, 10) }}
+                                        </a>
+                                    </div>
                                 </div>
                             </div> 
                         @endforeach
