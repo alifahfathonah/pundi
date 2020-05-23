@@ -77,7 +77,7 @@
                    </div>
                 </div>
                 <!-- Header Bottom -->
-                <div class="header-mid d-none d-md-block shadow" style=" background: linear-gradient(to right,#F8476C,#FE7D3D);">
+                <div class="header-mid d-none d-md-block" style="background: linear-gradient(to right,#F8476C,#FE7D3D);">
                    <div class="container">
                         <div class="row d-flex align-items-center">
                             <!-- Logo -->
@@ -101,7 +101,7 @@
                 </div>
 
                 <!-- Sticky Header -->
-                <div class="header-sticky">
+                <div class="header-sticky" >
                     <div class="container">
                         <div class="row d-flex align-items-center">
                             <!-- Logo -->

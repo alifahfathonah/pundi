@@ -59,11 +59,21 @@ class ArtikelController extends Controller
 
     public function artikel(Request $request)
     {
+        // Artikel
         $artikel = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'penulis_id', 'gambar', 'isi', 'tag', 'artikel_view', 'created_at')->whereid($request->post)->first();
 
         // Counter pengungjung
         DB::update('UPDATE artikel SET artikel_view = artikel_view + 1 WHERE id = "' . $request->post . '"');
 
-        return view('pages.artikel', compact('artikel'));
+        // Right Sidebar
+        $right_sideBar = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+
+        return view('pages.artikel', compact(
+            'artikel',
+            'right_sideBar'
+        ));
     }
 }

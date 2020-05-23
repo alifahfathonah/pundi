@@ -1,88 +1,78 @@
-<div class="col-lg-4">
+<div class="col-lg-4" >
     <div class="blog_right_sidebar">
-        <aside class="single_sidebar_widget search_widget">
-            <form action="#">
-                <div class="form-group">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder='Search Keyword'
-                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'">
-                        <div class="input-group-append">
-                            <button class="btns" type="button"><i class="ti-search"></i></button>
-                        </div>
+        <!-- Berita Terbaru -->
+        <aside>
+            <div class="news-poster d-none d-lg-block">
+                <img src="https://ibtimes.id/wp-content/uploads/2020/03/ibtimes-x-lazismu-min.jpg" width="350" alt="">
+            </div>
+        </aside>
+        <div class="post-sidebar">
+            <p class="text-center m-t-15 fs-14" style="color: gray;"><i>- Advertisement -</i></p>
+            <aside class="single_sidebar_widget popular_post_widget" style="background-color: transparent">
+                <div style="margin-bottom: -13px;">
+                    <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FC5300 !important"></i>
+                </div>
+                <span class="f-b m-l-15 widget_title" style="color: #FC5300 !important;"> 
+                    BERITA & ARTIKEL TERBARU
+                </span>
+                @foreach ($right_sideBar->take(4) as $i)
+                <div class="media post_item m-t-20">
+                    <img class="bdr-5" src="{{ asset('post/'. $i->gambar) }}" width="120" height="90" alt="post">
+                    <div class="media-body" style="margin-top: -7px">
+                        <span class="fs-13" style="color: #FC5300 !important; text-transform: uppercase">
+                            {{ $i->kategori->n_kategori }}
+                        </span>
+                        <a href="single-blog.html">
+                            <h3>{{ $i->judul }}</h3>
+                        </a>
+                        <i class="fas fa-clock fa-sm" style="color: gray"></i>
+                        <span class="fs-13" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
                     </div>
                 </div>
-                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" type="submit">Search</button>
-            </form>
-        </aside>
-
-        <aside class="single_sidebar_widget popular_post_widget">
-            <h3 class="widget_title">Berita & Artikel Terbaru</h3>
-            <div class="media post_item">
-                <img src="assets/img/post/post_1.png" alt="post">
-                <div class="media-body">
-                    <a href="single-blog.html">
-                        <h3>From life was you fish...</h3>
-                    </a>
-                    <p>January 12, 2019</p>
+                @endforeach
+            </aside>
+            <aside class="single_sidebar_widget tag_cloud_widget " style="background-color: transparent !important">
+                <div style="margin-bottom: -13px;">
+                    <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FC5300 !important"></i>
                 </div>
-            </div>
-            <div class="media post_item">
-                <img src="assets/img/post/post_2.png" alt="post">
-                <div class="media-body">
-                    <a href="single-blog.html">
-                        <h3>The Amazing Hubble</h3>
-                    </a>
-                    <p>02 Hours ago</p>
-                </div>
-            </div>
-            <div class="media post_item">
-                <img src="assets/img/post/post_3.png" alt="post">
-                <div class="media-body">
-                    <a href="single-blog.html">
-                        <h3>Astronomy Or Astrology</h3>
-                    </a>
-                    <p>03 Hours ago</p>
-                </div>
-            </div>
-            <div class="media post_item">
-                <img src="assets/img/post/post_4.png" alt="post">
-                <div class="media-body">
-                    <a href="single-blog.html">
-                        <h3>Asteroids telescope</h3>
-                    </a>
-                    <p>01 Hours ago</p>
-                </div>
-            </div>
-        </aside>
-        <aside class="single_sidebar_widget tag_cloud_widget">
-            <h4 class="widget_title">Tag</h4>
-            <ul class="list">
-                <li>
-                    <a href="#">project</a>
-                </li>
-                <li>
-                    <a href="#">love</a>
-                </li>
-                <li>
-                    <a href="#">technology</a>
-                </li>
-                <li>
-                    <a href="#">travel</a>
-                </li>
-                <li>
-                    <a href="#">restaurant</a>
-                </li>
-                <li>
-                    <a href="#">life style</a>
-                </li>
-                <li>
-                    <a href="#">design</a>
-                </li>
-                <li>
-                    <a href="#">illustration</a>
-                </li>
-            </ul>
-        </aside>
-
+                <span class="f-b m-l-15 widget_title" style="color: #FC5300 !important; text-align: justify !important"> 
+                    PUNDI.ID – TAJAM DAN MENCERAHKAN
+                </span>
+            </aside>
+        </div>
     </div>
 </div>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+<script>
+    const postDetails = document.querySelector(".post-details");
+    const postSidebar = document.querySelector(".post-sidebar");
+    const postSidebarContent = document.querySelector(".post-sidebar > div");
+
+    const controller = new ScrollMagic.Controller();
+    const scene = new ScrollMagic.Scene({
+        triggerElement: postSidebar,
+        triggerHook: 0,
+        duration: getDuration
+    }).addTo(controller);
+
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        scene.setPin(postSidebar, {pushFollowers: true});
+    }
+
+    // in your projects, you might want to debounce resize event for better performance
+    window.addEventListener("resize", () => {
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            scene.setPin(postSidebar, {pushFollowers: false});
+        } else {
+            scene.removePin(postSidebar, true);
+        }
+    });
+
+    function getDuration() {
+        return postDetails.offsetHeight - postSidebarContent.offsetHeight;
+    }
+</script>

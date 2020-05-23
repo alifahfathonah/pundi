@@ -23,6 +23,7 @@
         <div class="row">
             <!-- Left Sidebar -->
             <div class="col-lg-8 posts-list">
+                <!-- Isi Artikel -->
                 <div class="single-post">
                     <div class="blog_detail">
                         <h3 class="f-b m-b-20">{{ $artikel->judul }}</h3>
@@ -53,13 +54,17 @@
                         </span>
                     </div>
                 </div>
-                <div class="card m-b-30 m-t-30" style="padding: 20px; text-align: center; background: linear-gradient(to bottom,#FA5C59 ,#FE9B69); color: white">
+                <div class="card m-b-30 m-t-30" style="padding: 50px 20px 50px 20px; text-align: center; background: linear-gradient(to bottom,#FA5C59 ,#FE9B69); color: white">
                     <span>
-                        Dihidupi oleh jaringan penulis dan editor yang memerlukan dukungan untuk bisa menerbitkan tulisan secara berkala. 
+                        <b style="color: white">PUNDI.ID</b> Dihidupi oleh jaringan penulis dan editor yang memerlukan dukungan untuk bisa menerbitkan tulisan secara berkala. 
                         Agar kami bisa terus memproduksi artikel-artikel keislaman yang mencerahkan, silakan sisihkan sedikit donasi untuk keberlangsungan kami.
                     </span>
-                    <span class="m-t-50">
-                        Transfer Donasi ke Mandiri xxxx-xxxx-xxx A.n PUNDI.ID.
+                    <span class="m-t-30">
+                        Transfer Donasi ke
+                        <br> 
+                        Mandiri xxxx-xxxx-xxx 
+                        <br>
+                        A.n Pegiat Pendidikan Indonesia
                     </span>
                 </div>
                 <span class="bdr-20 fs-17" style="background-color: #FC5300 !important; color: white !important; padding:4px 12px">
@@ -71,6 +76,7 @@
                     </span>
                 @endforeach
                 <hr>
+                <!-- Info Penulis -->
                 <div class="blog-author" style="margin-top: -20px; margin-bottom: -25px">
                     <div class="media align-items-center">
                         <img class="rounded-circle" src="{{ asset('images/boy.png') }}" width="70" alt="">
@@ -82,8 +88,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="comments-area">
-                    <h4>05 Comments</h4>
+                <!-- Komen -->
+                <div class="comments-area" style="margin-bottom: -50px">
+                    <p class="fs-24 f-b f-blk" style="margin-top: -20px">1 Komen</p>
                     <div class="comment-list">
                         <div class="single-comment justify-content-between d-flex">
                             <div class="user justify-content-between d-flex">
@@ -111,92 +118,35 @@
                             </div>
                         </div>
                     </div>
-                    <div class="comment-list">
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="thumb">
-                                    <img src="assets/img/comment/comment_2.png" alt="">
-                                </div>
-                                <div class="desc">
-                                    <p class="comment">
-                                        Multiply sea night grass fourth day sea lesser rule open subdue female fill
-                                        which them
-                                        Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                                    </p>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex align-items-center">
-                                            <h5>
-                                                <a href="#">Emilly Blunt</a>
-                                            </h5>
-                                            <p class="date">December 4, 2017 at 3:12 pm </p>
-                                        </div>
-                                        <div class="reply-btn">
-                                            <a href="#" class="btn-reply text-uppercase">reply</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment-list">
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="thumb">
-                                    <img src="assets/img/comment/comment_3.png" alt="">
-                                </div>
-                                <div class="desc">
-                                    <p class="comment">
-                                        Multiply sea night grass fourth day sea lesser rule open subdue female fill
-                                        which them
-                                        Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                                    </p>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex align-items-center">
-                                            <h5>
-                                                <a href="#">Emilly Blunt</a>
-                                            </h5>
-                                            <p class="date">December 4, 2017 at 3:12 pm </p>
-                                        </div>
-                                        <div class="reply-btn">
-                                            <a href="#" class="btn-reply text-uppercase">reply</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="comment-form">
-                    <h4>Leave a Reply</h4>
-                    <form class="form-contact comment_form" action="#" id="commentForm">
+                    <p class="fs-24 f-b f-blk" style="margin-top: -20px">Tinggalkan Balasan</p>
+                    <i>Alamat email Anda tidak akan dipublikasikan. Ruas yang wajib ditandai *</i>
+                    <form class="form-contact comment_form m-t-20" action="#" id="commentForm">
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-sm-6">
                                 <div class="form-group">
-                                    <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9"
-                                        placeholder="Write Comment"></textarea>
+                                    <input class="form-control" name="name" id="name" type="text" placeholder="Enter Name *">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <input class="form-control" name="name" id="name" type="text" placeholder="Name">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input class="form-control" name="email" id="email" type="email"
-                                        placeholder="Email">
+                                    <input class="form-control" name="email" id="email" type="email" placeholder="Enter E-mail *">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <input class="form-control" name="website" id="website" type="text"
-                                        placeholder="Website">
+                                    <input class="form-control" name="website" id="website" type="text" placeholder="Enter Website">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9" placeholder="Enter Comment *"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="button button-contactForm btn_1 boxed-btn">Send
-                                Message</button>
+                            <button type="submit" class="button button-contactForm btn_1 boxed-btn">Post Komen</button>
                         </div>
                     </form>
                 </div>

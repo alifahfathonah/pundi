@@ -4577,8 +4577,8 @@ hr {
 }
 
 .blog_right_sidebar .widget_title {
-    font-size: 20px;
-    margin-bottom: 40px
+    font-size: 15px;
+    margin-bottom: 40px;
 }
 
 .blog_right_sidebar .widget_title::after {
@@ -4590,7 +4590,7 @@ hr {
 
 .blog_right_sidebar .single_sidebar_widget {
     background: #fbf9ff;
-    padding: 30px;
+    padding: 0px;
     margin-bottom: 30px
 }
 
@@ -4700,7 +4700,7 @@ hr {
 }
 
 .blog_right_sidebar .popular_post_widget .post_item .media-body h3 {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 20px;
     margin-bottom: 6px;
     transition: all 0.3s linear
