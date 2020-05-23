@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// Models
 use App\Models\Artikel;
 
 class HomeController extends Controller
@@ -17,13 +18,26 @@ class HomeController extends Controller
     // Index
     public function index()
     {
-        $get_artikel = Artikel::select('id', 'judul', 'kategori_id', 'gambar', 'penulis_id', 'created_at')->get();
+        $trending_top = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')->orderBy('created_at', 'desc')->first();
 
-        $trending_top = Artikel::select('id', 'judul', 'kategori_id', 'gambar', 'penulis_id', 'created_at')->orderBy('created_at', 'asc')->first();
+        $trending_bottom  = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')
+            // ->whereNotIn('id', $trending_top)
+            ->orderBy('created_at', 'desc')
+            ->take(3)
+            ->get();
+
+        $trending_right = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')
+            // ->whereNotIn('id', $trending_bottom)
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        $berita_mingguan = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')->get();
 
         return view('home', compact(
-            'get_artikel',
-            'trending_top'
+            'trending_top',
+            'trending_bottom',
+            'trending_right',
+            'berita_mingguan'
         ));
     }
 }

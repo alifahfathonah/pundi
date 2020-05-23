@@ -4,34 +4,39 @@
             <div class="row" style="margin-top: 40px">
                 <div class="col-lg-8">
                     <!-- Trending Top -->
-
-                        <div class="trending-top mb-30">
-                            <div class="trend-top-img">
-                                <input type="hidden" value="{{ $trending_top->id }}" name="id">
-                                <img src="{{ asset('post/' . $trending_top->gambar) }}" alt="">
-                                <div class="trend-top-cap">
-                                    <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">{{ $trending_top->kategori->n_kategori }}</span>
-                                    <h2>
-                                        <a href="{{ route('artikel') .'?post='.$trending_top->id}}">
-                                            {{ $trending_top->judul }}
-                                        </a>
-                                    </h2>
-                                    <i class="fa fa-user" style="background-color: transparent !important; color: white"></i>
-                                    <a href="#" class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: white">
-                                        {{ $trending_top->user->name }}
+                    <div class="trending-top mb-30">
+                        <div class="trend-top-img">
+                            <input type="hidden" value="{{ $trending_top->id }}" name="id">
+                            <img src="{{ asset('post/' . $trending_top->gambar) }}" alt="">
+                            <div class="trend-top-cap">
+                                <!-- Kategori -->
+                                <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">
+                                    {{ $trending_top->sub_kategori->n_sub_kategori }}
+                                </span>
+                                <!-- Judul -->
+                                <h2>
+                                    <a href="{{ route('artikel') .'?post='.$trending_top->id}}">
+                                        {{ $trending_top->judul }}
                                     </a>
-                                    <i class="fas fa-clock m-l-25" style="background-color: transparent !important; color: white"></i>
-                                    <a class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: white">
-                                        {{ $trending_top->created_at }}
-                                    </a>
-                                </div>
+                                </h2>
+                                <!-- Penulis -->
+                                <i class="fa fa-user" style="background-color: transparent !important; color: white"></i>
+                                <a href="#" class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: white">
+                                    {{ $trending_top->user->name }}
+                                </a>
+                                <!-- Waktu -->
+                                <i class="fas fa-clock m-l-25" style="background-color: transparent !important; color: white"></i>
+                                <a class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: white">
+                                    {{ $trending_top->created_at }}
+                                </a>
                             </div>
                         </div>
+                    </div>
                    
                     <!-- Trending Bottom -->
                     <div class="trending-bottom">
                         <div class="row">
-                            @foreach ($get_artikel->take(3) as $i)
+                            @foreach ($trending_bottom as $i)
                                 <div class="col-lg-4">
                                     <div class="single-bottom mb-35">
                                         <div class="trend-bottom-img mb-30">
@@ -61,7 +66,7 @@
                 </div>
                 <!-- Riht content -->
                 <div class="col-lg-4">
-                    @foreach ($get_artikel->take(5) as $i)
+                    @foreach ($trending_right->take(5) as $i)
                     <div class="trand-right-single d-flex">
                         <div class="trand-right-img">
                             <img src="{{ asset('post/'. $i->gambar) }}" width="150" height="100" alt="">

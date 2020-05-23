@@ -31,9 +31,9 @@
                         </span>
                         <img src="{{ asset('images/boy.png') }}" class="rounded-circle m-l-30" width="45" alt="">
                         <span class="fs-14 f-b m-l-10">{{ $artikel->user->name }}</span>
-                        <span class="fa fa-clock m-l-15"></span>
+                        <span class="fas fa-clock m-l-15" style="color:gray"></span>
                         <span class="fs-14">{{ substr($artikel->created_at, 0, 40) }}</span>
-                        <span class="fa fa-comments m-l-15"></span>
+                        <span class="fa fa-comments m-l-15" style="color:gray"></span>
                         <span class="fs-14">0 comments</span>
                         <span class="fa fa-fire m-l-15" style="color: #FC5300"></span>
                         <span class="f-red fs-14">{{ $artikel->artikel_view }}</span>

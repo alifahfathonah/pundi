@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="weekly-news-active dot-style d-flex dot-style">
-                        @foreach ($get_artikel->take(5) as $i)
+                        @foreach ($berita_mingguan->take(5) as $i)
                             <div class="weekly-single">
                                 <div class="weekly-img">
                                     <img src="{{ asset('post/' . $i->gambar) }}" width="" height="300" alt="">
