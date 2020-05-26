@@ -2,6 +2,7 @@
 
 @section('content')
     <!-- Header -->   
+    @parent
     @include('masterPages.headers.header')
 
     <div class="container col-md-4 m-t-50">
