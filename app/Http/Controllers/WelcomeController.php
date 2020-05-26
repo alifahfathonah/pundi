@@ -27,7 +27,7 @@ class WelcomeController extends Controller
             'trending_top',
             'trending_bottom',
             'trending_right',
-            'berita_mingguan',
+            'berita_mingguan'
         ));
     }
 }
