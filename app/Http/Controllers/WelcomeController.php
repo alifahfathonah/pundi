@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 // Models
 use App\Models\Artikel;
+use App\Store\index;
 
 class WelcomeController extends Controller
 {
@@ -27,11 +28,14 @@ class WelcomeController extends Controller
 
         $berita_mingguan = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')->get();
 
+        $header = index::header();
+
         return view('home', compact(
             'trending_top',
             'trending_bottom',
             'trending_right',
-            'berita_mingguan'
+            'berita_mingguan',
+            'header'
         ));
     }
 }

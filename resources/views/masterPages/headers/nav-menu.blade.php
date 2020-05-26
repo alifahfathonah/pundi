@@ -48,7 +48,7 @@
         <li>
             <a href="#" style="font-size: 13px !important">KIRIM TULISAN <span class="fa fa-angle-down m-l-5"></a>
             <ul class="submenu">
-                <li><a href="#">Ketentuan Tulisan</a></li>
+                <li><a href="{{ url('ketentuan-tulisan') }}">Ketentuan Tulisan</a></li>
                 <li><a href="{{ route('register') }}">Registrasi</a></li>
                 <li><a href="{{ route('login') }}">Login</a></li>
             </ul>
