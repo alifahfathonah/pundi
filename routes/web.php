@@ -21,18 +21,18 @@ Auth::routes();
 Route::get('/', 'WelcomeController@index')->name('/');
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Isi Artikel
+Route::get('artikel', 'ArtikelController@artikel')->name('artikel');
+
+// Ketentuan Tulisan
+Route::get('/ketentuan-tulisan', function () {
+    return view('pages.ketentuan-tulisan');
+});
+
 /* Proteksi Auth */
 Route::group(['middleware' => ['auth']], function () {
 
     // Kirim Tulisan
     Route::get('kirim-tulisan', 'ArtikelController@index')->name('kirim-tulisan');
     Route::post('kirim-tulisan', 'ArtikelController@tambah_artikel')->name('kirim-tulisan.tambah');
-
-    // Isi Artikel
-    Route::get('artikel', 'ArtikelController@artikel')->name('artikel');
-
-    // Ketentuan Tulisan
-    Route::get('/ketentuan-tulisan', function () {
-        return view('pages.ketentuan-tulisan');
-    });
 });

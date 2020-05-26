@@ -2528,7 +2528,7 @@ hr {
     display: inline-block;
     margin-right: 56px;
     font-family: "Roboto", sans-serif;
-    font-size: 12px
+    font-size: 13px
 }
 
 .header-area .header-top .header-info-left ul li:last-child {
@@ -2540,13 +2540,13 @@ hr {
 }
 
 .header-area .header-top .header-info-right .header-social li {
-    display: inline-block
+    display: inline-block;
 }
 
 .header-area .header-top .header-info-right .header-social li a {
     color: #fff;
     font-size: 13px;
-    padding-left: 17px
+    padding-left: 0px;
 }
 
 .header-area .header-top .header-info-right .header-social li a:hover {
@@ -2867,7 +2867,7 @@ hr {
 
 .trending-area .trending-main .trending-top .trend-top-img img {
     width: 100%;
-    border-radius: 7px
+    border-radius: 5px 
 }
 
 .trending-area .trending-main .trending-top .trend-top-img .trend-top-cap {

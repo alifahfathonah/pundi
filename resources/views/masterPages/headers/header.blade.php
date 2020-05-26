@@ -13,22 +13,38 @@
     <header>
        <div class="header-area">
             <div class="main-header ">
-
                 <!-- Header Top -->
                 <div class="header-top black-bg d-none d-md-block" style=" background: linear-gradient(to right,#F8476C,#FE7D3D);">
                    <div class="container">
                        <div class="col-xl-12">
                             <div class="row d-flex justify-content-between align-items-center">
-                                <div class="header-info-left">
-                                    <ul>     
-                                        <li style="margin-right: -0.5%">
+                                <!-- Infor Left -->
+                                <div class="header-info-left row" style="margin-bottom: -22px">   
+                                    <div class="fs-13 f-b m-l-15" style="margin-top: -3px !important; color: white">
+                                        <i class="fa fa-bolt"></i>
+                                        <span>NEWPOST</span>
+                                        <span style="border-left: 0.5px rgb(255, 255, 255) solid; margin-right: -10px; margin-left: 10px"></span>
+                                    </div>
+                                    <ul id="js-news" class="js-hidden">
+                                        @foreach ($trending_bottom as $i)
+                                            <li class="news-item">
+                                                <a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                <!-- Infro Right -->
+                                <div class="header-info-right" style="margin-right: 18px !important">
+                                    <ul class="header-social" style="color: white !important;">    
+                                        <i class="fas fa-calendar-check m-r-2"></i>
+                                        <li>
                                             <a id="hari"></a>
                                             ,
                                             <a id="tanggal"></a>
                                             <a id="bulan"></a>
                                             <a id="tahun"></a>
+                                            /
                                         </li>
-                                        <span style="border-left: 1px rgb(255, 255, 255) solid; height: 18px; margin-right: 10px; margin-left: 8px"></span>
                                         <li>
                                             <a id="jam"></a>
                                             :
@@ -37,40 +53,6 @@
                                             <a id="detik"></a>
                                         </li>
                                     </ul>
-                                </div>
-                                <div class="header-info-right">
-                                    @if (Auth::user() != null)
-                                        <div class="main-menu d-none d-md-block">
-                                            <nav>                  
-                                                <ul>    
-                                                    <a href="" style="font-size: 13px;">{{ Auth::user()->name }}</a>
-                                                    <li>
-                                                        <a href="#" style="margin-left: -15px;margin-right: -5px">
-                                                            <img width="30px" height="30px" src="{{ asset('images\boy.png') }}" alt="..." class="rounded-circle">
-                                                        </a>
-                                                        <ul class="submenu">
-                                                            <li><a href="elements.html">Edit Profil</a></li>
-                                                            <li><a href="{{ route('kirim-tulisan') }}">Kirim Tulisan</a></li>
-                                                            <li><a href="{{ url('ketentuan-tulisan') }}">Ketentuan Tulisan</a></li>
-                                                            <li> 
-                                                                <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                                                    Log Out
-                                                                </a>
-                                                            </li>
-                                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                                @csrf
-                                                            </form>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    @else
-                                    <ul class="header-social" style="margin-left: -15%">    
-                                        <li><a href="{{ route('login') }}">Login</a></li>
-                                        <li><a href="{{ route('register') }}">Register</a></li>
-                                    </ul>
-                                    @endif
                                 </div>
                             </div>
                        </div>

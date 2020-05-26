@@ -7,7 +7,7 @@
                     <div class="trending-top mb-30">
                         <div class="trend-top-img">
                             <input type="hidden" value="{{ $trending_top->id }}" name="id">
-                            <img src="{{ asset('post/' . $trending_top->gambar) }}" alt="">
+                            <img src="{{ asset('post/' . $trending_top->gambar  ) }}" alt="">
                             <div class="trend-top-cap">
                                 <!-- Kategori -->
                                 <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">
@@ -52,11 +52,11 @@
                                                 </a>
                                             </h4>
                                             <div style="color: gray; margin-left: -25px">
-                                            <i class="fas fa-clock fa-xs m-l-25" style="background-color: transparent !important"></i>
-                                            <a class="fs-13 m-l-5" style="background-color: transparent !important">
-                                                {{substr($trending_top->created_at, 0, 10)}}
-                                            </a>
-                                        </div>
+                                                <i class="fas fa-clock fa-xs m-l-25" style="background-color: transparent !important"></i>
+                                                <a class="fs-13 m-l-5" style="background-color: transparent !important">
+                                                    {{substr($trending_top->created_at, 0, 10)}}
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
