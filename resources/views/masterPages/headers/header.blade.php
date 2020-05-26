@@ -26,11 +26,11 @@
                                         <span style="border-left: 0.5px rgb(255, 255, 255) solid; margin-right: -10px; margin-left: 10px"></span>
                                     </div>
                                     <ul id="js-news" class="js-hidden">
-                                        @foreach ($header as $i)
+                                        {{-- @foreach ($header as $i)
                                             <li class="news-item">
                                                 <a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a>
                                             </li>
-                                        @endforeach
+                                        @endforeach --}}
                                     </ul>
                                 </div>
                                 <!-- Infro Right -->
