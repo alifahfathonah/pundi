@@ -54,7 +54,7 @@
                 <ul class="submenu">
                     <li><a href="#">Profil</a></li>
                     <li><a href="{{ route('kirim-tulisan') }}">Kirim Tulisan</a></li>
-                    <li><a href="single-blog.html">Ketentuan Tulisan</a></li>
+                    <li><a href="{{ url('ketentuan-tulisan') }}">Ketentuan Tulisan</a></li>
                     <li>
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();document.getElementById('logout-form').submit();">
@@ -64,6 +64,15 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
+                </ul>
+            </li>
+            @else
+            <li>
+                <a href="#" style="color: black !important">KIRIM TULISAN <span class="fa fa-angle-down m-l-5"></a>
+                <ul class="submenu">
+                    <li><a href="{{ url('ketentuan-tulisan') }}">Ketentuan Tulisan</a></li>
+                    <li><a href="{{ route('register') }}">Registrasi</a></li>
+                    <li><a href="{{ route('login') }}">Login</a></li>
                 </ul>
             </li>
             @endif
