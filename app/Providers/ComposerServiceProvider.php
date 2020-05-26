@@ -10,7 +10,10 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         // Using class based composers...
-        View::composer('index', 'App\Http\ViewComposers\UserComposer');
+        View::composer(
+            ['masterPages.headers.header', 'pages.artikel'],
+            'App\Http\ViewComposers\UserComposer'
+        );
     }
 
     /**

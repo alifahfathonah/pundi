@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Artikel;
 use App\Models\Kategori;
 use App\Models\Sub_Kategori;
+use App\Store\index;
 
 class ArtikelController extends Controller
 {
@@ -75,10 +76,12 @@ class ArtikelController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
+        $header = index::header();
 
         return view('pages.artikel', compact(
             'artikel',
-            'right_sideBar'
+            'right_sideBar',
+            'header'
         ));
     }
 }
