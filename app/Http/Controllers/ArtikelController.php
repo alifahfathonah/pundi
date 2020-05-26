@@ -21,10 +21,15 @@ class ArtikelController extends Controller
         // Sub Kategori
         $sub_kategori = Sub_Kategori::select('id', 'kategori_id', 'n_sub_kategori')->where('kategori_id', $kategori_id)->get();
 
+        $right_sideBar = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
         return view('pages.post-artikel', compact(
             'kategori',
             'kategori_id',
-            'sub_kategori'
+            'sub_kategori',
+            'right_sideBar'
         ));
     }
 

@@ -55,7 +55,7 @@
                     <ul class="submenu">
                         <li><a href="#">Profil</a></li>
                         <li><a href="{{ route('kirim-tulisan') }}">Kirim Tulisan</a></li>
-                        <li><a href="single-blog.html">Ketentuan Tulisan</a></li>
+                        <li><a href="{{ url('ketentuan-tulisan') }}">Ketentuan Tulisan</a></li>
                         <li>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                 Log Out
