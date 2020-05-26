@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- Header -->
+    <!-- Header -->   
     @include('masterPages.headers.header')
 
     <div class="container col-md-4 m-t-50">
