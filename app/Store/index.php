@@ -9,7 +9,7 @@ class index
 {
     public static function header()
     {
-        $var = Artikel::select('id', 'judul')->orderBy('created_at', 'desc')->get();
+        $var = Artikel::select('id', 'judul')->orderBy('created_at', 'desc')->get()->toArray();
 
         return $var;
     }

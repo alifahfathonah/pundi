@@ -36,7 +36,7 @@
                         <span class="fs-14">{{ substr($artikel->created_at, 0, 40) }}</span>
                         <span class="fa fa-comments m-l-15" style="color:gray"></span>
                         <span class="fs-14">0 comments</span>
-                        <span class="fa fa-fire m-l-15" style="color: #FC5300"></span>
+                        <span class="fa fa-eye m-l-15" style="color: #FC5300"></span>
                         <span class="f-red fs-14">{{ $artikel->artikel_view }}</span>
                         <div class="m-b-30 m-t-30">
                             <img class="img-fluid bdr-5" width="800" height="" src="{{ asset('post/'. $artikel->gambar) }}" alt="">

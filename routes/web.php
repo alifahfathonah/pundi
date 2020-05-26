@@ -26,7 +26,6 @@ Route::get('artikel', 'ArtikelController@artikel')->name('artikel');
 
 // Ketentuan Tulisan
 Route::get('/ketentuan-tulisan', function () {
-    
     return view('pages.ketentuan-tulisan');
 });
 
