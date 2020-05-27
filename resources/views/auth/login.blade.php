@@ -52,7 +52,7 @@
                     <div class="container">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
-                            <p class="text-center fs-32 f-b f-blk m-b-30">Login</p>
+                            <p class="text-center fs-30 f-b f-blk m-b-30">Login</p>
                             <!-- E-mail -->
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-2 f-b col-form-label" for="">E-MAIL</label>

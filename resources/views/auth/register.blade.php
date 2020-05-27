@@ -95,7 +95,7 @@
                             </div>
                             <!-- Konfirmasi Passwrod -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label f-red-dark" for="">CONFIRM PASSWORD <span class="text-danger ml-1">*</span></label>
+                                <label class="col-sm-4 f-b col-form-label f-red-dark" for="">KONFIRMASI PASSWORD <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
                                     <input type="password" class="input single-input-primary" name="password_confirmation"  oninvalid="this.setCustomValidity('Password tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
@@ -151,8 +151,7 @@
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label f-red-dark" for="">BIOGRAFI USER <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
-                                    <textarea type="text" class="input single-input-primary" name="name" required="" autofocus  oninvalid="this.setCustomValidity('Nama tidak boleh kosong!')" oninput="setCustomValidity('')">
-                                    </textarea>
+                                    <textarea type="text" class="input single-input-primary" name="name" required></textarea>
                                 </div>
                             </div>
                             <!-- Nomor Handphone -->
