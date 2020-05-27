@@ -67,7 +67,7 @@
         </li>
         @else
         <li>
-            <a href="#" style="color: black !important">KIRIM TULISAN <span class="fa fa-angle-down m-l-5"></a>
+            <a href="#">KIRIM TULISAN <span class="fa fa-angle-down m-l-5"></a>
             <ul class="submenu">
                 <li><a href="{{ url('ketentuan-tulisan') }}">Ketentuan Tulisan</a></li>
                 <li><a href="{{ route('register') }}">Registrasi</a></li>

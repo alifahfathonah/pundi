@@ -6144,12 +6144,12 @@ del {
 }
 
 .single-input-primary {
-    display: block;
+    display: inline-block;
     width: 100%;
     line-height: 40px;
     border: 1px solid transparent;
     outline: none;
-    background: #f9f9ff;
+    background:whitesmoke;
     padding: 0 20px
 }
 
