@@ -1,4 +1,4 @@
-{{-- @extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
     <!-- Header -->
@@ -52,9 +52,9 @@
             <hr>
         </form>
     </div>
-@endsection --}}
+@endsection
 
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
 <!-- Header -->
@@ -209,4 +209,4 @@
 </section>
 <!-- Footer -->
 @include('masterPages.footers.footer')
-@endsection
+@endsection --}}
