@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
     <!-- Header -->
@@ -52,9 +52,9 @@
             <hr>
         </form>
     </div>
-@endsection
+@endsection --}}
 
-{{-- @extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
 <!-- Header -->
@@ -68,6 +68,7 @@
                     <form action="{{ route('register') }}" method="POST">
                         @csrf
                         <div class="">
+                            <!-- -->
                             <p class="fs-30 f-b f-blk m-b-50">Register Kontributor</p>
                             <!-- E-mail -->
                             <div class="mt-10 form-group row">
@@ -101,7 +102,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- -->
                         <div class="m-t-50">
                             <p class="fs-30 f-b f-blk">Personal Data Kontributor</p>
                             <p class="fs-12" style="margin-top: -10px">Data berikut digunakan untuk menampilkan Profil Kontributor</p>
@@ -209,4 +210,4 @@
 </section>
 <!-- Footer -->
 @include('masterPages.footers.footer')
-@endsection --}}
+@endsection
