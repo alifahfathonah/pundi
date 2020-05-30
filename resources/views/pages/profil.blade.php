@@ -65,7 +65,7 @@
                                 <!-- Email -->
                                 <i class="fas fa-envelope m-r-10 m-b-10"></i>
                                 <span>{{ Auth::user()->email }}</span><br>
-                                  <!-- Nomor HP -->
+                                <!-- Nomor HP -->
                                 <i class="fas fa-phone m-r-10"></i>
                                 <span>{{ Auth::user()->nomor_hp }}</span><br>
                                 <!-- Facebook -->
