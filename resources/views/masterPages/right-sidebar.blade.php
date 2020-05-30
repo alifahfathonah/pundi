@@ -6,7 +6,7 @@
                 <img src="https://ibtimes.id/wp-content/uploads/2020/03/ibtimes-x-lazismu-min.jpg" width="350" alt="">
             </div>
         </aside>
-        <div class="post-sidebar">
+        <div class="">
             <p class="text-center m-t-15 fs-14" style="color: gray;"><i>- Advertisement -</i></p>
             <aside class="single_sidebar_widget popular_post_widget" style="background-color: transparent">
                 <div style="margin-bottom: -13px;">
@@ -15,7 +15,7 @@
                 <span class="f-b m-l-15 widget_title" style="color: #FC5300 !important;"> 
                     BERITA & ARTIKEL TERBARU
                 </span>
-                @foreach ($right_sideBar->take(4) as $i)
+                @foreach ($right_sideBar->take(3) as $i)
                 <div class="media post_item m-t-20">
                     <img class="bdr-5" src="{{ asset('post/'. $i->gambar) }}" width="120" height="90" alt="post">
                     <div class="media-body" style="margin-top: -7px">

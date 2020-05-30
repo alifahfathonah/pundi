@@ -13,6 +13,9 @@
         <!-- Berita Terbaru -->
         @include('pages.includes.berita-baru')
 
+        <!-- Berita Mingguan 2 -->
+        @include('pages.includes.berita-mingguan2')
+        
         <!-- Foote -->
         @include('masterPages.footers.footer')
     </div>
