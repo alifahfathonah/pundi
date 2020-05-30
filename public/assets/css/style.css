@@ -3317,7 +3317,7 @@ hr {
 .contact-section .nav-tabs .nav-link {
     border: 0;
     border-bottom: 2px solid transparent;
-    padding: 10px 20px
+    /* padding: 10px 20px */
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -3370,9 +3370,10 @@ hr {
 .about-area .nav-tabs .nav-item,
 .contact-section .nav-tabs .nav-item {
     display: block;
-    color: #8f8f96;
+    color:black;
     text-transform: capitalize;
-    font-size: 16px
+    font-size: 16px;
+    font-weight: bolder;
 }
 
 .whats-news-area .nav-tabs,
@@ -3384,7 +3385,7 @@ hr {
     border: 0;
     display: flex;
     justify-content: center;
-    background: #f7f7f7
+    /* background: #f7f7f7 */
 }
 
 .tab-pane {

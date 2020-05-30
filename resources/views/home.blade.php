@@ -10,6 +10,9 @@
         <!-- Weekely Trending --> 
         @include('pages.includes.berita-mingguan')
 
+        <!-- Berita Terbaru -->
+        @include('pages.includes.berita-baru')
+
         <!-- Foote -->
         @include('masterPages.footers.footer')
     </div>

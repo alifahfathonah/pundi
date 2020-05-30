@@ -29,11 +29,15 @@ class HomeController extends Controller
 
         $berita_mingguan = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')->get();
 
+        // HeadLine 
+        $headline = Artikel::where('kategori_id', 1)->get();
+
         return view('home', compact(
             'trending_top',
             'trending_bottom',
             'trending_right',
-            'berita_mingguan'
+            'berita_mingguan',
+            'headline'
         ));
     }
 }
