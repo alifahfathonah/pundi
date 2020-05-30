@@ -29,15 +29,32 @@ class HomeController extends Controller
 
         $berita_mingguan = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')->get();
 
-        // HeadLine 
+        /* Berita Terbaru */
+        // All
+        $all = Artikel::orderBy('created_at', 'desc')->get();
+        // Headline
         $headline = Artikel::where('kategori_id', 1)->get();
+        // Indepth
+        $indepth = Artikel::where('kategori_id', 2)->get();
+        // Kebijakan
+        $kebijakan = Artikel::where('kategori_id', 3)->get();
+        // Serba - Serbi
+        $serbaSerbi = Artikel::where('kategori_id', 4)->get();
+        // Konsultasi
+        $konsultasi = Artikel::where('kategori_id', 5)->get();
 
         return view('home', compact(
             'trending_top',
             'trending_bottom',
             'trending_right',
             'berita_mingguan',
-            'headline'
+            'konsultasi',
+            'all',
+            'headline',
+            'indepth',
+            'kebijakan',
+            'serbaSerbi',
+            'konsultasi'
         ));
     }
 }
