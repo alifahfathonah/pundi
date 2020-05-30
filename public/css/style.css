@@ -146,3 +146,7 @@
 .non-hover:hover {
     color: #F74854;
 }
+
+.hover-blk:hover{
+    color: black;
+}

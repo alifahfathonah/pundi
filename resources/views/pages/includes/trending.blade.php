@@ -54,7 +54,7 @@
                                             <div style="color: gray; margin-left: -25px">
                                                 <i class="fas fa-clock fa-xs m-l-25" style="background-color: transparent !important"></i>
                                                 <a class="fs-13 m-l-5" style="background-color: transparent !important">
-                                                    {{substr($trending_top->created_at, 0, 10)}}
+                                                    {{substr($i->created_at, 0, 10)}}
                                                 </a>
                                             </div>
                                         </div>

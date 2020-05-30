@@ -32,6 +32,9 @@ Route::get('/ketentuan-tulisan', function () {
 /* Proteksi Auth */
 Route::group(['middleware' => ['auth']], function () {
 
+    // Profil
+    Route::get('profil', 'ProfilController@index')->name('profil');
+
     // Kirim Tulisan
     Route::get('kirim-tulisan', 'ArtikelController@index')->name('kirim-tulisan');
     Route::post('kirim-tulisan', 'ArtikelController@tambah_artikel')->name('kirim-tulisan.tambah');

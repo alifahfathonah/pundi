@@ -53,7 +53,7 @@
                         <span>{{ Auth::user()->name }}</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="#">Profil</a></li>
+                        <li><a href="{{ route('profil') }}">Profil</a></li>
                         <li><a href="{{ route('kirim-tulisan') }}">Kirim Tulisan</a></li>
                         <li><a href="{{ url('ketentuan-tulisan') }}">Ketentuan Tulisan</a></li>
                         <li>
