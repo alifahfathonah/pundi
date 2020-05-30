@@ -48,7 +48,7 @@
         @if (Auth::user() != null)
         <li>
             <a href="#">
-                <img style="width: 30px !important" src="images\boy.png" alt="..." class="rounded-circle">
+                <img style="width: 30px !important" src="{{ asset('ava/' .Auth::user()->photo) }}" alt="..." class="rounded-circle">
             </a>
             <ul class="submenu">
                 <li><a href="#">Profil</a></li>
