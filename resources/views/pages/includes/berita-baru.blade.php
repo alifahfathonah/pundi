@@ -9,7 +9,7 @@
                             <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FC5300 !important"></i>
                         </div>
                         <span class="fs-18 m-l-15" style="color: #FC5300 !important; font-weight: 700 !important "> 
-                            Berita Terbaru
+                            BERITA TERBARU
                         </span>
                     </div>
                 </div>
@@ -46,7 +46,9 @@
                                                 </div>
                                                 <div class="what-cap">
                                                     <span class="color1">{{ $i->kategori->n_kategori }}</span>
-                                                    <h4><a href="#">{{ $i->judul }}</a></h4>
+                                                    <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
+                                                    <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
+                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -66,7 +68,7 @@
                                                 </div>
                                                 <div class="what-cap">
                                                     <span class="color1">{{ $i->kategori->n_kategori }}</span>
-                                                    <h4><a href="#">{{ $i->judul }}</a></h4>
+                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -86,7 +88,7 @@
                                                 </div>
                                                 <div class="what-cap">
                                                     <span class="color1">{{ $i->kategori->n_kategori }}</span>
-                                                    <h4><a href="#">{{ $i->judul }}</a></h4>
+                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -106,7 +108,7 @@
                                                 </div>
                                                 <div class="what-cap">
                                                     <span class="color1">{{ $i->kategori->n_kategori }}</span>
-                                                    <h4><a href="#">{{ $i->judul }}</a></h4>
+                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -126,7 +128,7 @@
                                                 </div>
                                                 <div class="what-cap">
                                                     <span class="color1">{{ $i->kategori->n_kategori }}</span>
-                                                    <h4><a href="#">{{ $i->judul }}</a></h4>
+                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -146,7 +148,7 @@
                                                 </div>
                                                 <div class="what-cap">
                                                     <span class="color1">{{ $i->kategori->n_kategori }}</span>
-                                                    <h4><a href="#">{{ $i->judul }}</a></h4>
+                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
                                         </div>

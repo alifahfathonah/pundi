@@ -5,63 +5,31 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle mb-30">
-                        <h3>Weekly Top News</h3>
+                        <div style="margin-bottom: -15px">
+                            <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FC5300 !important"></i>
+                        </div>
+                        <span class="fs-18 m-l-15" style="color: #FC5300 !important; font-weight: 700 !important "> 
+                            REPORT
+                        </span>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" style="margin-top: -10px !important">
                 <div class="col-12">
                     <div class="weekly2-news-active dot-style d-flex dot-style">
-                        <div class="weekly2-single">
-                            <div class="weekly2-img">
-                                <img src="assets/img/news/weekly2News1.jpg" alt="">
-                            </div>
-                            <div class="weekly2-caption">
-                                <span class="color1">Corporate</span>
-                                <p>25 Jan 2020</p>
-                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                            </div>
-                        </div> 
-                        <div class="weekly2-single">
-                            <div class="weekly2-img">
-                                <img src="assets/img/news/weekly2News2.jpg" alt="">
-                            </div>
-                            <div class="weekly2-caption">
-                                <span class="color1">Event night</span>
-                                <p>25 Jan 2020</p>
-                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                            </div>
-                        </div> 
-                        <div class="weekly2-single">
-                            <div class="weekly2-img">
-                                <img src="assets/img/news/weekly2News3.jpg" alt="">
-                            </div>
-                            <div class="weekly2-caption">
-                                <span class="color1">Corporate</span>
-                                <p>25 Jan 2020</p>
-                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                            </div>
-                        </div>
-                         <div class="weekly2-single">
-                            <div class="weekly2-img">
-                                <img src="assets/img/news/weekly2News4.jpg" alt="">
-                            </div>
-                            <div class="weekly2-caption">
-                                <span class="color1">Event time</span>
-                                <p>25 Jan 2020</p>
-                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                            </div>
-                        </div> 
-                         <div class="weekly2-single">
-                            <div class="weekly2-img">
-                                <img src="assets/img/news/weekly2News4.jpg" alt="">
-                            </div>
-                            <div class="weekly2-caption">
-                                <span class="color1">Corporate</span>
-                                <p>25 Jan 2020</p>
-                                <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                            </div>
-                        </div> 
+                        @foreach ($report as $i)
+                            <div class="weekly2-single">
+                                <div class="weekly2-img">
+                                    <img src="{{ asset('post/'. $i->gambar) }}" height="200" alt="">
+                                </div>
+                                <div class="weekly2-caption">
+                                    <span class="color1">{{ $i->kategori->n_kategori }}</span><br>
+                                    <i class="fas fa-clock fa-xs" style="color: gray"></i>
+                                    <span style="margin-left: -10px !important" style="color: gray">{{ $i->created_at }}</span>
+                                    <h4 style="margin-top: -15px !important"><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
+                                </div>
+                            </div> 
+                        @endforeach
                     </div>
                 </div>
             </div>

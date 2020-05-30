@@ -45,7 +45,7 @@
                             <li><a href="#"><i class="fa fa-user"></i>{{$artikel->kategori->n_kategori }}</a></li>
                             <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                         </ul>
-                        <div style="text-align: justify">
+                        <div>
                             {!! $artikel->isi !!}
                         </div>
                         <span class="f-b f-blk">
@@ -79,12 +79,12 @@
                 <!-- Info Penulis -->
                 <div class="blog-author" style="margin-top: -20px; margin-bottom: -25px">
                     <div class="media align-items-center">
-                        <img class="rounded-circle" src="{{ asset('images/boy.png') }}" width="70" alt="">
+                        <img class="rounded-circle" src="{{ asset('ava/'. $artikel->user->photo) }}" width="70" alt="">
                         <div class="media-body m-l-40 m-t-20">
                             <a href="#">
                                 <span class="fs-15 f-b non-hover f-blk">{{ $artikel->user->name }}</span>
                             </a>
-                            <p>Pegiat Jurnalisme Pesantren.</p>
+                            <p>{{ $artikel->user->bio }}</p>
                         </div>
                     </div>
                 </div>
