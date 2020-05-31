@@ -27,8 +27,8 @@
                 <div class="single-post">
                     <div class="blog_detail">
                         <h3 class="f-b m-b-20">{{ $artikel->judul }}</h3>
-                        <span class="bdr-5 fs-12 f-b" style="background-color: #FC5300 !important; color: white !important; padding: 7px; text-transform: uppercase">
-                            {{ $artikel->kategori->n_kategori }}
+                        <span class="bdr-5 fs-12 f-b" style="background-color: #FC5300 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
+                            <a href="">{{ $artikel->kategori->n_kategori }}</a>
                         </span>
                         <img src="{{ asset('images/boy.png') }}" class="rounded-circle m-l-30" width="45" alt="">
                         <span class="fs-14 f-b m-l-10">{{ $artikel->user->name }}</span>
@@ -45,6 +45,24 @@
                             <li><a href="#"><i class="fa fa-user"></i>{{$artikel->kategori->n_kategori }}</a></li>
                             <li><a href="#"><i class="fa fa-comments"></i> {{ $komen->count() }} komen</a></li>
                         </ul>
+                        <div class="m-b-10">
+                            <!-- Share Facebook -->
+                            <a href="http://www.facebook.com/sharer.php?u=http://103.219.112.114/pundi/public/artikel?post={{$artikel->id}}" target="_blank">
+                                <img src="https://image.flaticon.com/icons/svg/1384/1384053.svg" width="30" alt="Facebook" />
+                            </a>
+                            <!-- Share Twitter -->
+                            <a href="https://twitter.com/share?url=http://103.219.112.114/pundi/public/artikel?post={{$artikel->id}}&text={{$artikel->judul}}" target="_blank">
+                                <img src="https://image.flaticon.com/icons/svg/124/124021.svg" width="30" alt="Twitter" />
+                            </a>
+                            <!-- Share Whatsapp -->
+                            <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share">
+                                <img src="https://image.flaticon.com/icons/svg/124/124034.svg" width="30" alt="Twitter" />
+                            </a>
+                            <!-- Share Line -->
+                            <a href="#" data-action="share/whatsapp/share">
+                                <img src="https://image.flaticon.com/icons/svg/124/124027.svg" width="30" alt="Twitter" />
+                            </a>
+                        </div>
                         <div>
                             {!! $artikel->isi !!}
                         </div>

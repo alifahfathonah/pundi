@@ -1,7 +1,7 @@
 <nav>                  
     <ul>    
         <li>
-            <a href="#" style="font-size: 13px !important">HEADLINE <span class="fa fa-angle-down m-l-5"></span></a>
+            <a href="{{ route('kategori.headline') }}" style="font-size: 13px !important">HEADLINE <span class="fa fa-angle-down m-l-5"></span></a>
             <ul class="submenu">
                 <li><a href="#">News</a></li>
                 <li><a href="#">Editorial</a></li>

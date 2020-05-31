@@ -32,6 +32,12 @@ Route::get('/ketentuan-tulisan', function () {
     return view('pages.ketentuan-tulisan');
 });
 
+/* kategori */
+Route::prefix('ketegori')->name('kategori.')->group(function () {
+    // Headline
+    Route::get('headline', 'HeadlineController@index')->name('headline');
+});
+
 /* Proteksi Auth */
 Route::group(['middleware' => ['auth']], function () {
 
