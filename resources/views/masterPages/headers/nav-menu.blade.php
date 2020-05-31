@@ -3,10 +3,13 @@
         <li>
             <a href="{{ route('kategori','kategori=1') }}" style="font-size: 13px !important">HEADLINE <span class="fa fa-angle-down m-l-5"></span></a>
             <ul class="submenu">
-                <li><a href="#">News</a></li>
-                <li><a href="#">Editorial</a></li>
-                <li><a href="#">Laporan Utama</a></li>
-                <li><a href="#">Agenda</a></li>
+                @foreach ($sub_kategori as $i)
+                    <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>    
+                @endforeach
+                {{-- <li><a href="{{ route('sub_kategori','sub_kategori=1') }}">News</a></li>
+                <li><a href="{{ route('sub_kategori','sub_kategori=2') }}">Editorial</a></li>
+                <li><a href="{{ route('sub_kategori','sub_kategori=3') }}">Laporan Utama</a></li>
+                <li><a href="{{ route('sub_kategori','sub_kategori=4') }}">Agenda</a></li> --}}
             </ul>
         </li>
         <li>
@@ -16,7 +19,7 @@
                 <li><a href="#">Kolom</a></li>
                 <li><a href="#">Interview</a></li>
                 <li><a href="#">Litera</a></li>
-            </ul>
+            </ul> 
         </li>
         <li>
             <a href="{{ route('kategori','kategori=3') }}" style="font-size: 13px !important">KEBIJAKAN <span class="fa fa-angle-down m-l-5"></a>

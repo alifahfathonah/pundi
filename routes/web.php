@@ -35,6 +35,7 @@ Route::post('komen', 'KomenController@store')->name('komen.store');
 
 // Kategori
 Route::get('kategori',  'KategoriController@kategori')->name('kategori');
+Route::get('sub_kategori', 'KategoriController@sub_kategori')->name('sub_kategori');
 
 /* Proteksi Auth */
 Route::group(['middleware' => ['auth']], function () {

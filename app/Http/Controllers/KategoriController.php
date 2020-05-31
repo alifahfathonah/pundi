@@ -24,8 +24,23 @@ class KategoriController extends Controller
         $artikel = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'penulis_id', 'gambar', 'isi', 'tag', 'artikel_view', 'created_at')
             ->where('kategori_id', $request->kategori)->paginate(10);
 
-        return view('kategori.kategori', compact(
+        return view('pages.kategori.kategori', compact(
             'kategori',
+            'sub_kategori',
+            'artikel'
+        ));
+    }
+
+    public function sub_kategori(Request $request)
+    {
+        // Sub Kategori
+        $sub_kategori = Sub_Kategori::whereid($request->sub_kategori)->first();
+
+        // Sub Kategori
+        $artikel = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'penulis_id', 'gambar', 'isi', 'tag', 'artikel_view', 'created_at')
+            ->where('sub_kategori_id', $request->sub_kategori)->paginate(10);
+
+        return view('pages.kategori.sub_kategori', compact(
             'sub_kategori',
             'artikel'
         ));

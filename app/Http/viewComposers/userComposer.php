@@ -21,7 +21,10 @@ class UserComposer
             ->orderBy('created_at', 'desc')
             ->get();
 
+        $sub_kategori = Sub_Kategori::wherekategori_id(1)->get();
+
         $view->with('header', $header)
-            ->with('right_sideBar', $right_sideBar);
+            ->with('right_sideBar', $right_sideBar)
+            ->with('sub_kategori', $sub_kategori);
     }
 }

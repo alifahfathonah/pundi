@@ -4,10 +4,9 @@
             <li>
                 <a href="#" style="color: black !important;">HEADLINE <span style="size: 10px" class="fa fa-angle-down m-l-5"></span></a>
                 <ul class="submenu">
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Editorial</a></li>
-                    <li><a href="#">Laporan Utama</a></li>
-                    <li><a href="#">Agenda</a></li>
+                    @foreach ($sub_kategori as $i)
+                        <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>    
+                    @endforeach
                 </ul>
             </li>
             <li>
