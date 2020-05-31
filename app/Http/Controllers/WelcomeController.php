@@ -43,7 +43,7 @@ class WelcomeController extends Controller
         /* Report */
         $report = Artikel::orderBy('created_at', 'desc')->get();
 
-        return view('home', compact(
+        return view('welcome', compact(
             'trending_top',
             'trending_bottom',
             'trending_right',

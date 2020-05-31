@@ -13,24 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
+// Welcome
 Route::get('/', 'WelcomeController@index')->name('/');
+
+// Home
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Isi Artikel
-Route::get('artikel', 'ArtikelController@artikel')->name('artikel');
-
-// Koment
-Route::post('komen', 'KomenController@store')->name('komen.store');
+/* Authentication */
+Auth::routes();
 
 // Ketentuan Tulisan
 Route::get('/ketentuan-tulisan', function () {
     return view('pages.ketentuan-tulisan');
 });
+
+// Artikel
+Route::get('artikel', 'ArtikelController@artikel')->name('artikel');
+
+// Komen
+Route::post('komen', 'KomenController@store')->name('komen.store');
 
 // Kategori
 Route::get('kategori',  'KategoriController@kategori')->name('kategori');

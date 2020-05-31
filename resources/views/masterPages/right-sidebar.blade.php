@@ -22,7 +22,7 @@
                         <span class="fs-13" style="color: #FC5300 !important; text-transform: uppercase">
                             {{ $i->kategori->n_kategori }}
                         </span>
-                        <a href="single-blog.html">
+                        <a href="{{ route('artikel') .'?post='.$i->id}}">
                             <h3>{{ $i->judul }}</h3>
                         </a>
                         <i class="fas fa-clock fa-sm" style="color: gray"></i>
