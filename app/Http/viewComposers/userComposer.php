@@ -7,6 +7,7 @@ use App\Repositories\UserRepository;
 
 // Model
 use App\Models\Artikel;
+use App\Models\Sub_Kategori;
 
 class UserComposer
 {
@@ -20,6 +21,7 @@ class UserComposer
             ->orderBy('created_at', 'desc')
             ->get();
 
-        $view->with('header', $header)->with('right_sideBar', $right_sideBar);
+        $view->with('header', $header)
+            ->with('right_sideBar', $right_sideBar);
     }
 }

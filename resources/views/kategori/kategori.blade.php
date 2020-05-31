@@ -13,14 +13,14 @@
     </a>
     <i class="fa fa-angle-right"></i>
     <a class="m-l-8 m-r-8 f-red fs-14 non-hover" href="{{ route('/') }}">
-        <span>Headline</span>
+        <span>{{ $kategori->n_kategori }}</span>
     </a>
     <div class="m-t-10">
         <div style="margin-bottom: -15px">
             <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FC5300 !important"></i>
         </div>
-        <span class="fs-18 m-l-15" style="color: #FC5300 !important; font-weight: 700 !important "> 
-            KATEGORI : HEADLINE
+        <span class="fs-18 m-l-15" style="color: #FC5300 !important; font-weight: 700 !important;text-transform: uppercase !important"> 
+            KATEGORI : {{ $kategori->n_kategori }}
         </span>
     </div>
     <div class="m-t-15">   
@@ -53,10 +53,10 @@
                                 <i class="fas fa-clock m-l-10"></i>
                                 <span class="fs-13">{{ substr($i->created_at,0,10) }}</span>
                             </div>
-                            <div style="margin-bottom: -15px">
-                                {!! substr($i->isi,0,500) !!}
+                            <div class="m-t-10 fs-16">
+                                {{  substr(strip_tags($i->isi),0,500) }} […]
                             </div>
-                            <a href="{{ route('artikel') .'?post='.$i->id}}" class="f-blk fs-13 f-b">
+                            <a href="{{ route('artikel') .'?post='.$i->id}}" class="f-blk fs-13 f-b m-t-5">
                                 <span>READ MORE</span>
                                 <i class="fas fa-arrow-right"></i>
                             </a>

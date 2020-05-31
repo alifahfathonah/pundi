@@ -1,7 +1,7 @@
 <nav>                  
     <ul>    
         <li>
-            <a href="{{ route('kategori.headline') }}" style="font-size: 13px !important">HEADLINE <span class="fa fa-angle-down m-l-5"></span></a>
+            <a href="{{ route('kategori','kategori=1') }}" style="font-size: 13px !important">HEADLINE <span class="fa fa-angle-down m-l-5"></span></a>
             <ul class="submenu">
                 <li><a href="#">News</a></li>
                 <li><a href="#">Editorial</a></li>
@@ -10,7 +10,7 @@
             </ul>
         </li>
         <li>
-            <a href="#" style="font-size: 13px !important">INDEPTH <span class="fa fa-angle-down m-l-5"></a>
+            <a href="{{ route('kategori','kategori=2') }}" style="font-size: 13px !important">INDEPTH <span class="fa fa-angle-down m-l-5"></a>
             <ul class="submenu">
                 <li><a href="#">Essay</a></li>
                 <li><a href="#">Kolom</a></li>
@@ -19,7 +19,7 @@
             </ul>
         </li>
         <li>
-            <a href="#" style="font-size: 13px !important">KEBIJAKAN <span class="fa fa-angle-down m-l-5"></a>
+            <a href="{{ route('kategori','kategori=3') }}" style="font-size: 13px !important">KEBIJAKAN <span class="fa fa-angle-down m-l-5"></a>
             <ul class="submenu">
                 <li><a href="#">Analisis</a></li>
                 <li><a href="#">Suara Guru</a></li>
@@ -28,7 +28,7 @@
             </ul>
         </li>
         <li>
-            <a href="#" style="font-size: 13px !important">SERBA SERBI <span class="fa fa-angle-down m-l-5"></a>
+            <a href="{{ route('kategori','kategori=4') }}" style="font-size: 13px !important">SERBA SERBI <span class="fa fa-angle-down m-l-5"></a>
             <ul class="submenu">
                 <li><a href="#">Feature</a></li>
                 <li><a href="#">Motivasi</a></li>
@@ -38,7 +38,7 @@
             </ul>
         </li>
         <li>
-            <a href="#" style="font-size: 13px !important">KONSULTASI <span class="fa fa-angle-down m-l-5"></a>
+            <a href="{{ route('kategori','kategori=5') }}" style="font-size: 13px !important">KONSULTASI <span class="fa fa-angle-down m-l-5"></a>
             <ul class="submenu">
                 <li><a href="#">Curhat Remaja</a></li>
                 <li><a href="#">Curhat Anak</a></li>
