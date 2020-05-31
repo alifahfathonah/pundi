@@ -35,7 +35,7 @@
                         <span class="fas fa-clock m-l-15" style="color:gray"></span>
                         <span class="fs-14">{{ substr($artikel->created_at, 0, 40) }}</span>
                         <span class="fa fa-comments m-l-15" style="color:gray"></span>
-                        <span class="fs-14">0 comments</span>
+                        <span class="fs-14">{{ $komen->count() }} Komen</span>
                         <span class="fa fa-eye m-l-15" style="color: #FC5300"></span>
                         <span class="f-red fs-14">{{ $artikel->artikel_view }}</span>
                         <div class="m-b-30 m-t-30">
@@ -43,7 +43,7 @@
                         </div>
                         <ul class="blog-info-link mt-3 mb-4">
                             <li><a href="#"><i class="fa fa-user"></i>{{$artikel->kategori->n_kategori }}</a></li>
-                            <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                            <li><a href="#"><i class="fa fa-comments"></i> {{ $komen->count() }} komen</a></li>
                         </ul>
                         <div>
                             {!! $artikel->isi !!}
@@ -90,58 +90,66 @@
                 </div>
                 <!-- Komen -->
                 <div class="comments-area" style="margin-bottom: -50px">
-                    <p class="fs-24 f-b f-blk" style="margin-top: -20px">1 Komen</p>
-                    <div class="comment-list">
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="thumb">
-                                    <img src="assets/img/comment/comment_1.png" alt="">
-                                </div>
-                                <div class="desc">
-                                    <p class="comment">
-                                        Multiply sea night grass fourth day sea lesser rule open subdue female fill
-                                        which them
-                                        Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                                    </p>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex align-items-center">
-                                            <h5>
-                                                <a href="#">Emilly Blunt</a>
-                                            </h5>
-                                            <p class="date">December 4, 2017 at 3:12 pm </p>
-                                        </div>
-                                        <div class="reply-btn">
-                                            <a href="#" class="btn-reply text-uppercase">reply</a>
+                    <p class="fs-24 f-b f-blk" style="margin-top: -20px">{{ $komen->count() }} komen</p>
+                    @foreach ($komen as $i)
+                        <div class="comment-list">
+                            <div class="single-comment justify-content-between d-flex">
+                                <div class="user justify-content-between d-flex">
+                                    <div class="thumb">
+                                        @if ($i->user_id != null)
+                                        <img src="{{ asset('ava/' .$i->user->photo) }}" alt="">
+                                        @else
+                                        <img src="{{ asset('images/boy.png') }}" alt="">
+                                        @endif
+                                    </div>
+                                    <div class="desc">
+                                        <p class="comment">
+                                            {{ $i->comment }}
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <h5>
+                                                    <a href="#">{{ $i->nama }}</a>
+                                                </h5>
+                                                <i class="fas fa-clock fa-xs m-l-20" style="margin-right: -10px; color: gray"></i>
+                                                <span class="date" >{{ $i->created_at }}</span>
+                                            </div>
+                                            <div class="reply-btn">
+                                                {{-- <a href="#" class="btn-reply text-uppercase">reply</a> --}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
+                <!-- Insert Komen -->
                 <div class="comment-form">
                     <p class="fs-24 f-b f-blk" style="margin-top: -20px">Tinggalkan Balasan</p>
                     <i>Alamat email Anda tidak akan dipublikasikan. Ruas yang wajib ditandai *</i>
-                    <form class="form-contact comment_form m-t-20" action="#" id="commentForm">
+                    <form class="form-contact comment_form m-t-20" action="{{ route('komen.store') }}" method="post">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="artikel_id" value="{{ $artikel->id }}">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <input class="form-control" name="name" id="name" type="text" placeholder="Enter Name *">
+                                    <input class="form-control" type="text" name="nama" id="nama" placeholder="Enter Name *" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <input class="form-control" name="email" id="email" type="email" placeholder="Enter E-mail *">
+                                    <input class="form-control" type="email" name="email" id="email" placeholder="Enter E-mail *" required>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <input class="form-control" name="website" id="website" type="text" placeholder="Enter Website">
+                                    <input class="form-control" type="text" name="website" id="website" placeholder="Enter Website">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9" placeholder="Enter Comment *"></textarea>
+                                    <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9" placeholder="Enter Comment *" required></textarea>
                                 </div>
                             </div>
                         </div>

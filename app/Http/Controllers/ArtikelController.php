@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\Artikel;
 use App\Models\Kategori;
+use App\Models\Komen;
 use App\Models\Sub_Kategori;
 
 class ArtikelController extends Controller
@@ -65,8 +66,12 @@ class ArtikelController extends Controller
         // Counter pengungjung
         DB::update('UPDATE artikel SET artikel_view = artikel_view + 1 WHERE id = "' . $request->post . '"');
 
+        // Komen
+        $komen = Komen::select('id', 'artikel_id', 'user_id', 'nama', 'email', 'website', 'comment', 'created_at')->where('artikel_id', $request->post)->get();
+
         return view('pages.artikel', compact(
-            'artikel'
+            'artikel',
+            'komen'
         ));
     }
 }

@@ -24,6 +24,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Isi Artikel
 Route::get('artikel', 'ArtikelController@artikel')->name('artikel');
 
+// Koment
+Route::post('komen', 'KomenController@store')->name('komen.store');
+
 // Ketentuan Tulisan
 Route::get('/ketentuan-tulisan', function () {
     return view('pages.ketentuan-tulisan');
