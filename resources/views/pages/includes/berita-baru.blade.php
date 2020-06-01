@@ -45,7 +45,7 @@
                                                     <img src="{{ asset('post/'. $i->gambar) }}" height="300" alt="">
                                                 </div>
                                                 <div class="what-cap">
-                                                    <span class="color1">{{ $i->kategori->n_kategori }}</span>
+                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span>
                                                     <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
                                                     <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
                                                     <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
@@ -67,7 +67,9 @@
                                                     <img src="{{ asset('post/'.$i->gambar) }}" height="300" alt="">
                                                 </div>
                                                 <div class="what-cap">
-                                                    <span class="color1">{{ $i->kategori->n_kategori }}</span>
+                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span>
+                                                    <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
+                                                    <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
                                                     <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
@@ -87,7 +89,9 @@
                                                     <img src="{{ asset('post/'.$i->gambar) }}" height="300" alt="">
                                                 </div>
                                                 <div class="what-cap">
-                                                    <span class="color1">{{ $i->kategori->n_kategori }}</span>
+                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span>
+                                                    <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
+                                                    <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
                                                     <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
@@ -107,7 +111,9 @@
                                                     <img src="{{ asset('post/'.$i->gambar) }}" height="300" alt="">
                                                 </div>
                                                 <div class="what-cap">
-                                                    <span class="color1">{{ $i->kategori->n_kategori }}</span>
+                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span>
+                                                    <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
+                                                    <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
                                                     <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
@@ -127,7 +133,9 @@
                                                     <img src="{{ asset('post/'.$i->gambar) }}" height="300" alt="">
                                                 </div>
                                                 <div class="what-cap">
-                                                    <span class="color1">{{ $i->kategori->n_kategori }}</span>
+                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span>
+                                                    <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
+                                                    <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
                                                     <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
@@ -147,7 +155,9 @@
                                                     <img src="{{ asset('post/'.$i->gambar) }}" height="300" alt="">
                                                 </div>
                                                 <div class="what-cap">
-                                                    <span class="color1">{{ $i->kategori->n_kategori }}</span>
+                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span>
+                                                    <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
+                                                    <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
                                                     <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>

@@ -20,7 +20,7 @@
                         @foreach ($berita_mingguan->take(5) as $i)
                             <div class="weekly-single">
                                 <div class="weekly-img">
-                                    <img src="{{ asset('post/' . $i->gambar) }}" width="" height="300" alt="">
+                                    <img src="{{ asset('post/' . $i->gambar) }}" width="" height="350" alt="">
                                 </div>
                                 <div class="weekly-caption">
                                     <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">{{ $i->kategori->n_kategori }}</span>

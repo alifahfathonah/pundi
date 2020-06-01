@@ -4,46 +4,41 @@
             <li>
                 <a href="#">Headline</a>
                 <ul class="submenu">
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Editorial</a></li>
-                    <li><a href="#">Laporan Utama</a></li>
-                    <li><a href="#">Agenda</a></li>
+                    @foreach ($sub_kategori as $i)
+                        <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>    
+                    @endforeach
                 </ul>
             </li>
             <li>
                 <a href="#">Indepth</a>
                 <ul class="submenu">
-                    <li><a href="#">Essay</a></li>
-                    <li><a href="#">Kolom</a></li>
-                    <li><a href="#">Interview</a></li>
-                    <li><a href="#">Litera</a></li>
+                    @foreach ($sub_indepth as $i)
+                        <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>
+                    @endforeach
                 </ul>
             </li>
             <li>
                 <a href="#">Kebijakan</a>
                 <ul class="submenu">
-                    <li><a href="#">Analisis</a></li>
-                    <li><a href="#">Suara Guru</a></li>
-                    <li><a href="#">Suara Dosen</a></li>
-                    <li><a href="#">Suara Mahasiswa</a></li>
+                    @foreach ($sub_kebijakan as $i)
+                        <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>
+                    @endforeach
                 </ul>
             </li>
             <li>
                 <a href="#">Serba serbi</a>
                 <ul class="submenu">
-                    <li><a href="#">Feature</a></li>
-                    <li><a href="#">Motivasi</a></li>
-                    <li><a href="#">Tokoh</a></li>
-                    <li><a href="#">Liputan Khusus</a></li>
-                    <li><a href="#">Kreativitas</a></li>
+                    @foreach ($sub_serbaSerbi as $i)
+                        <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>
+                    @endforeach
                 </ul>
             </li>
             <li>
                 <a href="#">Konsultasi</a>
                 <ul class="submenu">
-                    <li><a href="#">Curhat Remaja</a></li>
-                    <li><a href="#">Curhat Anak</a></li>
-                    <li><a href="#">Kolom Pertanyaan</a></li>
+                    @foreach ($sub_konsultasi as $i)
+                        <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>
+                    @endforeach
                 </ul>
             </li>
             @if (Auth::user() != null)

@@ -26,7 +26,7 @@
     <div class="m-t-15">   
         @foreach ($sub_kategori as $i)
         <span class="bdr-5 fs-11 f-b m-l-10" style="background-color: #FC5300 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
-            <a href="">{{ $i->n_sub_kategori}}</a>
+            <a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori}}</a>
         </span>
         @endforeach
     </div>

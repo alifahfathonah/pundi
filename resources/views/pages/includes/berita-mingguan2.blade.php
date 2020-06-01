@@ -23,7 +23,7 @@
                                     <img src="{{ asset('post/'. $i->gambar) }}" height="200" alt="">
                                 </div>
                                 <div class="weekly2-caption">
-                                    <span class="color1">{{ $i->kategori->n_kategori }}</span><br>
+                                    <span style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span><br>
                                     <i class="fas fa-clock fa-xs" style="color: gray"></i>
                                     <span style="margin-left: -10px !important" style="color: gray">{{ $i->created_at }}</span>
                                     <h4 style="margin-top: -15px !important"><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
