@@ -4,7 +4,7 @@
             <li>
                 <a href="#">Headline</a>
                 <ul class="submenu">
-                    @foreach ($sub_headline as $i)
+                    @foreach ($header as $i)
                         <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>    
                     @endforeach
                 </ul>
