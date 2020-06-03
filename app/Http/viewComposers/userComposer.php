@@ -19,8 +19,8 @@ class UserComposer
         // Get data post terbaru
         $header = Artikel::select('id', 'judul')->orderBy('created_at', 'desc')->get();
         // Sub Headline
-        $sub_kategori = Sub_Kategori::wherekategori_id(1)->get();
-        // Sub Indepth
+        $sub_headline = Sub_Kategori::wherekategori_id(1)->get();
+        // Sub Indepth 
         $sub_indept = Sub_Kategori::wherekategori_id(2)->get();
         // Sub Kebijakan
         $sub_kebijakan = Sub_Kategori::wherekategori_id(3)->get();
@@ -38,11 +38,11 @@ class UserComposer
             ->get();
 
         $view->with('header', $header)
-            ->with('right_sideBar', $right_sideBar)
-            ->with('sub_kategori', $sub_kategori)
+            ->with('sub_headline', $sub_headline)
             ->with('sub_indepth', $sub_indept)
             ->with('sub_kebijakan', $sub_kebijakan)
             ->with('sub_serbaSerbi', $sub_serbaSerbi)
-            ->with('sub_konsultasi', $sub_konsultasi);
+            ->with('sub_konsultasi', $sub_konsultasi)
+            ->with('right_sideBar', $right_sideBar);
     }
 }
