@@ -11,7 +11,7 @@ class ComposerServiceProvider extends ServiceProvider
     {
         // Using class based composers...
         View::composer(
-            ['masterPages.headers.header', 'masterPages.right-sidebar'],
+            ['masterPages.headers.header', 'masterPages.right-sidebar', 'masterPages.headers.nav-menu'],
             'App\Http\ViewComposers\userComposer'
         );
     }
