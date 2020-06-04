@@ -3,7 +3,7 @@
         <li>
             <a href="{{ route('kategori','kategori=1') }}" style="font-size: 13px !important">HEADLINE <span class="fa fa-angle-down m-l-5"></span></a>
             <ul class="submenu">
-                @foreach ($header as $i)
+                @foreach ($sub_headline as $i)
                     <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>    
                 @endforeach
             </ul>
