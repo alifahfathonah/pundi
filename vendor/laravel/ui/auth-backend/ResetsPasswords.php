@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
+// Store
+use App\Store\index;
+
 trait ResetsPasswords
 {
     use RedirectsUsers;
@@ -26,7 +29,22 @@ trait ResetsPasswords
      */
     public function showResetForm(Request $request, $token = null)
     {
-        return view('auth.passwords.reset')->with(
+        /**
+         * Variabel for header
+         */
+        $sub_headline = index::subHeadline();
+        $sub_indepth  = index::subIndepth();
+        $sub_kebijakan = index::subKebijakan();
+        $sub_serbaSerbi = index::subSerbaSerbi();
+        $sub_konsultasi = index::subKebijakan();
+
+        return view('auth.passwords.reset', compact(
+            'sub_headline',
+            'sub_indepth',
+            'sub_kebijakan',
+            'sub_serbaSerbi',
+            'sub_konsultasi'
+        ))->with(
             ['token' => $token, 'email' => $request->email]
         );
     }

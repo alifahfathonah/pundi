@@ -5,6 +5,9 @@ namespace Illuminate\Foundation\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
+// Store
+use App\Store\index;
+
 trait ConfirmsPasswords
 {
     use RedirectsUsers;
@@ -16,7 +19,22 @@ trait ConfirmsPasswords
      */
     public function showConfirmForm()
     {
-        return view('auth.passwords.confirm');
+        /**
+         * Variabel for header
+         */
+        $sub_headline = index::subHeadline();
+        $sub_indepth  = index::subIndepth();
+        $sub_kebijakan = index::subKebijakan();
+        $sub_serbaSerbi = index::subSerbaSerbi();
+        $sub_konsultasi = index::subKebijakan();
+
+        return view('auth.passwords.confirm', compact(
+            'sub_headline',
+            'sub_indepth',
+            'sub_kebijakan',
+            'sub_serbaSerbi',
+            'sub_konsultasi'
+        ));
     }
 
     /**
@@ -32,8 +50,8 @@ trait ConfirmsPasswords
         $this->resetPasswordConfirmationTimeout($request);
 
         return $request->wantsJson()
-                    ? new Response('', 204)
-                    : redirect()->intended($this->redirectPath());
+            ? new Response('', 204)
+            : redirect()->intended($this->redirectPath());
     }
 
     /**
