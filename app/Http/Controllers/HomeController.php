@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 // Models
 use App\Models\Artikel;
 
+// Store
+use App\Store\index;
+
 class HomeController extends Controller
 {
     // Middleware
@@ -16,7 +19,9 @@ class HomeController extends Controller
     // Index
     public function index()
     {
-        /* Trending */
+        /**
+         * Section 1
+         */
         // Trending Top
         $trending_top = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')->orderBy('created_at', 'desc')->first();
         // Trending Bottom
@@ -29,10 +34,14 @@ class HomeController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
-        /* Indept Of Issues */
+        /**
+         * Section 2
+         */
         $berita_mingguan = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')->get();
 
-        /* Berita Terbaru */
+        /**
+         * Section 3
+         */
         // All
         $all = Artikel::orderBy('created_at', 'desc')->get();
         // Headline
@@ -46,22 +55,38 @@ class HomeController extends Controller
         // Konsultasi
         $konsultasi = Artikel::where('kategori_id', 5)->get();
 
-        /* Report */
+        /**
+         * Section 4
+         */
+        // Report
         $report = Artikel::orderBy('created_at', 'desc')->get();
+
+        /**
+         * Variabel for header
+         */
+        $sub_headline = index::subHeadline();
+        $sub_indepth  = index::subIndepth();
+        $sub_kebijakan = index::subKebijakan();
+        $sub_serbaSerbi = index::subSerbaSerbi();
+        $sub_konsultasi = index::subKebijakan();
 
         return view('home', compact(
             'trending_top',
             'trending_bottom',
             'trending_right',
             'berita_mingguan',
-            'konsultasi',
             'all',
             'headline',
             'indepth',
             'kebijakan',
             'serbaSerbi',
             'konsultasi',
-            'report'
+            'report',
+            'sub_headline',
+            'sub_indepth',
+            'sub_kebijakan',
+            'sub_serbaSerbi',
+            'sub_konsultasi'
         ));
     }
 }

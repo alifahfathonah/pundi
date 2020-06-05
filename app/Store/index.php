@@ -7,15 +7,36 @@ use App\Models\Artikel;
 
 class index
 {
-    public static function header()
+    /**
+     * Passing for view header
+     */
+    public function subHeadline()
     {
-        $var = Artikel::select('id', 'judul')->orderBy('created_at', 'desc')->get()->toArray();
-
-        return $var;
+        $sub_headline = Sub_Kategori::wherekategori_id(1)->get();
+        return $sub_headline;
     }
 
-    public function rightSideBar()
+    public function subIndepth()
     {
-        $var = Artikel::select('id', '');
+        $sub_indept = Sub_Kategori::wherekategori_id(2)->get();
+        return $sub_indept;
+    }
+
+    public function subKebijakan()
+    {
+        $sub_kebijakan = Sub_Kategori::wherekategori_id(3)->get();
+        return $sub_kebijakan;
+    }
+
+    public function subSerbaSerbi()
+    {
+        $sub_serbaSerbi = Sub_Kategori::wherekategori_id(4)->get();
+        return $sub_serbaSerbi;
+    }
+
+    public function subKonsultasi()
+    {
+        $sub_konsultasi = Sub_Kategori::wherekategori_id(5)->get();
+        return $sub_konsultasi;
     }
 }
