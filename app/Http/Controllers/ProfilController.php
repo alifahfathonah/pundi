@@ -13,8 +13,22 @@ class ProfilController extends Controller
     {
         $post = Artikel::where('penulis_id', Auth::user()->id)->get();
 
+        /**
+         * Variabel for header
+         */
+        $sub_headline = index::subHeadline();
+        $sub_indepth  = index::subIndepth();
+        $sub_kebijakan = index::subKebijakan();
+        $sub_serbaSerbi = index::subSerbaSerbi();
+        $sub_konsultasi = index::subKebijakan();
+
         return view('pages.profil', compact(
-            'post'
+            'post',
+            'sub_headline',
+            'sub_indepth',
+            'sub_kebijakan',
+            'sub_serbaSerbi',
+            'sub_konsultasi'
         ));
     }
 }

@@ -24,10 +24,24 @@ class KategoriController extends Controller
         $artikel = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'penulis_id', 'gambar', 'isi', 'tag', 'artikel_view', 'created_at')
             ->where('kategori_id', $request->kategori)->paginate(10);
 
+        /**
+         * Variabel for header
+         */
+        $sub_headline = index::subHeadline();
+        $sub_indepth  = index::subIndepth();
+        $sub_kebijakan = index::subKebijakan();
+        $sub_serbaSerbi = index::subSerbaSerbi();
+        $sub_konsultasi = index::subKebijakan();
+
         return view('pages.kategori.kategori', compact(
             'kategori',
             'sub_kategori',
-            'artikel'
+            'artikel',
+            'sub_headline',
+            'sub_indepth',
+            'sub_kebijakan',
+            'sub_serbaSerbi',
+            'sub_konsultasi'
         ));
     }
 
@@ -40,9 +54,23 @@ class KategoriController extends Controller
         $artikel = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'penulis_id', 'gambar', 'isi', 'tag', 'artikel_view', 'created_at')
             ->where('sub_kategori_id', $request->sub_kategori)->paginate(10);
 
+        /**
+         * Variabel for header
+         */
+        $sub_headline = index::subHeadline();
+        $sub_indepth  = index::subIndepth();
+        $sub_kebijakan = index::subKebijakan();
+        $sub_serbaSerbi = index::subSerbaSerbi();
+        $sub_konsultasi = index::subKebijakan();
+
         return view('pages.kategori.sub_kategori', compact(
             'sub_kategori',
-            'artikel'
+            'artikel',
+            'sub_headline',
+            'sub_indepth',
+            'sub_kebijakan',
+            'sub_serbaSerbi',
+            'sub_konsultasi'
         ));
     }
 }

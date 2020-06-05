@@ -11,6 +11,9 @@ use App\Models\Kategori;
 use App\Models\Komen;
 use App\Models\Sub_Kategori;
 
+// Store
+use App\Store\index;
+
 class ArtikelController extends Controller
 {
     public function index(Request $request)
@@ -22,10 +25,24 @@ class ArtikelController extends Controller
         // Sub Kategori
         $sub_kategori = Sub_Kategori::select('id', 'kategori_id', 'n_sub_kategori')->where('kategori_id', $kategori_id)->get();
 
+        /**
+         * Variabel for header
+         */
+        $sub_headline = index::subHeadline();
+        $sub_indepth  = index::subIndepth();
+        $sub_kebijakan = index::subKebijakan();
+        $sub_serbaSerbi = index::subSerbaSerbi();
+        $sub_konsultasi = index::subKebijakan();
+
         return view('pages.post-artikel', compact(
             'kategori',
             'kategori_id',
-            'sub_kategori'
+            'sub_kategori',
+            'sub_headline',
+            'sub_indepth',
+            'sub_kebijakan',
+            'sub_serbaSerbi',
+            'sub_konsultasi'
         ));
     }
 
@@ -69,9 +86,23 @@ class ArtikelController extends Controller
         // Komen
         $komen = Komen::select('id', 'artikel_id', 'user_id', 'nama', 'email', 'website', 'comment', 'created_at')->where('artikel_id', $request->post)->get();
 
+        /**
+         * Variabel for header
+         */
+        $sub_headline = index::subHeadline();
+        $sub_indepth  = index::subIndepth();
+        $sub_kebijakan = index::subKebijakan();
+        $sub_serbaSerbi = index::subSerbaSerbi();
+        $sub_konsultasi = index::subKebijakan();
+
         return view('pages.artikel', compact(
             'artikel',
-            'komen'
+            'komen',
+            'sub_headline',
+            'sub_indepth',
+            'sub_kebijakan',
+            'sub_serbaSerbi',
+            'sub_konsultasi'
         ));
     }
 }
