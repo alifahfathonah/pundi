@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Auth;
 // Model
 use App\Models\Artikel;
 
+// Store
+use App\Store\index;
+
 class ProfilController extends Controller
 {
     public function index()

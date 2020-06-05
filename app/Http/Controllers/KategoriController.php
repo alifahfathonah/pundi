@@ -9,6 +9,9 @@ use App\Models\Artikel;
 use App\Models\Kategori;
 use App\Models\Sub_Kategori;
 
+// Store
+use App\Store\index;
+
 class KategoriController extends Controller
 {
     // Kategori
