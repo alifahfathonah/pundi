@@ -2764,7 +2764,7 @@ hr {
 
 /* Lebar Header Sticky */
 .header-sticky.sticky-bar.sticky .main-menu ul>li>a {
-    padding: 20px 15px
+    padding: 30px 15px
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2813,9 +2813,11 @@ hr {
 
 .mobile_menu {
     background-color: white !important;
-    position: absolute;
+    /* position: absolute; */
     right: 0px;
     width: 100%;
+    padding: 5px 0px;
+    height: 200;
     z-index: 99
 }
 
@@ -2829,7 +2831,7 @@ hr {
 
 .sticky-logo {
     display: none !important;
-    margin-left: -15px;
+    /* margin-left: -15px; */
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -2840,7 +2842,8 @@ hr {
 
 @media (max-width: 767px) {
     .sticky-logo {
-        display: block !important
+        display: block !important;
+        margin-top: 15px;
     }
 }
 
@@ -2866,8 +2869,8 @@ hr {
 }
 
 .trending-area .trending-main .trending-top .trend-top-img img {
-    width: 100%;
-    border-radius: 5px 
+    width: 100%; 
+    border-radius: 5% 
 }
 
 .trending-area .trending-main .trending-top .trend-top-img .trend-top-cap {
@@ -2917,10 +2920,20 @@ hr {
 }
 
 .trending-area .trending-main .trending-bottom .single-bottom .trend-bottom-img img {
-    width: 100%;
+    /* width: 100%; */
     border-radius: 5px;
     transform: scale(1);
     transition: all 0.5s ease-out 0s
+}
+
+@media (max-width: 767px) {
+    .trending-area .trending-main .trending-bottom .single-bottom .trend-bottom-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        transform: scale(1);
+        transition: all 0.5s ease-out 0s
+    }
 }
 
 .trending-area .trending-main .trending-bottom .single-bottom .trend-bottom-cap span {

@@ -4,17 +4,17 @@
         <!-- Header -->
         @include('masterPages.headers.header')
 
-        <!-- Page Trending -->
+        <!-- Section 1 : Trending Section -->
         @include('pages.includes.trending')
 
-        <!-- Weekely Trending --> 
-        @include('pages.includes.berita-mingguan')
+        <!-- Section 2 : Indepth Of Issues --> 
+        @include('pages.includes.indepth-of-issues')
 
-        <!-- Berita Terbaru -->
-        @include('pages.includes.berita-baru')
+        <!-- Section 3 :  -->
+        @include('pages.includes.berita-terbaru')
 
         <!-- Berita Mingguan 2 -->
-        @include('pages.includes.berita-mingguan2')
+        @include('pages.includes.report')
         
         <!-- Foote -->
         @include('masterPages.footers.footer')

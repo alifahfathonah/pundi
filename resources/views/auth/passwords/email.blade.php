@@ -10,7 +10,7 @@
                 <div class="blog_left_sidebar">
                     <!-- Notif sukses -->
                     @if (session('status'))
-                        <div class="alert bdr-20 alert-success" style="padding: 0.5px" role="alert">
+                        <div class="alert bdr-5 alert-success" style="padding: 0.5px" role="alert">
                             <p class="text-center m-t-20">
                                 Cek email Anda untuk mengganti password.
                             </p>

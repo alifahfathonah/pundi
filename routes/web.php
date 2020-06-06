@@ -23,9 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 // Ketentuan Tulisan
-Route::get('/ketentuan-tulisan', function () {
-    return view('pages.ketentuan-tulisan');
-});
+Route::get('/ketentuan-tulisan', 'KetentuanTulisanController@index');
 
 // Artikel
 Route::get('artikel', 'ArtikelController@artikel')->name('artikel');

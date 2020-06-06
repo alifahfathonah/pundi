@@ -14,21 +14,28 @@
                     </div>
                 </div>
             </div>
+            <!-- Section Content -->
             <div class="row">
                 <div class="col-12">
                     <div class="weekly-news-active dot-style d-flex dot-style">
-                        @foreach ($berita_mingguan->take(5) as $i)
+                        @foreach ($indepth_of_issues as $i)
                             <div class="weekly-single">
+                                <!-- Gambar -->
                                 <div class="weekly-img">
                                     <img src="{{ asset('post/' . $i->gambar) }}" width="" height="350" alt="">
                                 </div>
                                 <div class="weekly-caption">
-                                    <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">{{ $i->kategori->n_kategori }}</span>
+                                    <!-- Kategori -->
+                                    <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">
+                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a>
+                                    </span>
+                                    <!-- Judul -->
                                     <h4>
                                         <a href="{{ route('artikel') .'?post='.$i->id}}">
                                             {{ $i->judul }}
                                         </a>
                                     </h4>
+                                    <!-- Penulis dan Waktu -->
                                     <div style="color: gray">
                                         <i class="fa fa-user" style="background-color: transparent !important"></i>
                                         <a href="#" class="fs-13 m-l-5" style="background-color: transparent !important; color:gray">

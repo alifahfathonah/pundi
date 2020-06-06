@@ -20,46 +20,41 @@ class HomeController extends Controller
     public function index()
     {
         /**
-         * Section 1
+         * Section 1 : Trending
          */
         // Trending Top
-        $trending_top = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')->orderBy('created_at', 'desc')->first();
+        $trending_top = Artikel::wherestatus(1)->orderBy('created_at', 'desc')->take(3)->get();
         // Trending Bottom
-        $trending_bottom  = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')
-            ->orderBy('created_at', 'desc')
-            ->take(3)
-            ->get();
+        $trending_bottom  = Artikel::wherestatus(1)->orderBy('created_at', 'desc')->take(3)->get();
         // Trending Right
-        $trending_right = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')
-            ->orderBy('created_at', 'desc')
-            ->get();
+        $trending_right = Artikel::wherestatus(1)->orderBy('created_at', 'desc')->take(5)->get();
 
         /**
-         * Section 2
+         * Section 2 : Indepth Of Issues
          */
-        $berita_mingguan = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')->get();
+        $indepth_of_issues = Artikel::wherestatus(1)->take(5)->get();
 
         /**
-         * Section 3
+         * Section 3 : Berita Terbaru
          */
         // All
-        $all = Artikel::orderBy('created_at', 'desc')->get();
+        $all = Artikel::orderBy('created_at', 'desc')->wherestatus(1)->take(4)->get();
         // Headline
-        $headline = Artikel::where('kategori_id', 1)->get();
+        $headline = Artikel::where('kategori_id', 1)->wherestatus(1)->take(4)->get();
         // Indepth
-        $indepth = Artikel::where('kategori_id', 2)->get();
+        $indepth = Artikel::where('kategori_id', 2)->wherestatus(1)->take(4)->get();
         // Kebijakan
-        $kebijakan = Artikel::where('kategori_id', 3)->get();
+        $kebijakan = Artikel::where('kategori_id', 3)->wherestatus(1)->take(4)->get();
         // Serba - Serbi
-        $serbaSerbi = Artikel::where('kategori_id', 4)->get();
+        $serbaSerbi = Artikel::where('kategori_id', 4)->wherestatus(1)->take(4)->get();
         // Konsultasi
-        $konsultasi = Artikel::where('kategori_id', 5)->get();
+        $konsultasi = Artikel::where('kategori_id', 5)->wherestatus(1)->take(4)->get();
 
         /**
-         * Section 4
+         * Section 4 : Report
          */
         // Report
-        $report = Artikel::orderBy('created_at', 'desc')->get();
+        $report = Artikel::orderBy('created_at', 'desc')->wherestatus(1)->take(6)->get();
 
         /**
          * Variabel for header
@@ -74,7 +69,7 @@ class HomeController extends Controller
             'trending_top',
             'trending_bottom',
             'trending_right',
-            'berita_mingguan',
+            'indepth_of_issues',
             'all',
             'headline',
             'indepth',

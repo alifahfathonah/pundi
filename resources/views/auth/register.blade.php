@@ -8,7 +8,6 @@
         <div class="row">
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
-
                     <form action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="" >
@@ -53,7 +52,7 @@
                             <hr style="margin-top: -10px">
                             <!-- Name -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label f-red-dark" for="">USERNAME <span class="text-danger ml-1">*</span></label>
+                                <label class="col-sm-4 f-b col-form-label f-red-dark" for="">Nama<span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
                                     <input type="text" class="input single-input-primary" name="name" value="{{ old('name') }}" required oninvalid="this.setCustomValidity('Username tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
@@ -74,9 +73,9 @@
                             </div>
                             <!-- Nama Yang Ditampilkan -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label f-red-dark" for="">NAMA YANG DITAMPILKAN</label>
+                                <label class="col-sm-4 f-b col-form-label f-red-dark" for="">USERNAME <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="input single-input-primary" name="username" value="{{ old('username') }}"/>
+                                    <input type="text" class="input single-input-primary" name="username" value="{{ old('username') }}" required oninvalid="this.setCustomValidity('Username tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
                             <!-- Gambar User -->
@@ -144,7 +143,6 @@
                             </a>
                         </p>
                     </form>
-
                 </div>
             </div>
             <!-- sideBar -->

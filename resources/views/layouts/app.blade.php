@@ -78,13 +78,6 @@
     <script src="{{ asset('./assets/js/jquery.nice-select.min.js') }}"></script>
     <script src="{{ asset('./assets/js/jquery.sticky.js') }}"></script>
 
-    <!-- contact js -->
-    <script src="{{ asset('./assets/js/contact.js') }}"></script>
-    <script src="{{ asset('./assets/js/jquery.form.js') }}"></script>
-    <script src="{{ asset('./assets/js/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('./assets/js/mail-script.js') }}"></script>
-    <script src="{{ asset('./assets/js/jquery.ajaxchimp.min.js') }}"></script>
-
     <!-- Jquery Plugins, main Jquery -->
     <script src="{{ asset('./assets/js/plugins.js') }}"></script>
     <script src="{{ asset('./assets/js/main.js') }}"></script>

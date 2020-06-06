@@ -3,6 +3,7 @@
         <div class="row">
         <div class="col-lg-8" style="margin-top: -10px">
             <div class="row d-flex justify-content-between">
+                <!-- Section Title -->
                 <div class="col-lg-3 col-md-3">
                     <div class="section-tittle mb-30">
                         <div style="margin-bottom: -15px">
@@ -30,6 +31,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Section Content -->
             <div class="row">
                 <div class="col-12">
                     <!-- Nav Card -->
@@ -38,16 +40,22 @@
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">           
                             <div class="whats-news-caption">
                                 <div class="row">
-                                    @foreach ($all->take(4) as $i)
+                                    @foreach ($all as $i)
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-what-news mb-100">
+                                                <!-- Gambar -->
                                                 <div class="what-img">
                                                     <img src="{{ asset('post/'. $i->gambar) }}" height="300" alt="">
                                                 </div>
                                                 <div class="what-cap">
-                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span>
+                                                    <!-- Kategori -->
+                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">
+                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
+                                                    </span>
+                                                    <!-- Waktu -->
                                                     <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
                                                     <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
+                                                    <!-- Judul -->
                                                     <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
@@ -63,13 +71,19 @@
                                     @foreach ($headline->take(4) as $i)
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-what-news mb-100">
+                                                <!-- Gambar -->
                                                 <div class="what-img">
-                                                    <img src="{{ asset('post/'.$i->gambar) }}" height="300" alt="">
+                                                    <img src="{{ asset('post/'. $i->gambar) }}" height="300" alt="">
                                                 </div>
                                                 <div class="what-cap">
-                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span>
+                                                    <!-- Kategori -->
+                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">
+                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
+                                                    </span>
+                                                    <!-- Waktu -->
                                                     <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
                                                     <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
+                                                    <!-- Judul -->
                                                     <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
@@ -85,13 +99,19 @@
                                     @foreach ($indepth as $i)
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-what-news mb-100">
+                                                <!-- Gambar -->
                                                 <div class="what-img">
-                                                    <img src="{{ asset('post/'.$i->gambar) }}" height="300" alt="">
+                                                    <img src="{{ asset('post/'. $i->gambar) }}" height="300" alt="">
                                                 </div>
                                                 <div class="what-cap">
-                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span>
+                                                    <!-- Kategori -->
+                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">
+                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
+                                                    </span>
+                                                    <!-- Waktu -->
                                                     <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
                                                     <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
+                                                    <!-- Judul -->
                                                     <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
@@ -107,13 +127,19 @@
                                     @foreach ($kebijakan as $i)
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-what-news mb-100">
+                                                <!-- Gambar -->
                                                 <div class="what-img">
-                                                    <img src="{{ asset('post/'.$i->gambar) }}" height="300" alt="">
+                                                    <img src="{{ asset('post/'. $i->gambar) }}" height="300" alt="">
                                                 </div>
                                                 <div class="what-cap">
-                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span>
+                                                    <!-- Kategori -->
+                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">
+                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
+                                                    </span>
+                                                    <!-- Waktu -->
                                                     <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
                                                     <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
+                                                    <!-- Judul -->
                                                     <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
@@ -129,13 +155,19 @@
                                     @foreach ($serbaSerbi as $i)
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-what-news mb-100">
+                                                <!-- Gambar -->
                                                 <div class="what-img">
-                                                    <img src="{{ asset('post/'.$i->gambar) }}" height="300" alt="">
+                                                    <img src="{{ asset('post/'. $i->gambar) }}" height="300" alt="">
                                                 </div>
                                                 <div class="what-cap">
-                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span>
+                                                    <!-- Kategori -->
+                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">
+                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
+                                                    </span>
+                                                    <!-- Waktu -->
                                                     <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
                                                     <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
+                                                    <!-- Judul -->
                                                     <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>
@@ -151,13 +183,19 @@
                                     @foreach ($konsultasi as $i)
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-what-news mb-100">
+                                                <!-- Gambar -->
                                                 <div class="what-img">
-                                                    <img src="{{ asset('post/'.$i->gambar) }}" height="300" alt="">
+                                                    <img src="{{ asset('post/'. $i->gambar) }}" height="300" alt="">
                                                 </div>
                                                 <div class="what-cap">
-                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span>
+                                                    <!-- Kategori -->
+                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">
+                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
+                                                    </span>
+                                                    <!-- Waktu -->
                                                     <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
                                                     <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
+                                                    <!-- Judul -->
                                                     <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                                 </div>
                                             </div>

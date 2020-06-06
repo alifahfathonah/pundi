@@ -1,7 +1,7 @@
 <div class="weekly2-news-area  weekly2-pading gray-bg" style="margin-top: -30px !important">
     <div class="container">
         <div class="weekly2-wrapper" style="margin-top: -90px !important">
-            <!-- section Tittle -->
+            <!-- Section Tittle -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle mb-30">
@@ -14,18 +14,25 @@
                     </div>
                 </div>
             </div>
+            <!-- Section Content -->
             <div class="row" style="margin-top: -10px !important">
                 <div class="col-12">
                     <div class="weekly2-news-active dot-style d-flex dot-style">
                         @foreach ($report as $i)
                             <div class="weekly2-single">
+                                <!-- Gambar -->
                                 <div class="weekly2-img">
                                     <img src="{{ asset('post/'. $i->gambar) }}" height="200" alt="">
                                 </div>
                                 <div class="weekly2-caption">
-                                    <span style="background-color: #FC5300; color: white">{{ $i->kategori->n_kategori }}</span><br>
+                                    <!-- Kategori -->
+                                    <span style="background-color: #FC5300; color: white">
+                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
+                                    </span><br>
+                                    <!-- Waktu -->
                                     <i class="fas fa-clock fa-xs" style="color: gray"></i>
                                     <span style="margin-left: -10px !important" style="color: gray">{{ $i->created_at }}</span>
+                                    <!-- Judul -->
                                     <h4 style="margin-top: -15px !important"><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                 </div>
                             </div> 

@@ -63,6 +63,14 @@
                 </li>
             @else 
             <li>
+                <a href="#" >Kirim Tulisan</a>
+                <ul class="submenu">
+                    <li><a href="{{ url('ketentuan-tulisan') }}">Ketentuan Tulisan</a></li>
+                    <li><a href="{{ route('register') }}">Registrasi</a></li>
+                    <li><a href="{{ route('login') }}">Login</a></li>
+                </ul>
+            </li>
+            <li>
                 <a href="{{ route('login') }}">
                     <button class="genric-btn primary btn-block">Login</button>
                 </a>

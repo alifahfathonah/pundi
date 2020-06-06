@@ -11,24 +11,7 @@
     color: black;
 }
 
-/* Fonts */
-.josefin {
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-.pacifico {
-    font-family: 'Pacifico', cursive;
-}
-
-.sans {
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.apple {
-    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
-}
-
-/* Font */
+/* Style Font */
 .f-b {
     font-weight: bolder;
 }
@@ -41,11 +24,11 @@
     color: white !important;
 }
 
-.f-red-dark{
+.f-red-dark {
     color: #5D4063;
 }
 
-.f-red{
+.f-red {
     color: #F74854;
 }
 
@@ -116,27 +99,28 @@
 
 /* Kategori */
 @media (max-width: 767px) {
-    .kategori{
+    .kategori {
         margin-left: 14px !important;
         margin-top: 10px !important;
         margin-right: 15px !important;
     }
-    .kategori1{
+
+    .kategori1 {
         margin-left: 14px !important;
         margin-top: 10px !important;
         margin-right: 15px !important;
     }
 }
 
-@media (max-width: 767px){
-    .test{
+@media (max-width: 767px) {
+    .test {
         font-size: 10px !important;
         color: black;
     }
 }
 
 /* Artikel */
-.title{
+.title {
     font-weight: 700;
     font-size: 36px;
     line-height: 42px;
@@ -147,6 +131,20 @@
     color: #F74854;
 }
 
-.hover-blk:hover{
+.hover-blk:hover {
     color: black;
+}
+
+.vertical-line {
+    border-left: 0.5px rgb(255, 255, 255) solid;
+    margin-right: -10px;
+    margin-left: 10px
+}
+
+.color-gradient1 {
+    background: linear-gradient(to right, #F8476C, #FE7D3D) !important;
+}
+
+.capital {
+    text-transform: uppercase !important;
 }
