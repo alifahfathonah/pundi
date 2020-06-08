@@ -138,9 +138,7 @@
     document.getElementById("tanggal").innerHTML = Tanggal;
 
     // Bulan
-    arrbulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober",
-        "November", "Desember"
-    ];
+    arrbulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
     Bulan = new Date().getMonth();
     document.getElementById("bulan").innerHTML = arrbulan[Bulan];
 

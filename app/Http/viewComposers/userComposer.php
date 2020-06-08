@@ -15,7 +15,10 @@ class UserComposer
          * View Header
          */
         // Get data post terbaru
-        $header = Artikel::select('id', 'judul')->wherestatus(1)->orderBy('created_at', 'desc')->get();
+        $header = Artikel::select('id', 'judul')
+            ->wherestatus(1)
+            ->orderBy('created_at', 'desc')
+            ->get();
 
         /**
          * View Riht Sidebar
