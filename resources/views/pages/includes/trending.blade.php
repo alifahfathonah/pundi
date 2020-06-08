@@ -16,8 +16,8 @@
                                     @foreach( $trending_top as $i )
                                         <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                                             <img class="bdr-5" style="width: 100%;" src="{{ asset('post/' . $i->gambar  ) }}" height="520" width="730">
-                                            <div class="carousel-caption ">
-                                                <div class="trend-top-cap">
+                                            <div class="carousel-caption">
+                                                <div class="">
                                                     <!-- Kategori -->
                                                     <span class="bdr-5 p-2 capital f-b" style="background-color: #FC5300 !important; color: white !important; font-size: 13px !important">
                                                         <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a>
