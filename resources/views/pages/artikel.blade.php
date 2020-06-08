@@ -71,11 +71,11 @@
                             </a>
                         </div>
                         <!-- Isi Artikel -->
-                        <div id="less" style="font-size: 17px !important">{{ substr(strip_tags($artikel->isi), 0, 800) }} [...]</div>
+                        <div id="less" style="font-size: 17px !important;">{{ substr(strip_tags($artikel->isi), 0, 800) }} [...]</div>
                         <div id="more" style="display: none">{!! $artikel->isi !!}</div>
                         <!-- Button Hide And Show -->
                         <div class="m-t-20 m-b-20 text-center">
-                            <button class="genric-btn danger bdr-5" id="tombol_show">Tutup</button>
+                            <button class="genric-btn danger bdr-5" id="tombol_show">Lebih Sedikit</button>
                             <button class="genric-btn primary bdr-5" id="tombol_hide">Baca Selengkapnya</button><br>
                         </div>
                         <!-- Editor -->
