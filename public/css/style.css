@@ -131,6 +131,10 @@
     color: #F74854;
 }
 
+.non-hover-white:hover {
+    color: white !important;
+}
+
 .hover-blk:hover {
     color: black;
 }
@@ -147,4 +151,8 @@
 
 .capital {
     text-transform: uppercase !important;
+}
+
+#more {
+    display: none;
 }

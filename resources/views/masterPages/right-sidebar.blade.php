@@ -25,7 +25,7 @@
                     <div class="media-body" style="margin-top: -7px">
                         <!-- Kategori -->
                         <span class="fs-13" style="color: #FC5300 !important; text-transform: uppercase">
-                           <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a> 
+                           <a style="color: #FC5300" href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a> 
                         </span>
                         <!-- Judul -->
                         <a href="{{ route('artikel') .'?post='.$i->id}}">

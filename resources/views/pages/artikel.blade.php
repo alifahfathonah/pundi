@@ -13,7 +13,7 @@
     </a>
     <span class="fa fa-angle-right"></span>
     <a class="m-l-8 m-r-8 f-red fs-14 non-hover" href="{{ route('/') }}">
-        <span>{{ $artikel->kategori->n_kategori }}</span>
+        <span>{{ $artikel->sub_kategori->n_sub_kategori }}</span>
     </a>
     <span class="fa fa-angle-right"></span>
     <span class="m-l-8 m-r-8 fs-14">{{substr($artikel->judul, 0, 20)}}...</span>
@@ -27,17 +27,24 @@
                 <div class="single-post">
                     <div class="blog_detail">
                         <h3 class="f-b m-b-20">{{ $artikel->judul }}</h3>
+                        <!-- Kategori -->
                         <span class="bdr-5 fs-12 f-b" style="background-color: #FC5300 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
-                            <a href="">{{ $artikel->kategori->n_kategori }}</a>
+                            <a  href="">{{ $artikel->sub_kategori->n_sub_kategori }}</a>
                         </span>
-                        <img src="{{ asset('images/boy.png') }}" class="rounded-circle m-l-30" width="45" alt="">
+                        <!-- Photo User -->
+                        <img src="{{ asset('ava/'.$artikel->user->photo) }}" class="rounded-circle m-l-30" width="45" alt="">
+                        <!-- Nama Penulis -->
                         <span class="fs-14 f-b m-l-10">{{ $artikel->user->name }}</span>
-                        <span class="fas fa-clock m-l-15" style="color:gray"></span>
+                        <!-- Waktu -->
+                        <i class="fas fa-clock m-l-15" style="color:gray"></i>
                         <span class="fs-14">{{ substr($artikel->created_at, 0, 40) }}</span>
-                        <span class="fa fa-comments m-l-15" style="color:gray"></span>
+                        <!-- Info Komen -->
+                        <i class="fa fa-comments m-l-15" style="color:gray"></i>
                         <span class="fs-14">{{ $komen->count() }} Komen</span>
-                        <span class="fa fa-eye m-l-15" style="color: #FC5300"></span>
+                        <!-- Info Artikel dilihat -->
+                        <i class="fa fa-eye m-l-15" style="color: #FC5300"></i>
                         <span class="f-red fs-14">{{ $artikel->artikel_view }}</span>
+                        <!-- Gambar Artikel -->
                         <div class="m-b-30 m-t-30">
                             <img class="img-fluid bdr-5" width="800" height="" src="{{ asset('post/'. $artikel->gambar) }}" alt="">
                         </div>
@@ -63,9 +70,15 @@
                                 <img src="https://image.flaticon.com/icons/svg/124/124027.svg" width="30" alt="Twitter" />
                             </a>
                         </div>
-                        <div>
-                            {!! $artikel->isi !!}
+                        <!-- Isi Artikel -->
+                        <div id="less" style="font-size: 17px !important">{{ substr(strip_tags($artikel->isi), 0, 800) }} [...]</div>
+                        <div id="more" style="display: none">{!! $artikel->isi !!}</div>
+                        <!-- Button Hide And Show -->
+                        <div class="m-t-20 m-b-20 text-center">
+                            <button class="genric-btn danger bdr-5" id="tombol_show">Tutup</button>
+                            <button class="genric-btn primary bdr-5" id="tombol_hide">Baca Selengkapnya</button><br>
                         </div>
+                        <!-- Editor -->
                         <span class="f-b f-blk">
                             <i>Editor: </i>
                             <i class="f-red">Fauzul Adim</i>    
@@ -186,4 +199,20 @@
 <div>
     @include('masterPages.footers.footer')
 </div>
+@endsection
+@section('script')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#tombol_hide").click(function () {
+            $("#more").show();
+            $("#less").hide();
+        })
+
+        $("#tombol_show").click(function () {
+            $("#more").hide();
+            $("#less").show();
+        })
+    });
+</script>
 @endsection
