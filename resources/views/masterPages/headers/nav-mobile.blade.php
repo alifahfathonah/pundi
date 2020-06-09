@@ -42,40 +42,30 @@
                 </ul>
             </li>
             @if (Auth::user() != null)
-                <li>
-                    <a href="#">
-                        <img width="30px" height="30px" src="{{ asset('ava/' .Auth::user()->photo) }}" alt="..." class="rounded-circle">
-                        <span>{{ Auth::user()->name }}</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="{{ route('profil') }}">Profil</a></li>
-                        <li><a href="{{ route('kirim-tulisan') }}">Kirim Tulisan</a></li>
-                        <li><a href="{{ url('ketentuan-tulisan') }}">Ketentuan Tulisan</a></li>
-                        <li>
-                            <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                Log Out
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </li>
-                    </ul>
-                </li>
+            <li>
+                <a href="#">Akun</a>
+                <ul class="submenu">
+                    <li><a href="{{ route('profil') }}">Edit Profil</a></li>
+                    <li><a href="{{ route('kirim-tulisan') }}">Kirim Tulisan</a></li>
+                    <li><a href="{{ url('ketentuan-tulisan') }}">Ketentuan Tulisan</a></li>
+                </ul>
+            </li>
             @else 
             <li>
-                <a href="#" >Kirim Tulisan</a>
+                <a href="#">Akun</a>
                 <ul class="submenu">
+                    <li><a href="{{ route('kirim-tulisan') }}">Kirim Tulisan</a></li>
                     <li><a href="{{ url('ketentuan-tulisan') }}">Ketentuan Tulisan</a></li>
-                    <li><a href="{{ route('register') }}">Registrasi</a></li>
                     <li><a href="{{ route('login') }}">Login</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="{{ route('login') }}">
-                    <button class="genric-btn primary btn-block">Login</button>
-                </a>
-            </li>
             @endif
+            <li>
+                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                </form>
+            </li>
         </ul>
     </nav>
 </div>

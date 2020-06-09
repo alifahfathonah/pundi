@@ -28,7 +28,7 @@
                     <div class="row d-flex align-items-center justify-content-between">
                         <div class="col-lg-6">
                             <div class="footer-copy-right">
-                                <p>2020 pundi.ID - kanal pendidikan tajam dan mencerahkan</p>
+                                <p>2020 PUNDI.or.id - kanal pendidikan tajam dan mencerahkan</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
