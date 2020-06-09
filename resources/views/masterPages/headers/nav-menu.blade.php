@@ -1,7 +1,7 @@
 <nav>                  
     <ul>    
         <li>
-            <a href="{{ route('kategori','kategori=1') }}" style="font-size: 13px !important">HEADLINE <span class="fa fa-angle-down m-l-5"></span></a>
+            <a href="{{ route('kategori','kategori=1') }}" style="font-size: 13px !important">HEADLINE <span class="fa fa-angle-down "></span></a>
             <ul class="submenu">
                 @foreach ($sub_headline as $i)
                     <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>    
@@ -9,7 +9,7 @@
             </ul>
         </li>
         <li>
-            <a href="{{ route('kategori','kategori=2') }}" style="font-size: 13px !important">INDEPTH <span class="fa fa-angle-down m-l-5"></a>
+            <a href="{{ route('kategori','kategori=2') }}" style="font-size: 13px !important">INDEPTH <span class="fa fa-angle-down "></a>
             <ul class="submenu">
                 @foreach ($sub_indepth as $i)
                     <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>
@@ -17,7 +17,7 @@
             </ul> 
         </li>
         <li>
-            <a href="{{ route('kategori','kategori=3') }}" style="font-size: 13px !important">KEBIJAKAN <span class="fa fa-angle-down m-l-5"></a>
+            <a href="{{ route('kategori','kategori=3') }}" style="font-size: 13px !important">KEBIJAKAN <span class="fa fa-angle-down "></a>
             <ul class="submenu">
                 @foreach ($sub_kebijakan as $i)
                     <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>
@@ -25,7 +25,7 @@
             </ul>
         </li>
         <li>
-            <a href="{{ route('kategori','kategori=4') }}" style="font-size: 13px !important">SERBA SERBI <span class="fa fa-angle-down m-l-5"></a>
+            <a href="{{ route('kategori','kategori=4') }}" style="font-size: 13px !important">SERBA SERBI <span class="fa fa-angle-down "></a>
             <ul class="submenu">
                 @foreach ($sub_serbaSerbi as $i)
                     <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>
@@ -33,7 +33,7 @@
             </ul>
         </li>
         <li>
-            <a href="{{ route('kategori','kategori=5') }}" style="font-size: 13px !important">KONSULTASI <span class="fa fa-angle-down m-l-5"></a>
+            <a href="{{ route('kategori','kategori=5') }}" style="font-size: 13px !important">KONSULTASI <span class="fa fa-angle-down "></a>
             <ul class="submenu">
                 @foreach ($sub_konsultasi as $i)
                     <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>
@@ -43,7 +43,7 @@
      
         @if (Auth::user() != null)
         <li>
-            <a href="#">AKUN <span class="fa fa-angle-down m-l-5"></a>
+            <a href="#">AKUN <span class="fa fa-angle-down "></a>
             <ul class="submenu">
                 <li><a href="{{ route('profil') }}">Edit Profil</a></li>
                 <li><a href="{{ route('kirim-tulisan') }}">Kirim Tulisan</a></li>
@@ -52,7 +52,7 @@
         </li>
         @else
         <li>
-            <a href="#">AKUN <span class="fa fa-angle-down m-l-5"></a>
+            <a href="#">AKUN <span class="fa fa-angle-down "></a>
             <ul class="submenu">
                 <li><a href="{{ route('kirim-tulisan') }}">Kirim Tulisan</a></li>
                 <li><a href="{{ url('ketentuan-tulisan') }}">Ketentuan Tulisan</a></li>
@@ -60,7 +60,7 @@
             </ul>
         </li>
         @endif
-        <li>
+        {{-- <li>
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" style="margin-top: -3px" viewBox="0 0 172 172"
                 style=" fill:#000000;">
                 <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
@@ -74,6 +74,12 @@
                     </g>
                 </g>
             </svg>
+        </li> --}}
+        <li>
+            <form class="form-row d-flex justify-content-center md-form form-sm mt-0">
+                {{-- <i class="fas fa-search" aria-hidden="true"></i> --}}
+                <input class="row bdr-5 single-input-primary ml-2 w-75" style="margin-top: -8px; height: 30px; width: 10px" type="text" placeholder="Search" aria-label="Search">
+            </form>
         </li>
     </ul>
 </nav>
