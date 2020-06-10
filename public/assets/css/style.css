@@ -2797,7 +2797,7 @@ hr {
 }
 
 .header-area .slicknav_btn {
-    top: -50px;
+    top: -42px;
     right: 17px
 }
 
@@ -6170,6 +6170,21 @@ del {
 .single-input-primary:focus {
     outline: none;
     border: 1px solid #222
+}
+
+.single-input-primary2 {
+    display: inline-block;
+    /* width: 100%; */
+    line-height: 40px;
+    border: 1px solid transparent;
+    outline: none;
+    background:whitesmoke;
+    padding: 0 20px
+}
+
+.single-input-primary2:focus {
+    outline: none;
+    /* border: 1px solid #222 */
 }
 
 .single-input-accent {

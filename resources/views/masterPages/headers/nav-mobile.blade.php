@@ -61,9 +61,13 @@
             </li>
             @endif
             <li>
-                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                <form class="form-row d-flex justify-content-center md-form form-sm mt-2">
+                    <div class="input-group-prepend">
+                        <button style="border: none; background: none">
+                            <span class="input-group-text" style="background-color: whitesmoke;">Search</span>
+                        </button>
+                    </div>
+                    <input class="row bdr-5 single-input-primary2 ml-0 w-75" style="height: 38px" type="text">
                 </form>
             </li>
         </ul>

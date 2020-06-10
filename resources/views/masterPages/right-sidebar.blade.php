@@ -3,7 +3,7 @@
         <!-- Berita Terbaru -->
         <aside>
             <div class="news-poster d-none d-lg-block">
-                <img src="https://ibtimes.id/wp-content/uploads/2020/03/ibtimes-x-lazismu-min.jpg" width="350" alt="">
+                <img class="bdr-5" src="{{ asset('images/iklan/images1.jpg') }}" width="350" alt="iklan">
             </div>
         </aside>
         <!-- Section Berita Terbaru -->

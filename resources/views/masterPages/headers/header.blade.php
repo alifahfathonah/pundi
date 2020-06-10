@@ -74,7 +74,7 @@
                 <div class="container">
                     <div class="row d-flex align-items-center">
                         <!-- Logo -->
-                        <div class="col-xl-3 col-lg-3 col-md-3">
+                        <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="sticky-logo">
                                 <a href="{{ url('/') }}">
                                     <img src="{{ asset('images\logo.png') }}" width="150px" alt="Logo">
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                         <!-- Navigation -->
-                        <div class="col-xl-9 col-lg-9 col-md-9">
+                        <div class="col-xl-10 col-lg-10 col-md-10">
                             <div class="sticky-logo">
                                 <div class="header-banner f-right ">
                                     <div class="main-menu d-none d-md-block">

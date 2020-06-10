@@ -39,15 +39,15 @@
                             <li>Jangan tulis judul dua kali. Judul cukup ditulis di kolom yang tersedia.</li>
                             <li>Setiap tulisan harus disertakan foto/gambar yang standar, yakni sebesar 450 piksel (atau maksimal 730X489) dengan menuliskan sumber gambar/foto tersebut diambil.</li>
                             <li>Pilih kategori tulisan sesuai dengan tema yang Anda tulis.</li>
-                            <li>Penulis dilarang mengirimkan artikel yang pernah diterbitkan di media lain, baik media daring atau cetak tanpa sepengetahuan tim redaksi IBTimes.ID. Penulis juga dilarang mengirim satu tulisan pada saat bersamaan ke media lain.</li>
+                            <li>Penulis dilarang mengirimkan artikel yang pernah diterbitkan di media lain, baik media daring atau cetak tanpa sepengetahuan tim redaksi PUNDI.ID. Penulis juga dilarang mengirim satu tulisan pada saat bersamaan ke media lain.</li>
                         </ol>
                     </div>
                     <div class="m-t-30">
                         <p class="f-blk fs-25 f-b">Disclaimer</p>
                         <ol class="ordered-list">
                             <li>Hak cipta setiap karya yang telah dimuat di PUNDI.ID berada pada <b>penulis/kontributor</b>. Artinya PUNDI.ID hanya memiliki hak untuk mempublikasikan saja.</li>
-                            <li>Redaksi berhak menolak/tidak menerbitkan tulisan yang telah dikirimkan. Jika dalam <b>tiga hari tulisan tidak terbit</b> di IBTimes.ID, maka secara <b>otomatis ditolak</b>.</li>
-                            <li><b>Redaksi berhak menyunting tulisan</b> dari penulis, seperti mengubah judul dan isi naskah tanpa mengubah substansinya, atau menghilangkan segala isi unggahan pengguna yang melanggar aturan hukum sebagaimana diatur oleh Pedoman Pemberitaan Media Siber. Penyebaran karya IBTimes.ID di tempat lain diperkenankan sejauh menyebut nama penulis.</li>
+                            <li>Redaksi berhak menolak/tidak menerbitkan tulisan yang telah dikirimkan. Jika dalam <b>tiga hari tulisan tidak terbit</b> di PUNDI.ID, maka secara <b>otomatis ditolak</b>.</li>
+                            <li><b>Redaksi berhak menyunting tulisan</b> dari penulis, seperti mengubah judul dan isi naskah tanpa mengubah substansinya, atau menghilangkan segala isi unggahan pengguna yang melanggar aturan hukum sebagaimana diatur oleh Pedoman Pemberitaan Media Siber. Penyebaran karya PUNDI.ID di tempat lain diperkenankan sejauh menyebut nama penulis.</li>
                             <li>Penyebaran karya PUNDI.ID di tempat lain diperkenankan sejauh menyebut nama penulis dan sumber PUNDI.ID, serta minimal <b>dua hari</b> setelah ditayangkan di PUNDI.</li>
                             <li>Pihak yang merasa dirugikan oleh artikel-artikel yang dipublish di PUNDI.ID bisa melayangkan protes melalui email <b>redaksi@pundi.id</b>.</li>
                         </ol>
