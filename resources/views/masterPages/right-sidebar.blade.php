@@ -38,14 +38,14 @@
                 </div>
                 @endforeach
             </aside>
-            <aside class="single_sidebar_widget tag_cloud_widget " style="background-color: transparent !important">
+            {{-- <aside class="single_sidebar_widget tag_cloud_widget " style="background-color: transparent !important">
                 <div style="margin-bottom: -13px;">
                     <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FC5300 !important"></i>
                 </div>
                 <span class="f-b m-l-15 widget_title" style="color: #FC5300 !important; text-align: justify !important"> 
                     PUNDI.ID – TAJAM DAN MENCERAHKAN
                 </span>
-            </aside>
+            </aside> --}}
         </div>
     </div>
 </div>

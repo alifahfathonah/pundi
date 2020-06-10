@@ -1,6 +1,6 @@
-<div class="weekly2-news-area  weekly2-pading gray-bg" style="margin-top: -30px !important">
+<div class="weekly2-news-area mb-30">
     <div class="container">
-        <div class="weekly2-wrapper" style="margin-top: -90px !important">
+        <div class="weekly2-wrapper" style="margin-top: -30px !important">
             <!-- Section Tittle -->
             <div class="row">
                 <div class="col-lg-12">
