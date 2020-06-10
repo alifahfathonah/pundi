@@ -61,13 +61,13 @@
             </li>
             @endif
             <li>
-                <form class="form-row d-flex justify-content-center md-form form-sm mt-2">
+                <form class="form-row d-flex justify-content-center md-form form-sm mt-2"  action="{{ route('hasil-pencarian') }}" method="GET">
                     <div class="input-group-prepend">
-                        <button style="border: none; background: none">
+                        <button type="submit" style="border: none; background: none">
                             <span class="input-group-text" style="background-color: whitesmoke;">Search</span>
                         </button>
                     </div>
-                    <input class="row bdr-5 single-input-primary2 ml-0 w-75" style="height: 38px" type="text">
+                    <input class="row bdr-5 single-input-primary2 ml-0 w-75" name="hasil_search" style="height: 38px" type="text">
                 </form>
             </li>
         </ul>

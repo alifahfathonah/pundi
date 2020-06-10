@@ -60,8 +60,8 @@
         </li>
         @endif
         <li style="margin-left: -40px">
-            <form class="form-row d-flex justify-content-center md-form form-sm mt-0">
-                <input class="row bdr-5  single-input-primary2 ml-5 w-75" style="margin-top: -8px; height: 30px;" type="text" placeholder="Search">
+            <form class="form-row d-flex justify-content-center md-form form-sm mt-0" action="{{ route('hasil-pencarian') }}" method="GET">
+                <input type="text" class="row bdr-5 single-input-primary2 ml-5 w-75" name="hasil_search" style="margin-top: -8px; height: 30px;" placeholder="Search">
             </form>
         </li>
     </ul>

@@ -6183,12 +6183,12 @@ del {
     border: 1px solid transparent;
     outline: none;
     background:whitesmoke;
-    padding: 0 20px
+    padding: 0 10px
 }
 
 .single-input-primary2:focus {
     outline: none;
-    /* border: 1px solid #222 */
+    /* border: 1px solid #F8486B */
 }
 
 .single-input-accent {

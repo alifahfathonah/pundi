@@ -23,10 +23,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 // Ketentuan Tulisan
-Route::get('/ketentuan-tulisan', 'KetentuanTulisanController@index');
+Route::get('ketentuan-tulisan', 'KetentuanTulisanController@index');
 
 // Artikel
 Route::get('artikel', 'ArtikelController@artikel')->name('artikel');
+
+// Hasil Pencarian 
+Route::get('hasil-pencarian', 'PencarianController@hasilPencarian')->name('hasil-pencarian');
 
 // Komen
 Route::post('komen', 'KomenController@store')->name('komen.store');

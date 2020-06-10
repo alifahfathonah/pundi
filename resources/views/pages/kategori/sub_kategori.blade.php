@@ -31,7 +31,7 @@
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
                     @foreach ($artikel as $i)
-                    <div class="row m-b-10 m-b-30">
+                    <div class="row m-b-50">
                         <div class="col-sm-6">
                             <img class="bdr-5" src="{{ asset('post/'.$i->gambar) }}" width="350" alt="">
                         </div>
