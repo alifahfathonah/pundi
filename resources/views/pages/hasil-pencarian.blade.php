@@ -17,13 +17,13 @@
                         @forelse ($artikel as $i)
                         <div class="row m-b-50">
                             <div class="col-sm-6">
-                                <img class="bdr-5" src="{{ asset('post/'.$i->gambar) }}" width="350" alt="">
+                                <img class="bdr-5 m-b-10" src="{{ asset('post/'.$i->gambar) }}" width="350" alt="">
                             </div>
                             <div class="col-sm-6">
                                 <span class="bdr-5 fs-11 f-b" style="background-color: #FC5300 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
                                     <a href="">{{ $i->kategori->n_kategori}}</a>
                                 </span>
-                                <p class="fs-19 f-b f-blk">{{ $i->judul }}</p>
+                                <p class="fs-19 f-b f-blk m-t-10">{{ $i->judul }}</p>
                                 <div style="color: gray; margin-top: -10px ">
                                     <i class="fa fa-user"></i>
                                     <span class="fs-13">{{ $i->user->name }}</span>
