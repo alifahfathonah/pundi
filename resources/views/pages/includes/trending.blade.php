@@ -6,7 +6,7 @@
                     <!-- Trending Top -->
                     <div class="trending-top mb-30">
                         <div class="">
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-top: -18px !important">
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators m-b-1">
                                     @foreach( $trending_top as $i )
                                         <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }}"></li>

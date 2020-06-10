@@ -2,7 +2,7 @@
     <div class="blog_right_sidebar">
         <!-- Berita Terbaru -->
         <aside>
-            <div class="news-poster d-none d-lg-block">
+            <div class="news-poster d-lg-block">
                 <img class="bdr-5" src="{{ asset('images/iklan/images1.jpg') }}" width="350" alt="iklan">
             </div>
         </aside>

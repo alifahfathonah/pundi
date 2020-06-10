@@ -3322,7 +3322,11 @@ hr {
 .about-area .news-poster img,
 .contact-section .news-poster img {
     width: 100%;
-    padding: 0 61px
+    /* padding: 0 61px */
+}
+
+.news-poster img{
+    width: 100%;
 }
 
 .whats-news-area .nav-tabs .nav-link,
