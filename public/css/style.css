@@ -141,7 +141,7 @@
 }
 
 .hover-blk:hover {
-    color: black;
+    color: black !important;
 }
 
 .vertical-line {

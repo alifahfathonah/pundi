@@ -25,7 +25,9 @@ class KategoriController extends Controller
 
         // Sub Kategori
         $artikel = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'penulis_id', 'gambar', 'isi', 'tag', 'artikel_view', 'created_at')
-            ->where('kategori_id', $request->kategori)->paginate(10);
+            ->where('kategori_id', $request->kategori)
+            ->wherestatus(1)
+            ->paginate(10);
 
         /**
          * Variabel for header
@@ -55,7 +57,9 @@ class KategoriController extends Controller
 
         // Sub Kategori
         $artikel = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'penulis_id', 'gambar', 'isi', 'tag', 'artikel_view', 'created_at')
-            ->where('sub_kategori_id', $request->sub_kategori)->paginate(10);
+            ->where('sub_kategori_id', $request->sub_kategori)
+            ->wherestatus(1)
+            ->paginate(10);
 
         /**
          * Variabel for header
