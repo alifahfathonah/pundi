@@ -48,6 +48,10 @@
                     <li><a href="{{ route('profil') }}">Edit Profil</a></li>
                     <li><a href="{{ route('kirim-tulisan') }}">Kirim Tulisan</a></li>
                     <li><a href="{{ url('ketentuan-tulisan') }}">Ketentuan Tulisan</a></li>
+                    <li><a href="" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Log Out</a></li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </ul>
             </li>
             @else

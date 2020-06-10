@@ -110,7 +110,7 @@
                                 <label class="col-sm-4 f-b col-form-label f-red-dark" for="">FACEBOOK</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="input single-input-primary" name="facebook" value="{{ old('facebook') }}"/>
-                                    <i class="fs-12 f-red-dark">example: https://www.facebook.com/your-account-name</i>
+                                    {{-- <i class="fs-12 f-red-dark">example: https://www.facebook.com/your-account-name</i> --}}
                                 </div>
                             </div>
                             <!-- Twitter -->
@@ -118,7 +118,7 @@
                                 <label class="col-sm-4 f-b col-form-label f-red-dark" for="">TWITTER</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="input single-input-primary" name="twitter" value="{{ old('twitter') }}"/>
-                                    <i class="fs-12 f-red-dark">example: https://twitter.com/your-account-name</i>
+                                    {{-- <i class="fs-12 f-red-dark">example: https://twitter.com/your-account-name</i> --}}
                                 </div>
                             </div>
                             <!-- Instagram -->
@@ -126,7 +126,7 @@
                                 <label class="col-sm-4 f-b col-form-label f-red-dark" for="">INSTAGRAM</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="input single-input-primary" name="instagram" value="{{ old('instagram') }}"/>
-                                    <i class="fs-12 f-red-dark">example: https://instagram.com/your-account-name</i>
+                                    {{-- <i class="fs-12 f-red-dark">example: https://instagram.com/your-account-name</i> --}}
                                 </div>
                             </div>
                         </div>
