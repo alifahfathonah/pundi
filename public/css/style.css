@@ -133,7 +133,7 @@
 }
 
 .non-hover:hover {
-    color: #F74854;
+    color: #F74854 !important;
 }
 
 .non-hover-white:hover {

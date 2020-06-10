@@ -22,7 +22,7 @@
                                 </ul>
                             </div>
                             <!-- Infro Right -->
-                            <div class="header-info-right" style="margin-right: 18px !important">
+                            <div class="header-info-right">
                                 <ul class="header-social" style="color: white !important;">
                                     <i class="fas fa-calendar-check m-r-2"></i>
                                     <li>

@@ -66,6 +66,11 @@
         <li style="margin-left: -40px">
             <form class="form-row d-flex justify-content-center md-form form-sm mt-0" action="{{ route('hasil-pencarian') }}" method="GET">
                 <input type="text" class="row bdr-5 single-input-primary2 ml-5 w-75" name="hasil_search" style="margin-top: -8px; height: 30px;" placeholder="Search">
+                <div class="input-group-prepend bdr-5" style="background: #FC5300;">
+                    <button type="submit" style="border: none; background: #FC5300; height: 30px; margin-top: -8px;">
+                        <i class="fa fa-search" style="color: white"></i> 
+                    </button>
+                </div>
             </form>
         </li>
     </ul>
