@@ -12,7 +12,7 @@
         <span>Home</span>
     </a>
     <span class="fa fa-angle-right"></span>
-    <a class="m-l-8 m-r-8 f-red fs-14 non-hover" href="{{ route('/') }}">
+    <a class="m-l-8 m-r-8 f-red fs-14 non-hover" href="{{ route('sub_kategori','sub_kategori='.$artikel->sub_kategori->id) }}">
         <span>{{ $artikel->sub_kategori->n_sub_kategori }}</span>
     </a>
     <span class="fa fa-angle-right"></span>

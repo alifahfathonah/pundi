@@ -23,7 +23,7 @@
                             <!-- Kategori -->
                             <div class="col-sm-6">
                                 <span class="bdr-5 fs-11 f-b" style="background-color: #FC5300 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
-                                    <a href="{{ route('kategori','kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori}}</a>
+                                    <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori}}</a>
                                 </span>
                                 <!-- Judul -->
                                 <p class="fs-19 f-b f-blk m-t-10">
