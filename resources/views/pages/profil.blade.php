@@ -11,7 +11,7 @@
         <div class="row">
             <!-- Left Sidebar -->
             <div class="col-lg-8 mb-5 mb-lg-0">
-                <div class="blog_left_sidebar" style="text-align: justify">
+                <div class="blog_left_sidebar">
                     <div>
                         <p class="f-blk fs-30 f-b">Dashboard</p>
                         <p class="f-blk fs-25 f-b m-t-50">{{ Auth::user()->name }}'s Dashboard </p>
@@ -26,11 +26,8 @@
                                 <div class="col-auto">
                                     <span>{{ $no }}</span>
                                 </div>
-                                <div class="col-9">
+                                <div class="col-11">
                                     <a class="fs-13" href="{{ route('artikel') .'?post='.$i->id}}" style="color: #9C6D76; margin-left: 0px">{{ $i->judul }}</a>
-                                </div>
-                                <div class="col">
-                                    <a class="fs-13" href="#" style="color: #9C6D76"">{{ $i->kategori->n_kategori}}</a>
                                 </div>
                             </div> 
                         @endforeach
@@ -40,10 +37,11 @@
                         <p class="card-header f-blk fs-25 f-b">Author Info</p>
                         <div class="p-2 m-l-10">
                             <div class="row">
-                                <div class="col-sm-1">
-                                    <img class="rounded-circle" src="{{ asset('ava/' . Auth::user()->photo) }}" width="45" alt="">
+                                <div class="col-1">
+                                    {{-- <img class="rounded-circle" src="{{ asset('ava/' . Auth::user()->photo) }}" width="45" alt=""> --}}
+                                    <img class="rounded-circle" src="{{ asset('images/boy.png') }}" width="45" alt="">
                                 </div>
-                                <div class="col-sm-11">
+                                <div class="col-8 m-t-5">
                                     <span class="m-t- f-blk f-b fs-20">{{ Auth::user()->name }}</span>
                                     <i type="button" class="fa fa-caret-down" data-toggle="dropdown"></i>
                                     <!-- DropDown -->
