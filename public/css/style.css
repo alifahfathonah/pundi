@@ -124,6 +124,12 @@
     }
 }
 
+@media (max-width: 767px) {
+    .m-l-15r {
+        margin-left: 50px;
+    }
+}
+
 /* Artikel */
 .title {
     font-weight: 700;

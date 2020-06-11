@@ -22,6 +22,7 @@
                         <?php $no = 0;?>
                         @foreach ($post as $i)
                         <?php $no++ ;?>
+                        <div class="container">
                             <div class="row">
                                 <div class="col-auto">
                                     <span>{{ $no }}</span>
@@ -30,6 +31,7 @@
                                     <a class="fs-13" href="{{ route('artikel') .'?post='.$i->id}}" style="color: #9C6D76; margin-left: 0px">{{ $i->judul }}</a>
                                 </div>
                             </div> 
+                        </div>
                         @endforeach
                     </div>
                     <!-- Author info -->
@@ -37,11 +39,11 @@
                         <p class="card-header f-blk fs-25 f-b">Author Info</p>
                         <div class="p-2 m-l-10">
                             <div class="row">
-                                <div class="col-1">
+                                <div class="col-2">
                                     {{-- <img class="rounded-circle" src="{{ asset('ava/' . Auth::user()->photo) }}" width="45" alt=""> --}}
                                     <img class="rounded-circle" src="{{ asset('images/boy.png') }}" width="45" alt="">
                                 </div>
-                                <div class="col-8 m-t-5">
+                                <div class="col m-t-5 m-l-15r" style="margin-left: -8%">
                                     <span class="m-t- f-blk f-b fs-20">{{ Auth::user()->name }}</span>
                                     <i type="button" class="fa fa-caret-down" data-toggle="dropdown"></i>
                                     <!-- DropDown -->
