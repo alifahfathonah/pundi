@@ -34,7 +34,7 @@
                         <div class="col-lg-6">
                             <div class="footer-menu f-right" style="margin-top: -15px; text-align: center !important">
                                 <ul>
-                                    <li><a href="#">Tentang Kami</a></li>
+                                    <li><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
                                     <li><a href="#">Disclaimer</a></li>
                                     <li><a href="#">Redaksi</a></li>
                                     <li><a href="#">Media Siber</a></li>

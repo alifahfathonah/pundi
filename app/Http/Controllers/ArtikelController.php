@@ -48,6 +48,7 @@ class ArtikelController extends Controller
 
     public function tambah_artikel(Request $request)
     {
+        // Validasi
         $request->validate([
             'judul'       => 'required',
             'kategori_id' => 'required',
@@ -55,6 +56,7 @@ class ArtikelController extends Controller
             'isi'         => 'required',
         ]);
 
+        // Get data
         $artikel = new Artikel();
         $artikel->judul           = $request->judul;
         $artikel->kategori_id     = $request->kategori_id;

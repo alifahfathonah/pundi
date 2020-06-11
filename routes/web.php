@@ -25,6 +25,9 @@ Auth::routes();
 // Ketentuan Tulisan
 Route::get('ketentuan-tulisan', 'KetentuanTulisanController@index');
 
+// Tentang Kami
+Route::get('tentang-kami', 'TentangKamiController@index')->name('tentang-kami');
+
 // Artikel
 Route::get('artikel', 'ArtikelController@artikel')->name('artikel');
 
@@ -40,7 +43,6 @@ Route::get('sub_kategori', 'KategoriController@sub_kategori')->name('sub_kategor
 
 /* Proteksi Auth */
 Route::group(['middleware' => ['auth']], function () {
-
     // Profil
     Route::get('profil', 'ProfilController@index')->name('profil');
 
