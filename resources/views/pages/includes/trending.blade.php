@@ -15,29 +15,33 @@
                                 <div class="carousel-inner" role="listbox">
                                     @foreach( $trending_top as $i )
                                         <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                                            <img class="bdr-5" style="width: 100%;" src="{{ asset('post/' . $i->gambar  ) }}" height="520" width="730">
-                                            <div class="carousel-caption">
-                                                <div class="">
-                                                    <!-- Kategori -->
-                                                    <span class="bdr-5 p-2 capital f-b" style="background-color: #FC5300 !important; color: white !important; font-size: 13px !important">
-                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a>
-                                                    </span>
-                                                    <!-- Judul -->
-                                                    <h2 class="m-t-20">
-                                                        <a class="f-b text-white" href="{{ route('artikel') .'?post='.$i->id}}">
-                                                            {{ $i->judul }}
+                                            <div class="zoom-effect">
+                                                <div class="kotak">
+                                                    <img class="bdr-5" style="width: 100%;" src="{{ asset('post/' . $i->gambar  ) }}" height="520" width="730">
+                                                </div>
+                                                <div class="carousel-caption">
+                                                    <div class="">
+                                                        <!-- Kategori -->
+                                                        <span class="bdr-5 p-2 capital f-b" style="background-color: #FC5300 !important; color: white !important; font-size: 13px !important">
+                                                            <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a>
+                                                        </span>
+                                                        <!-- Judul -->
+                                                        <h2 class="m-t-20">
+                                                            <a class="f-b text-white" href="{{ route('artikel') .'?post='.$i->id}}">
+                                                                {{ $i->judul }}
+                                                            </a>
+                                                        </h2>
+                                                        <!-- Penulis -->
+                                                        <i class="fa fa-user" style="background-color: transparent !important; color: white"></i>
+                                                        <a href="#" class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: white">
+                                                            {{ $i->user->name }}
                                                         </a>
-                                                    </h2>
-                                                    <!-- Penulis -->
-                                                    <i class="fa fa-user" style="background-color: transparent !important; color: white"></i>
-                                                    <a href="#" class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: white">
-                                                        {{ $i->user->name }}
-                                                    </a>
-                                                    <!-- Waktu -->
-                                                    <i class="fas fa-clock m-l-25" style="background-color: transparent !important; color: white"></i>
-                                                    <a class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: white">
-                                                        {{ $i->created_at }}
-                                                    </a>
+                                                        <!-- Waktu -->
+                                                        <i class="fas fa-clock m-l-25" style="background-color: transparent !important; color: white"></i>
+                                                        <a class="f-b fs-13 m-l-5" style="background-color: transparent !important; color: white">
+                                                            {{ $i->created_at }}
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
