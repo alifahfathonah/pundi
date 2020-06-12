@@ -18,7 +18,7 @@
     <span class="fa fa-angle-right"></span>
     <span class="m-l-8 m-r-8 fs-14 f-orange">{{substr($artikel->judul, 0, 20)}}...</span>
 </div>
-<section class="blog_area section-padding" style="margin-top: -70px">
+<section class="blog_area section-padding" style="margin-top: -90px">
     <div class="container">
         <div class="row">
             <!-- Left Sidebar -->
