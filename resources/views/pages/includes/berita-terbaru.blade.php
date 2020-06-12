@@ -7,9 +7,9 @@
                 <div class="col-lg-3 col-md-3">
                     <div class="section-tittle mb-30">
                         <div style="margin-bottom: -15px">
-                            <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FC5300 !important"></i>
+                            <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FEBD01 !important"></i>
                         </div>
-                        <span class="fs-18 m-l-15" style="color: #FC5300 !important; font-weight: 700 !important "> 
+                        <span class="fs-18 m-l-15" style="color: #FEBD01 !important; font-weight: 700 !important "> 
                             BERITA TERBARU
                         </span>
                     </div>
@@ -49,7 +49,7 @@
                                                 </div>
                                                 <div class="what-cap">
                                                     <!-- Kategori -->
-                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">
+                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
                                                         <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
                                                     </span>
                                                     <!-- Waktu -->
@@ -77,7 +77,7 @@
                                                 </div>
                                                 <div class="what-cap">
                                                     <!-- Kategori -->
-                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">
+                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
                                                         <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
                                                     </span>
                                                     <!-- Waktu -->
@@ -105,7 +105,7 @@
                                                 </div>
                                                 <div class="what-cap">
                                                     <!-- Kategori -->
-                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">
+                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
                                                         <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
                                                     </span>
                                                     <!-- Waktu -->
@@ -133,7 +133,7 @@
                                                 </div>
                                                 <div class="what-cap">
                                                     <!-- Kategori -->
-                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">
+                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
                                                         <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
                                                     </span>
                                                     <!-- Waktu -->
@@ -161,7 +161,7 @@
                                                 </div>
                                                 <div class="what-cap">
                                                     <!-- Kategori -->
-                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">
+                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
                                                         <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
                                                     </span>
                                                     <!-- Waktu -->
@@ -189,7 +189,7 @@
                                                 </div>
                                                 <div class="what-cap">
                                                     <!-- Kategori -->
-                                                    <span class="bdr-5" style="background-color: #FC5300; color: white">
+                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
                                                         <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
                                                     </span>
                                                     <!-- Waktu -->

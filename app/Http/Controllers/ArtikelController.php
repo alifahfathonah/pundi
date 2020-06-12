@@ -19,7 +19,7 @@ class ArtikelController extends Controller
     public function index(Request $request)
     {
         // Kategori
-        $kategori = Kategori::select('id', 'n_kategori')->get();
+        $kategori = Kategori::select('id', 'n_kategori')->whereNotIn('id', [5])->get();
         $kategori_id = ($request->kategori_id == '' ? '0' : $request->kategori_id);
 
         // Sub Kategori

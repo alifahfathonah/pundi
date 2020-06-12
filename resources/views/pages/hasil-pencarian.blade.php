@@ -22,7 +22,7 @@
                             </div>
                             <!-- Kategori -->
                             <div class="col-sm-6">
-                                <span class="bdr-5 fs-11 f-b" style="background-color: #FC5300 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
+                                <span class="bdr-5 fs-11 f-b" style="background-color: #FEBD01 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
                                     <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori}}</a>
                                 </span>
                                 <!-- Judul -->
@@ -51,13 +51,13 @@
                             {{ $artikel->links() }}
                         </div>
                         @empty
-                        <p class="f-blk fs-30 f-b">Nothing Found !</p>
+                        <p class="f-blk fs-30 f-b">Tidak Ditemukan !</p>
                         <span>Sepertinya tidak ada yang ditemukan di sini. Mungkin coba cari lagi ?</span>
                         <form class="form-row d-flex justify-content-center md-form form-sm mt-4" action="{{ route('hasil-pencarian') }}" method="GET">
                             <div class="input-group input-group-lg">
                                 <input type="text" class="single-input-primary2" name="hasil_search" style="width: 80%"  placeholder="Search Keyword">
-                                <div class="input-group-prepend" style="background: #FC5300;">
-                                    <button type="submit" style="border: none; background: #FC5300; width: 50px">
+                                <div class="input-group-prepend" style="background: #FEBD01;">
+                                    <button type="submit" style="border: none; background: #FEBD01; width: 50px">
                                         <i class="fa fa-search" style="color: white"></i> 
                                     </button>
                                 </div>

@@ -6,9 +6,9 @@
                 <div class="col-lg-12">
                     <div class="section-tittle m-b-20">
                         <div style="margin-bottom: -15px">
-                            <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FC5300 !important"></i>
+                            <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FEBD01 !important"></i>
                         </div>
-                        <span class="fs-18 m-l-15" style="color: #FC5300 !important; font-weight: 700 !important "> 
+                        <span class="fs-18 m-l-15" style="color: #FEBD01 !important; font-weight: 700 !important "> 
                             INDEPT OF ISSUES
                         </span>
                     </div>
@@ -26,7 +26,7 @@
                                 </div>
                                 <div class="weekly-caption">
                                     <!-- Kategori -->
-                                    <span class="bdr-5" style="background-color: #FC5300 !important; color: white !important">
+                                    <span class="bdr-5" style="background-color: #FEBD01 !important; color: white !important">
                                         <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a>
                                     </span>
                                     <!-- Judul -->

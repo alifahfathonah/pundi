@@ -22,7 +22,7 @@
                                                 <div class="carousel-caption">
                                                     <div class="">
                                                         <!-- Kategori -->
-                                                        <span class="bdr-5 p-2 capital f-b" style="background-color: #FC5300 !important; color: white !important; font-size: 13px !important">
+                                                        <span class="bdr-5 p-2 capital f-b" style="background-color: #FEBD01  !important; color: white !important; font-size: 13px !important">
                                                             <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a>
                                                         </span>
                                                         <!-- Judul -->
@@ -71,7 +71,7 @@
                                         <div class="trend-bottom-cap" style="margin-top: -20px">
                                             <!-- Kategori -->
                                             <p class="fs-13 capital">
-                                                <a style="color: #FC5300 !important" href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a>
+                                                <a style="color: #FEBD01 !important" href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a>
                                             </p>
                                             <!-- Judul -->
                                             <h4 style="font-size: 15px !important; margin-top: -10px">
@@ -104,7 +104,7 @@
                         <div class="trand-right-cap" style="margin-top: -8px">
                              <!-- Kategori -->
                             <p class="fs-13 capital">
-                                <a style="color: #FC5300 !important" href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a>
+                                <a style="color: #FEBD01  !important" href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a>
                             </p>
                             <!-- Judul -->
                             <h4 style="font-size: 15px !important; margin-top: -10px">

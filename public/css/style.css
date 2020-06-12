@@ -17,7 +17,7 @@
 }
 
 .f-blk {
-    color: black;
+    color: black !important;
 }
 
 .f-wht {
@@ -30,6 +30,10 @@
 
 .f-red {
     color: #F74854;
+}
+
+.f-orange{
+    color: #FEBD01;
 }
 
 /* Position */
@@ -139,7 +143,7 @@
 }
 
 .non-hover:hover {
-    color: #F74854 !important;
+    color: #FEBD01 !important;
 }
 
 .non-hover-white:hover {
@@ -151,14 +155,14 @@
 }
 
 .vertical-line {
-    border-left: 0.5px rgb(255, 255, 255) solid;
+    border-left: 0.5px black solid;
     margin-right: -10px;
     margin-left: 10px
 }
 
 .color-gradient1 {
-    background: linear-gradient(to right, #F8476C, #FE7D3D) !important;
-    /* background-color: #FEBD01 !important; */
+    /* background: linear-gradient(to right, #F8476C, #FE7D3D) !important; */
+    background-color: #FEBD01 !important;
 }
 
 .capital {

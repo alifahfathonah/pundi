@@ -12,9 +12,9 @@
             <aside class="single_sidebar_widget popular_post_widget" style="background-color: transparent">
                 <!-- title -->
                 <div style="margin-bottom: -13px;">
-                    <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FC5300 !important"></i>
+                    <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FEBD01 !important"></i>
                 </div>
-                <span class="f-b m-l-15 widget_title" style="color: #FC5300 !important;"> 
+                <span class="f-b m-l-15 widget_title" style="color: #FEBD01 !important;"> 
                     BERITA & ARTIKEL TERBARU
                 </span>
                 <!-- Content -->
@@ -24,8 +24,8 @@
                     <img class="bdr-5" src="{{ asset('post/'. $i->gambar) }}" width="120" height="90" alt="post">
                     <div class="media-body" style="margin-top: -7px">
                         <!-- Kategori -->
-                        <span class="fs-13" style="color: #FC5300 !important; text-transform: uppercase">
-                           <a style="color: #FC5300" href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a> 
+                        <span class="fs-13" style="color: #FEBD01 !important; text-transform: uppercase">
+                           <a style="color: #FEBD01" href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a> 
                         </span>
                         <!-- Judul -->
                         <a href="{{ route('artikel') .'?post='.$i->id}}">
@@ -40,9 +40,9 @@
             </aside>
             {{-- <aside class="single_sidebar_widget tag_cloud_widget " style="background-color: transparent !important">
                 <div style="margin-bottom: -13px;">
-                    <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FC5300 !important"></i>
+                    <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FEBD01 !important"></i>
                 </div>
-                <span class="f-b m-l-15 widget_title" style="color: #FC5300 !important; text-align: justify !important"> 
+                <span class="f-b m-l-15 widget_title" style="color: #FEBD01 !important; text-align: justify !important"> 
                     PUNDI.ID – TAJAM DAN MENCERAHKAN
                 </span>
             </aside> --}}

@@ -16,7 +16,7 @@
         <div class="footer-area footer-padding fix">
             <div class="container">
                 <div class="text-center">
-                    <h1 class="f-wht">Pegiat Pendidikan Indonesia</h1>
+                    <img class="m-b-15" src="{{ asset('images/logo-round.png') }}" width="100" alt="">
                     <p class="f-wht">Tajam dan Mencerahkan</p>
                 </div>
             </div>

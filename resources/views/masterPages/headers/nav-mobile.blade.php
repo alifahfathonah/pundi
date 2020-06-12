@@ -2,7 +2,7 @@
     <nav>                  
         <ul id="navigation">    
             <li>
-                <a href="#">Headline</a>
+                <a href="#">Ulasan</a>
                 <ul class="submenu">
                     @foreach ($sub_headline as $i)
                         <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>    
@@ -10,7 +10,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Indepth</a>
+                <a href="#">Kajian</a>
                 <ul class="submenu">
                     @foreach ($sub_indepth as $i)
                         <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>
@@ -18,7 +18,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Kebijakan</a>
+                <a href="#">Kreativitas</a>
                 <ul class="submenu">
                     @foreach ($sub_kebijakan as $i)
                         <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>
@@ -34,12 +34,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Konsultasi</a>
-                <ul class="submenu">
-                    @foreach ($sub_konsultasi as $i)
-                        <li><a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori }}</a></li>
-                    @endforeach
-                </ul>
+                <a href="{{ route('konsultasi') }}">Konsultasi</a>
             </li>
             @if (Auth::user() != null)
             <li>
@@ -68,8 +63,8 @@
                 <form class="form-row d-flex justify-content-center md-form form-sm mt-1" action="{{ route('hasil-pencarian') }}" method="GET">
                     <div class="input-group input-group-lg" style="margin-left: 6%">
                         <input type="text" class="single-input-primary2" name="hasil_search" style="width: 82%"  placeholder="Search Keyword">
-                        <div class="input-group-prepend" style="background: #FC5300;">
-                            <button type="submit" style="border: none; background: #FC5300; width: 50px">
+                        <div class="input-group-prepend" style="background: #FEBD01;">
+                            <button type="submit" style="border: none; background: #FEBD01; width: 50px">
                                 <i class="fa fa-search" style="color: white"></i> 
                             </button>
                         </div>

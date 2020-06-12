@@ -8,24 +8,24 @@
 <!-- Navigation -->
 <div class="container m-t-25">
     <i class="fa fa-home" style="color: gray"></i>
-    <a class="m-l-8 m-r-8 f-red fs-14 non-hover" href="{{ route('/') }}">
+    <a class="m-l-8 m-r-8 f-red fs-14 non-hover f-orange" href="{{ route('/') }}">
         <span>Home</span>
     </a>
     <i class="fa fa-angle-right"></i>
-    <a class="m-l-8 m-r-8 f-red fs-14 non-hover" href="{{ route('kategori','kategori='.$kategori->id) }}">
+    <a class="m-l-8 m-r-8 f-red fs-14 non-hover f-orange" href="{{ route('kategori','kategori='.$kategori->id) }}">
         <span>{{ $kategori->n_kategori }}</span>
     </a>
     <div class="m-t-10">
         <div style="margin-bottom: -15px">
-            <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FC5300 !important"></i>
+            <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FEBD01 !important"></i>
         </div>
-        <span class="fs-18 m-l-15" style="color: #FC5300 !important; font-weight: 700 !important;text-transform: uppercase !important"> 
+        <span class="fs-18 m-l-15" style="color: #FEBD01 !important; font-weight: 700 !important;text-transform: uppercase !important"> 
             KATEGORI : {{ $kategori->n_kategori }}
         </span>
     </div>
     <div class="m-t-15">   
         @foreach ($sub_kategori as $i)
-        <span class="bdr-5 fs-11 f-b m-l-10" style="background-color: #FC5300 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
+        <span class="bdr-5 fs-11 f-b m-l-10" style="background-color: #FEBD01 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
             <a href="{{ route('sub_kategori','sub_kategori='.$i->id) }}">{{ $i->n_sub_kategori}}</a>
         </span>
         @endforeach
@@ -45,7 +45,7 @@
                         </div>
                         <div class="col-sm-6">
                             <!-- Kategori -->
-                            <span class="bdr-5 fs-11 f-b" style="background-color: #FC5300 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
+                            <span class="bdr-5 fs-11 f-b" style="background-color: #FEBD01 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
                                 <a href="{{ route('kategori','kategori='.$i->kategori->id) }}" class="hover-blk">{{ $i->kategori->n_kategori}}</a>
                             </span>
                             <!-- Judul -->

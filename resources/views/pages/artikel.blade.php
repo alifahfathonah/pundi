@@ -8,15 +8,15 @@
 <!-- Navigation -->
 <div class="container m-t-25">
     <span class="fa fa-home"></span>
-    <a class="m-l-8 m-r-8 f-red fs-14 non-hover" href="{{ route('/') }}">
+    <a class="m-l-8 m-r-8 f-red fs-14 non-hover f-orange" href="{{ route('/') }}">
         <span>Home</span>
     </a>
     <span class="fa fa-angle-right"></span>
-    <a class="m-l-8 m-r-8 f-red fs-14 non-hover" href="{{ route('sub_kategori','sub_kategori='.$artikel->sub_kategori->id) }}">
+    <a class="m-l-8 m-r-8 f-red fs-14 non-hover f-orange" href="{{ route('sub_kategori','sub_kategori='.$artikel->sub_kategori->id) }}">
         <span>{{ $artikel->sub_kategori->n_sub_kategori }}</span>
     </a>
     <span class="fa fa-angle-right"></span>
-    <span class="m-l-8 m-r-8 fs-14">{{substr($artikel->judul, 0, 20)}}...</span>
+    <span class="m-l-8 m-r-8 fs-14 f-orange">{{substr($artikel->judul, 0, 20)}}...</span>
 </div>
 <section class="blog_area section-padding" style="margin-top: -70px">
     <div class="container">
@@ -28,8 +28,8 @@
                     <div class="blog_detail">
                         <h3 class="f-b m-b-20">{{ $artikel->judul }}</h3>
                         <!-- Kategori -->
-                        <span class="bdr-5 fs-12 f-b" style="background-color: #FC5300 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
-                            <a  href="">{{ $artikel->sub_kategori->n_sub_kategori }}</a>
+                        <span class="bdr-5 fs-12 f-b" style="background-color: #FEBD01 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
+                            <a href="{{ route('sub_kategori','sub_kategori='.$artikel->sub_kategori->id) }}">{{ $artikel->sub_kategori->n_sub_kategori }}</a>
                         </span>
                         <!-- Photo User -->
                         <img src="{{ asset('ava/'.$artikel->user->photo) }}" class="rounded-circle m-l-30" width="45" alt="">
@@ -42,16 +42,12 @@
                         <i class="fa fa-comments m-l-15" style="color:gray"></i>
                         <span class="fs-14">{{ $komen->count() }} Komen</span>
                         <!-- Info Artikel dilihat -->
-                        <i class="fa fa-eye m-l-15" style="color: #FC5300"></i>
-                        <span class="f-red fs-14">{{ $artikel->artikel_view }}</span>
+                        <i class="fa fa-eye m-l-15" style="color: #FEBD01"></i>
+                        <span class="fs-14">{{ $artikel->artikel_view }}</span>
                         <!-- Gambar Artikel -->
-                        <div class="m-b-30 m-t-30">
+                        <div class="m-b-25 m-t-30">
                             <img class="img-fluid bdr-5" width="800" height="" src="{{ asset('post/'. $artikel->gambar) }}" alt="">
                         </div>
-                        <ul class="blog-info-link mt-3 mb-4">
-                            <li><a href="#"><i class="fa fa-user"></i>{{$artikel->kategori->n_kategori }}</a></li>
-                            <li><a href="#"><i class="fa fa-comments"></i> {{ $komen->count() }} komen</a></li>
-                        </ul>
                         <div class="m-b-10">
                             <!-- Share Facebook -->
                             <a href="http://www.facebook.com/sharer.php?u=http://103.219.112.114/pundi/public/artikel?post={{$artikel->id}}" target="_blank">
@@ -62,12 +58,12 @@
                                 <img src="https://image.flaticon.com/icons/svg/124/124021.svg" width="30" alt="Twitter" />
                             </a>
                             <!-- Share Whatsapp -->
-                            <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share">
+                            <a href="whatsapp://send?text={{$artikel->judul}}%0Ahttp://103.219.112.114/pundi/public/artikel?post={{$artikel->id}}" target="blank" data-action="share/whatsapp/share">
                                 <img src="https://image.flaticon.com/icons/svg/124/124034.svg" width="30" alt="Twitter" />
                             </a>
-                            <!-- Share Line -->
+                            <!-- Share Telegram -->
                             <a href="#" data-action="share/whatsapp/share">
-                                <img src="https://image.flaticon.com/icons/svg/124/124027.svg" width="30" alt="Twitter" />
+                                <img src="https://image.flaticon.com/icons/svg/124/124019.svg" width="30" alt="Twitter" />
                             </a>
                         </div>
                         <!-- Isi Artikel -->
@@ -75,37 +71,27 @@
                         <div id="more" style="display: none">{!! $artikel->isi !!}</div>
                         <!-- Button Hide And Show -->
                         <div class="m-t-20 m-b-20 text-center">
-                            <button class="genric-btn danger bdr-5 m-r-5" id="tombol_show">Lebih Sedikit</button>
+                            <button class="genric-btn warning bdr-5 m-r-5" id="tombol_show">Lebih Sedikit</button>
                             <button class="genric-btn primary bdr-5" id="tombol_hide">Baca Selengkapnya</button><br>
                         </div>
                         <!-- Editor -->
                         <span class="f-b f-blk">
                             <i>Editor: </i>
-                            <i class="f-red">Fauzul Adim</i>    
+                            <i class="f-orange">Fauzul Adim</i>    
                         </span>
                     </div>
                 </div>
-                <div class="card m-b-30 m-t-30" style="padding: 50px 20px 50px 20px; text-align: center; background: linear-gradient(to bottom,#FA5C59 ,#FE9B69); color: white">
-                    <span>
-                        <b style="color: white">PUNDI.ID</b> Dihidupi oleh jaringan penulis dan editor yang memerlukan dukungan untuk bisa menerbitkan tulisan secara berkala. 
-                        Agar kami bisa terus memproduksi artikel-artikel keislaman yang mencerahkan, silakan sisihkan sedikit donasi untuk keberlangsungan kami.
+                <!-- Tags -->
+                <div class="m-t-10">
+                    <span class="bdr-20 fs-17" style="background-color: #FEBD01 !important; color: white !important; padding:4px 12px">
+                        Tags :
                     </span>
-                    <span class="m-t-30">
-                        Transfer Donasi ke
-                        <br> 
-                        Mandiri xxxx-xxxx-xxx 
-                        <br>
-                        A.n Pegiat Pendidikan Indonesia
-                    </span>
+                    @foreach (explode(',', $artikel->tag) as $tags)
+                        <span class="bdr-20 fs-17 m-l-15" style="background-color: white !important; color: #AAAAAA !important; border: 1px solid #AAAAAA !important; padding:4px 12px">
+                            {{ $tags }}
+                        </span>
+                    @endforeach
                 </div>
-                <span class="bdr-20 fs-17" style="background-color: #FC5300 !important; color: white !important; padding:4px 12px">
-                    Tags :
-                </span>
-                @foreach (explode(',', $artikel->tag) as $tags)
-                    <span class="bdr-20 fs-17 m-l-15" style="background-color: white !important; color: #AAAAAA !important; border: 1px solid #AAAAAA !important; padding:4px 12px">
-                        {{ $tags }}
-                    </span>
-                @endforeach
                 <hr>
                 <!-- Info Penulis -->
                 <div class="blog-author" style="margin-top: -20px; margin-bottom: -25px">
@@ -171,11 +157,6 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <input class="form-control" type="email" name="email" id="email" placeholder="Enter E-mail *" required>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <input class="form-control" type="text" name="website" id="website" placeholder="Enter Website">
                                 </div>
                             </div>
                             <div class="col-12">

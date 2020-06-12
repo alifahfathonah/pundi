@@ -44,7 +44,7 @@
                             <hr>
                             <p class="f-blk" style="margin-top: -2%">Belum punya akun? 
                                 <a href="{{ route('register') }}">
-                                    <u class="f-red">Daftar sekarang!</u>
+                                    <u class="f-orange">Daftar sekarang!</u>
                                 </a>
                             </p>
                         </form>

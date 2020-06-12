@@ -28,6 +28,9 @@ Route::get('ketentuan-tulisan', 'KetentuanTulisanController@index');
 // Tentang Kami
 Route::get('tentang-kami', 'TentangKamiController@index')->name('tentang-kami');
 
+// Konsultasi 
+Route::get('konsultasi', 'KonsultasiController@index')->name('konsultasi');
+
 // Artikel
 Route::get('artikel', 'ArtikelController@artikel')->name('artikel');
 

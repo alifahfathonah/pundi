@@ -8,37 +8,37 @@
                         <div class="row d-flex justify-content-between align-items-center">
                             <!-- Infor Left -->
                             <div class="header-info-left row" style="margin-bottom: -22px">
-                                <div class="fs-13 f-b m-l-15" style="margin-top: -3px !important; color: white">
+                                <div class="fs-13 f-b m-l-15" style="margin-top: -3px !important">
                                     <i class="fa fa-bolt"></i>
-                                    <span>NEWPOST</span>
+                                    <span>TERBARU</span>
                                     <span class="vertical-line"></span>
                                 </div>
                                 <ul id="js-news" class="js-hidden">
                                     @foreach ($header as $i)
                                     <li class="news-item">
-                                        <a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a>
+                                        <a style="color: black !important" href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a>
                                     </li>
                                     @endforeach
                                 </ul>
                             </div>
                             <!-- Infro Right -->
                             <div class="header-info-right">
-                                <ul class="header-social" style="color: white !important;">
+                                <ul class="header-social">
                                     <i class="fas fa-calendar-check m-r-2"></i>
                                     <li>
-                                        <a id="hari"></a>
+                                        <a class="f-blk" id="hari"></a>
                                         ,
-                                        <a id="tanggal"></a>
-                                        <a id="bulan"></a>
-                                        <a id="tahun"></a>
+                                        <a class="f-blk" id="tanggal"></a>
+                                        <a class="f-blk" id="bulan"></a>
+                                        <a class="f-blk" id="tahun"></a>
                                         /
                                     </li>
                                     <li>
-                                        <a id="jam"></a>
+                                        <a class="f-blk" id="jam"></a>
                                         :
-                                        <a id="menit"></a>
+                                        <a class="f-blk" id="menit"></a>
                                         :
-                                        <a id="detik"></a>
+                                        <a class="f-blk" id="detik"></a>
                                     </li>
                                 </ul>
                             </div>
@@ -54,7 +54,7 @@
                         <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="logo">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset('images\logo.png') }}" style="margin-top: -10px" width="150px" alt="Logo">
+                                    <img src="{{ asset('images\logo2.png') }}" style="margin-top: -10px" width="150px" alt="Logo">
                                 </a>
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                         <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="sticky-logo">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset('images\logo.png') }}" width="150px" alt="Logo">
+                                    <img src="{{ asset('images\logo2.png') }}" width="150px" alt="Logo">
                                 </a>
                             </div>
                         </div>

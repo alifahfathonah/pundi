@@ -30,7 +30,7 @@
             ['font', ['bold', 'underline', 'clear']],
             ['color', ['color']],
             ['para', ['ul', 'ol', 'paragraph']],
-            ['insert', ['link', 'picture']],
+            ['insert', ['link']],
             ['view', ['fullscreen', 'codeview']]
         ]
     });
