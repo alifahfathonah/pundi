@@ -17,7 +17,7 @@ class WelcomeController extends Controller
          * Section 1 : Trending
          */
         // Trending Top
-        $trending_top = Artikel::wherestatus(1)->orderBy('created_at', 'desc')->take(3)->get();
+        $trending_top = Artikel::wherestatus(1)->orderBy('created_at', 'desc')->take(5)->get();
         // Trending Bottom
         $trending_bottom  = Artikel::wherestatus(1)->orderBy('created_at', 'desc')->take(3)->get();
         // Trending Right
