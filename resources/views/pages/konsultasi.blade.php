@@ -15,7 +15,7 @@
                     <div>
                         <p class="f-blk fs-30 f-b">Konsultasi</p>
                         <div class="m-t-30">
-                            <img class="d-block m-auto" src="{{ asset('images/logo.png') }}" width="500" alt="">
+                            <img class="d-block m-auto img-fluid" src="{{ asset('images/logo.png') }}" width="500" alt="">
                         </div>
                         <div class="m-t-40">
                             <div class="m-b-5">
@@ -32,7 +32,7 @@
                         <div class="m-t-20">
                             <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link active f-orange" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Kirim Pertanyaan</a>
+                                    <a class="nav-item nav-link active f-orange " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Kirim Pertanyaan</a>
                                     <a class="nav-item nav-link f-orange" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Konsultasi</a>
                                 </div>
                             </nav>
