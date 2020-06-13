@@ -12,7 +12,7 @@
             <!-- Left Sidebar -->
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar" >
-                    <div class="container">
+                    <div class="">
                         <p class="f-blk fs-30 f-b m-b-40">Hasil Pencarian Untuk: {{ $hasil_search }}</p>
                         @forelse ($artikel as $i)
                         <div class="row m-b-50">
