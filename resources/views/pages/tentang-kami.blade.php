@@ -15,7 +15,7 @@
                     <div>
                         <p class="f-blk fs-30 f-b">Tentang PUNDI.ID - Pegiat Pendidikan Indonesia</p>
                         <div class="m-t-30">
-                            <img class="d-block m-auto" src="{{ asset('images/logo1.png') }}" width="200" alt="">
+                            <img class="d-block m-auto img-fluid" src="{{ asset('images/logo.png') }}" width="500" alt="">
                         </div>
                         <div></div>
                     </div>
