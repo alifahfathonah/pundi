@@ -26,7 +26,7 @@
                                 </div>
                                 <div class="weekly2-caption">
                                     <!-- Kategori -->
-                                    <span style="background-color: #FEBD01; color: white">
+                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
                                         <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
                                     </span><br>
                                     <!-- Waktu -->
