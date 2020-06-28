@@ -10,10 +10,10 @@
         <!-- Section 2 : Indepth Of Issues --> 
         @include('pages.includes.indepth-of-issues')
 
-        <!-- Section 3 :  -->
+        <!-- Section 3 : Berita Terbaru -->
         @include('pages.includes.berita-terbaru')
 
-        <!-- Berita Mingguan 2 -->
+        <!-- Section 4 : Report -->
         @include('pages.includes.report')
         
         <!-- Foote -->
