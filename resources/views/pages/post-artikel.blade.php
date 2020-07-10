@@ -39,21 +39,21 @@
                             <!-- Judul -->
                             <div class="m-t-50">
                                 <label for="" class="f-b fs-17">JUDUL ARTIKEL<span class="text-danger ml-1">*</span></label>
-                                <input type="text" class="input single-input-primary border bdr-5 col-md-12" name="judul" id="judul" required="" oninvalid="this.setCustomValidity('Judul artikel tidak boleh kosong')" oninput="setCustomValidity('')" />
+                                <input type="text" class="input single-input-primary border bdr-5 col-md-12" name="judul" id="judul" value="{{ old('judul') }}" required="" oninvalid="this.setCustomValidity('Judul artikel tidak boleh kosong')" oninput="setCustomValidity('')"/>
                             </div>
                             <!-- Kategori -->
                             <div class="m-t-15">
                                 <label for="" class="f-b fs-17">KATEGORI<span class="text-danger ml-1">*</span></label><br>
                                 <div class="row">
-                                    <select name="kategori_id" id="kategori_id" class="kategori input single-input-primary border select">
-                                        <option value="0">Pilih Kategori</option>
+                                    <select name="kategori_id" id="kategori_id" class="kategori input single-input-primary border select" required="" oninvalid="this.setCustomValidity('Kategori tidak boleh kosong')" oninput="setCustomValidity('')">
+                                        <option value="">Pilih Kategori</option>
                                         @foreach ($kategori as $i)
                                             <option value="{{ $i->id }}" @if ($kategori_id == $i->id) selected="selected"@endif>
                                                 {{ $i->n_kategori }}
                                             </option>
                                         @endforeach
                                     </select>
-                                    <select name="sub_kategori_id" id="sub_kategori_id" class="kategori1 input single-input-primary border select">
+                                    <select name="sub_kategori_id" id="sub_kategori_id" class="kategori1 input single-input-primary border select" required>
                                     </select>
                                 </div>
                             </div>
@@ -76,11 +76,11 @@
                             <!-- Tag -->
                             <div class="m-t-10">
                                 <label for="" class="f-b fs-17">TAGS</label>
-                                <input type="text" class="input single-input-primary border bdr-5 col-md-12" name="tag" id="tag"/>
-                                <i class="fs-12 f-red">Pisahkan dengan koma (,)</i>
+                                <input type="text" class="input single-input-primary border bdr-5 col-md-12" value="{{ old('tag') }}" name="tag" id="tag"/>
+                                <i class="fs-12 f-red">Pisahkan dengan koma ( , )</i>
                             </div>
                             <!-- Button -->
-                            <button class="genric-btn primary bdr-5 m-t-20 " type="submit" value="Log in">KirimTulisan</button>
+                            <button class="genric-btn primary bdr-5 m-t-20 " type="submit"  value="Log in">KirimTulisan</button>
                             <hr>
                         </form>
                     </div>
