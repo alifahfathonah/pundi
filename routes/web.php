@@ -51,5 +51,6 @@ Route::group(['middleware' => ['auth']], function () {
 
     // Kirim Tulisan
     Route::get('kirim-tulisan', 'ArtikelController@index')->name('kirim-tulisan');
+    Route::get('kirim-tulisan/subKegiatanByKegiatan/{id}', 'ArtikelController@subKegiatanByKegiatan')->name('kirim-tulisan.subKegiatanByKegiatan');
     Route::post('kirim-tulisan', 'ArtikelController@tambah_artikel')->name('kirim-tulisan.tambah');
 });

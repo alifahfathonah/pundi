@@ -24,9 +24,6 @@
                                 <div class="weekly-img">
                                     <img src="{{ asset('post/' . $i->gambar) }}" width="" height="350" alt="">
                                 </div>
-                                <div>
-                                    <img src="test.png" alt="">
-                                </div>
                                 <div class="weekly-caption">
                                     <!-- Kategori -->
                                     <span class="bdr-5" style="background-color: #FEBD01 !important; color: white !important">

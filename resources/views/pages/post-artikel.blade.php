@@ -36,7 +36,6 @@
                             </ul>
                         </div>
                     @endif
-                
                     <div class="m-t-50">
                         <form action="{{ route('kirim-tulisan.tambah', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
                             {{ csrf_field() }}
@@ -53,7 +52,7 @@
                             <div class="m-t-25">
                                 <label for="" class="f-b fs-17">KATEGORI<span class="text-danger ml-1">*</span></label><br>
                                 <div class="row">
-                                    <select class="single-input border col-md-5 m-r-15 m-l-14 kategori" name="kategori_id" id="kategori_id" onchange="selectOnChange()">
+                                    <select name="kategori_id" id="kategori_id" class="kategori single-input border col-md-5 select">
                                         <option value="">- Pilih Kategori -</option>
                                         @foreach ($kategori as $i)
                                             <option value="{{ $i->id }}" @if ($kategori_id == $i->id) selected="selected"@endif>
@@ -61,11 +60,8 @@
                                             </option>
                                         @endforeach
                                     </select>
-                                    <select class="single-input border col-md-5 kategori1" name="sub_kategori_id" id="sub_kategori_id">
-                                        <option value="">- Pilih Sub Kategori -</option>
-                                        @foreach ($sub_kategori as $i)
-                                            <option value="{{ $i->id }}">{{ $i->n_sub_kategori }}</option>
-                                        @endforeach
+                                    <select name="sub_kategori_id" id="sub_kategori_id" class="kategori1 single-input border col-md-5 select">
+                                        <option value="">- Pilih Kategori -</option>
                                     </select>
                                 </div>
                             </div>
@@ -110,7 +106,6 @@
     @include('masterPages.footers.footer')
 </div>
 @endsection
-
 @section('script')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script type="text/javascript">
@@ -157,11 +152,26 @@
         }
     }
 
-    // Select Kategori
-    function selectOnChange(){
-        kategori_id = $('#kategori_id').val();
-        document.location.href = "{{ route('kirim-tulisan') }}?kategori_id=" + kategori_id;
-    }
-
+    $(document).ready(function(){
+        $('#kategori_id').change(function(){ 
+            var id=$(this).val();
+            $.ajax({
+                url : "{{ route('kirim-tulisan.subKegiatanByKegiatan', ':id') }}".replace(':id', id),
+                method : "GET",
+                data : {id: id},
+                async : true,
+                dataType : 'json',
+                success: function(data){
+                    var html = '';
+                    var i;
+                    for(i=0; i<data.length; i++){
+                        html += '<option value='+data[i].id+'>'+data[i].n_sub_kategori+'</option>';
+                    }
+                    $('#sub_kategori_id').html(html);
+                }
+            });
+            return false;
+        }); 
+    });
 </script>
 @endsection

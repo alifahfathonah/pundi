@@ -22,9 +22,6 @@ class ArtikelController extends Controller
         $kategori = Kategori::select('id', 'n_kategori')->whereNotIn('id', [5])->get();
         $kategori_id = ($request->kategori_id == '' ? '0' : $request->kategori_id);
 
-        // Sub Kategori
-        $sub_kategori = Sub_Kategori::select('id', 'kategori_id', 'n_sub_kategori')->where('kategori_id', $kategori_id)->get();
-
         /**
          * Variabel for header
          */
@@ -37,13 +34,17 @@ class ArtikelController extends Controller
         return view('pages.post-artikel', compact(
             'kategori',
             'kategori_id',
-            'sub_kategori',
             'sub_headline',
             'sub_indepth',
             'sub_kebijakan',
             'sub_serbaSerbi',
             'sub_konsultasi'
         ));
+    }
+
+    public function subKegiatanByKegiatan($kategori_id)
+    {
+        return Sub_Kategori::select('id', 'n_sub_kategori')->wherekategori_id($kategori_id)->get();
     }
 
     public function tambah_artikel(Request $request)

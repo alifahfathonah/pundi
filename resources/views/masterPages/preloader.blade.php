@@ -24,10 +24,8 @@
         </div>
     </div>
 </body>
-<!-- Jquery Plugins, main Jquery -->
-<script src="{{ asset('./assets/js/plugins.js') }}"></script>
-<script src="{{ asset('./assets/js/main.js') }}"></script>
-
+<!-- Jquery Plugins -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 <script>
     $(document).ready(function () {
         $(".preloader").fadeOut();

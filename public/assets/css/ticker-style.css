@@ -97,7 +97,7 @@
 }
 
 .ticker-controls li.jnt-play-pause {
-    background-image: url('../images/controls.png');
+    /* background-image: url('../images/controls.png'); */
     background-position: 32px 16px;
 }
 
@@ -110,7 +110,7 @@
 }
 
 .ticker-controls li.jnt-play-pause.paused {
-    background-image: url('../images/controls.png');
+    /* background-image: url('../images/controls.png'); */
     background-position: 48px 16px;
 }
 
@@ -123,7 +123,7 @@
 }
 
 .ticker-controls li.jnt-prev {
-    background-image: url('../images/controls.png');
+    /* background-image: url('../images/controls.png'); */
     background-position: 0px 16px;
 }
 
@@ -136,7 +136,7 @@
 }
 
 .ticker-controls li.jnt-next {
-    background-image: url('../images/controls.png');
+    /* background-image: url('../images/controls.png'); */
     background-position: 16px 16px;
 }
 
