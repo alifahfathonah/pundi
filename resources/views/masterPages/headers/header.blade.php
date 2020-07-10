@@ -82,7 +82,7 @@
                             </div>
                         </div>
                         <!-- Navigation -->
-                        <div class="col-xl-10 col-lg-10 col-md-10">
+                        <div class="">
                             <div class="sticky-logo">
                                 <div class="header-banner f-right ">
                                     <div class="main-menu d-none d-md-block">

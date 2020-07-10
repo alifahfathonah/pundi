@@ -2767,7 +2767,7 @@ hr {
 
 /* Lebar Header Sticky */
 .header-sticky.sticky-bar.sticky .main-menu ul>li>a {
-    padding: 30px 15px
+    padding: 0px
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2851,7 +2851,7 @@ hr {
 }
 
 .sticky-logo.info-open {
-    padding: 8px
+    margin-bottom: 10px;
 }
 
 .trending-area .trending-main {
