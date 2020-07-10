@@ -32,7 +32,7 @@
     color: #F74854;
 }
 
-.f-orange{
+.f-orange {
     color: #FEBD01 !important;
 }
 
@@ -128,10 +128,11 @@
     }
 }
 
-.select{
+.select {
     height: 45px;
     border-radius: 5px;
-    margin-left: 13px;
+    margin-left: 15px;
+    width: 357px !important
 }
 
 @media (max-width: 767px) {
@@ -183,19 +184,19 @@
 .zoom-effect {
     width: 100%;
     overflow: hidden;
-  }
+}
 
-  .kotak {
+.kotak {
     top: 0;
     left: 0;
-  }
+}
 
-  .kotak img {
+.kotak img {
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
-  }
+}
 
-  .zoom-effect:hover .kotak img {
+.zoom-effect:hover .kotak img {
     -webkit-transform: scale(1.08);
     transform: scale(1.08);
-  }
+}
