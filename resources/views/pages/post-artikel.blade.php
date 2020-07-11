@@ -91,10 +91,7 @@
         </div>
     </div>
 </section>
-<!-- Footer -->
-<div>
-    @include('masterPages.footers.footer')
-</div>
+@include('masterPages.footers.footer')
 @endsection
 @section('script')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>

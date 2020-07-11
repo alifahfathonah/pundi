@@ -1,10 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
-<!-- Header -->
-<div>
-    @include('masterPages.headers.header')
-</div>
+@include('masterPages.headers.header')
 <!-- Navigation -->
 <div class="container m-t-25">
     <span class="fa fa-home"></span>
@@ -87,9 +83,9 @@
                         Tags :
                     </span>
                     @foreach (explode(',', $artikel->tag) as $tags)
-                        <span class="bdr-20 fs-17 m-l-15" style="background-color: white !important; color: #AAAAAA !important; border: 1px solid #AAAAAA !important; padding:4px 12px">
-                            {{ $tags }}
-                        </span>
+                    <span class="bdr-20 fs-17 m-l-15" style="background-color: white !important; color: #AAAAAA !important; border: 1px solid #AAAAAA !important; padding:4px 12px">
+                        {{ $tags }}
+                    </span>
                     @endforeach
                 </div>
                 <hr>
@@ -109,36 +105,36 @@
                 <div class="comments-area" style="margin-bottom: -50px">
                     <p class="fs-24 f-b f-blk" style="margin-top: -20px">{{ $komen->count() }} komen</p>
                     @foreach ($komen as $i)
-                        <div class="comment-list">
-                            <div class="single-comment justify-content-between d-flex">
-                                <div class="user justify-content-between d-flex">
-                                    <div class="thumb">
-                                        @if ($i->user_id != null)
-                                        <img src="{{ asset('ava/' .$i->user->photo) }}" alt="">
-                                        @else
-                                        <img src="{{ asset('images/boy.png') }}" alt="">
-                                        @endif
-                                    </div>
-                                    <div class="desc">
-                                        <p class="comment">
-                                            {{ $i->comment }}
-                                        </p>
-                                        <div class="d-flex justify-content-between">
-                                            <div class="d-flex align-items-center">
-                                                <h5>
-                                                    <a href="#">{{ $i->nama }}</a>
-                                                </h5>
-                                                <i class="fas fa-clock fa-xs m-l-20" style="margin-right: -10px; color: gray"></i>
-                                                <span class="date" >{{ $i->created_at }}</span>
-                                            </div>
-                                            <div class="reply-btn">
-                                                {{-- <a href="#" class="btn-reply text-uppercase">reply</a> --}}
-                                            </div>
+                    <div class="comment-list">
+                        <div class="single-comment justify-content-between d-flex">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    @if ($i->user_id != null)
+                                    <img src="{{ asset('ava/' .$i->user->photo) }}" alt="">
+                                    @else
+                                    <img src="{{ asset('images/boy.png') }}" alt="">
+                                    @endif
+                                </div>
+                                <div class="desc">
+                                    <p class="comment">
+                                        {{ $i->comment }}
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <h5>
+                                                <a href="#">{{ $i->nama }}</a>
+                                            </h5>
+                                            <i class="fas fa-clock fa-xs m-l-20" style="margin-right: -10px; color: gray"></i>
+                                            <span class="date" >{{ $i->created_at }}</span>
+                                        </div>
+                                        <div class="reply-btn">
+                                            {{-- <a href="#" class="btn-reply text-uppercase">reply</a> --}}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     @endforeach
                 </div>
                 <!-- Insert Komen -->
@@ -176,10 +172,7 @@
         </div>
     </div>
 </section>
-<!-- Footer -->
-<div>
-    @include('masterPages.footers.footer')
-</div>
+@include('masterPages.footers.footer')
 @endsection
 @section('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

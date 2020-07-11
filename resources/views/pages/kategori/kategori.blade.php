@@ -1,10 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
-<!-- Header -->
-<div>
-    @include('masterPages.headers.header')
-</div>
+@include('masterPages.headers.header')
 <!-- Navigation -->
 <div class="container m-t-25">
     <i class="fa fa-home" style="color: gray"></i>
@@ -81,8 +77,5 @@
         </div>
     </div>
 </section>
-<!-- Footer -->
-<div>
-    @include('masterPages.footers.footer')
-</div>
+@include('masterPages.footers.footer')
 @endsection

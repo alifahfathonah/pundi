@@ -9,7 +9,6 @@
     <title>Document</title>
 
 </head>
-
 <body>
     <footer>
         <!-- Footer Start-->
@@ -21,7 +20,7 @@
                 </div>
             </div>
         </div>
-        <!-- footer-bottom aera -->
+        <!-- footer-bottom area -->
         <div class="footer-bottom-area">
             <div class="container">
                 <div class="footer-border">
@@ -48,5 +47,4 @@
         <!-- Footer End-->
     </footer>
 </body>
-
 </html>

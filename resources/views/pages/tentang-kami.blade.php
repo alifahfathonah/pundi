@@ -1,11 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
-<!-- Header -->
-<div>
-    @include('masterPages.headers.header')
-</div>
-
+@include('masterPages.headers.header')
 <section class="blog_area section-padding" style="margin-top: -80px">
     <div class="container">
         <div class="row">
@@ -17,7 +12,6 @@
                         <div class="m-t-30">
                             <img class="d-block m-auto img-fluid" src="{{ asset('images/logo.png') }}" width="500" alt="">
                         </div>
-                        <div></div>
                     </div>
                 </div>
             </div>
@@ -27,7 +21,5 @@
     </div>
 </section>
 <!-- Footer -->
-<div>
-    @include('masterPages.footers.footer')
-</div>
+@include('masterPages.footers.footer')
 @endsection

@@ -1,11 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
-<!-- Header -->
-<div>
-    @include('masterPages.headers.header')
-</div>
-
+@include('masterPages.headers.header')
 <section class="blog_area section-padding" style="margin-top: -80px">
     <div class="container">
         <div class="row">
@@ -72,8 +67,5 @@
         </div>
     </div>
 </section>
-<!-- Footer -->
-<div>
-    @include('masterPages.footers.footer')
-</div>
+@include('masterPages.footers.footer')
 @endsection

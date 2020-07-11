@@ -15,7 +15,6 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-lite.min.js"></script>
 
 </head>
-
 <body>
     <div>
         <textarea name="isi" id="summernote">{{ old('isi') }}</textarea>
@@ -36,5 +35,4 @@
     });
 
 </script>
-
 </html>
