@@ -2,7 +2,7 @@
 @section('content')
 @include('masterPages.headers.header')
 <!-- Navigation -->
-<div class="container m-t-25">
+<div class="container m-t-10">
     <i class="fa fa-home" style="color: gray"></i>
     <a class="m-l-8 m-r-8 f-red fs-14 non-hover f-orange" href="{{ route('/') }}">
         <span>Home</span>
@@ -20,14 +20,14 @@
         </span>
     </div>
 </div>
-<section class="blog_area section-padding" style="margin-top: -80px">
+<section class="blog_area section-padding" style="margin-top: -100px">
     <div class="container">
         <div class="row">
             <!-- Left Sidebar -->
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
                     @foreach ($artikel as $i)
-                    <div class="row m-b-50">
+                    <div class="row m-b-30">
                         <!-- Gambar -->
                         <div class="col-sm-6">
                             <img class="bdr-5 m-b-10" src="{{ asset('post/'.$i->gambar) }}" width="350" alt="">
@@ -49,7 +49,7 @@
                                 <span class="fs-13">{{ substr($i->created_at,0,10) }}</span>
                             </div>
                             <!-- Isi Artikel -->
-                            <div class="m-t-10 fs-16">
+                            <div class="m-t-10 fs-16 text-justify">
                                 {{  substr(strip_tags($i->isi),0,500) }} […]
                             </div>
                             <!-- Read More -->

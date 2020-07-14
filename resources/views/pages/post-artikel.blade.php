@@ -1,43 +1,21 @@
 @extends('layouts.app')
 @section('content')
 @include('masterPages.headers.header')
-<section class="blog_area section-padding" style="margin-top: -80px; margin-bottom: -100px">
+<section class="blog_area section-padding" style="margin-top: -80px ">
     <div class="container">
         <div class="row">
             <!-- Left Sidebar -->
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
-                    <!-- Alert Success -->
-                    @if (session()->has('success'))
-                    <div class="alert alert-success alert-dismissible fade show text-center bdr-5 col-md-12 container" role="alert">
-                        {{ session('success') }}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    @endif
-                    <!-- Alert Errors -->
-                    @if (count($errors) > 0)
-                    <div class="alert alert-danger">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <strong>Whoops Error!</strong>&nbsp;
-                        <span>You have {{ $errors->count() }} error</span>
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    @endif
-                    <div class="m-t-50">
+                    <!-- Alerts -->
+                    @include('masterPages.alerts')
+                    <div>
                         <form action="{{ route('kirim-tulisan.tambah', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             {{ method_field('POST') }}
-                            <p class="f-blk fs-30 f-b" style="margin-top: -40px">Upload Tulisan</p>
+                            <p class="f-blk fs-30 f-b">Upload Tulisan</p>
                             <!-- Judul -->
-                            <div class="m-t-50">
+                            <div class="m-t-30">
                                 <label for="" class="f-b fs-17">JUDUL ARTIKEL<span class="text-danger ml-1">*</span></label>
                                 <input type="text" class="input single-input-primary border bdr-5 col-md-12" name="judul" id="judul" value="{{ old('judul') }}" required="" oninvalid="this.setCustomValidity('Judul artikel tidak boleh kosong')" oninput="setCustomValidity('')"/>
                             </div>

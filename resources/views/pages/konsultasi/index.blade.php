@@ -8,33 +8,11 @@
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar" style="text-align: justify">
                     <!-- Alert Success -->
-                    @if (session()->has('success'))
-                    <div class="alert alert-success alert-dismissible fade show text-center bdr-5 col-md-12 container" role="alert">
-                        {{ session('success') }}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    @endif
-                    <!-- Alert Errors -->
-                    @if (count($errors) > 0)
-                    <div class="alert alert-danger">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <strong>Whoops Error!</strong>&nbsp;
-                        <span>You have {{ $errors->count() }} error</span>
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    @endif
+                    @include('masterPages.alerts')
                     <div>
                         <p class="f-blk fs-30 f-b">Konsultasi</p>
                         <div class="m-t-30">
-                            <img class="d-block m-auto img-fluid" src="{{ asset('images/logo.png') }}" width="500" alt="">
+                            <img class="d-block m-auto img-fluid" src="{{ asset('images/logo.png') }}" width="400" alt="">
                         </div>
                         <div class="m-t-40">
                             <div class="m-b-5">
