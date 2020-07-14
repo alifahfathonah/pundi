@@ -30,6 +30,9 @@ Route::get('tentang-kami', 'TentangKamiController@index')->name('tentang-kami');
 
 // Konsultasi 
 Route::get('konsultasi', 'KonsultasiController@index')->name('konsultasi');
+Route::post('konsultasi/konsultasi_store', 'KonsultasiController@konsultasi_store')->name('konsultasi.konsultasi_store');
+Route::post('konsultasi/pertanyaan_store', 'KonsultasiController@pertanyaan_store')->name('konsultasi.pertanyaan_store');
+
 
 // Artikel
 Route::get('artikel', 'ArtikelController@artikel')->name('artikel');
