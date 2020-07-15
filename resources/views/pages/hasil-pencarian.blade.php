@@ -10,7 +10,7 @@
                     <div class="">
                         <p class="f-blk fs-30 f-b m-b-40">Hasil Pencarian Untuk: {{ $hasil_search }}</p>
                         @forelse ($artikel as $i)
-                        <div class="row m-b-50">
+                        <div class="row m-b-30">
                             <!-- Gambar -->
                             <div class="col-sm-6">
                                 <img class="bdr-5 m-b-10" src="{{ asset('post/'.$i->gambar) }}" width="350" alt="">
@@ -32,7 +32,7 @@
                                     <span class="fs-13">{{ substr($i->created_at,0,10) }}</span>
                                 </div>
                                 <!-- Isi Artikel -->
-                                <div class="m-t-10 fs-16">
+                                <div class="m-t-10 fs-16 text-justify">
                                     {{  substr(strip_tags($i->isi),0,500) }} […]
                                 </div>
                                 <!-- Read More -->

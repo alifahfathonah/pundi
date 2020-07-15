@@ -23,7 +23,7 @@
             @endif
             <div class="col-12">
                 <div class="form-group">
-                    <textarea class="form-control w-100" name="konsultasi" id="konsultasi" cols="10" rows="8" placeholder="konsultasi *" required></textarea>
+                    <textarea class="form-control w-100" name="konsultasi" id="konsultasi" cols="10" rows="8" placeholder="konsultasi *"></textarea>
                 </div>
             </div>
         </div>

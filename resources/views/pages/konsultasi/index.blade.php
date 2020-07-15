@@ -21,7 +21,7 @@
                             <div class="m-b-5">
                                 <span class="">Whatsapp Group : </span>
                                 <a href="">#</a><br>
-                            </div>
+                            </div>  
                             <div>
                                 <span>Email : admin@pundi.or.id</span>
                             </div>
@@ -29,7 +29,7 @@
                         <div class="m-t-20">
                             <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link active f-orange " id="nav-home-tab" data-toggle="tab" href="#pertanyaan">Kirim Pertanyaan</a>
+                                    <a class="nav-item nav-link active f-orange" id="nav-home-tab" data-toggle="tab" href="#pertanyaan">Kirim Pertanyaan</a>
                                     <a class="nav-item nav-link f-orange" id="nav-profile-tab" data-toggle="tab" href="#konsultasi">Konsultasi</a>
                                 </div>
                             </nav>

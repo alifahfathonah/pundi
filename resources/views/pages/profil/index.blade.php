@@ -9,8 +9,8 @@
                 <div class="blog_left_sidebar">
                     <div>
                         <p class="f-blk fs-30 f-b">Dashboard</p>
-                        <p class="f-blk fs-25 f-b m-t-50">{{ Auth::user()->name }}'s Dashboard </p>
-                        <span>You have created {{ $post->count() }} (Pos)</span>
+                        <p class="f-blk fs-25 f-b m-t-30">{{ Auth::user()->name }} Dashboard </p>
+                        <span>You have created {{ $post->count() }} article</span>
                     </div>
                     <!-- Post -->
                     <div class="card p-2 m-t-10" style="background-color: #FCF8E3; border-color: #8A6D3B; color: #9C6D76">
@@ -43,7 +43,7 @@
                                     <i type="button" class="fa fa-caret-down" data-toggle="dropdown"></i>
                                     <!-- DropDown -->
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item fs-15" href="{{ route('/') }}">Edit Profil</a>
+                                        <a class="dropdown-item fs-15" href="{{ route('edit-profil') }}">Edit Profil</a>
                                         <a class="dropdown-item fs-15" href="{{ route('kirim-tulisan') }}">Kirim Tulisan</a>
                                         <a class="dropdown-item fs-15" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                             Log Out

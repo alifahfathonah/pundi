@@ -33,7 +33,6 @@ Route::get('konsultasi', 'KonsultasiController@index')->name('konsultasi');
 Route::post('konsultasi/konsultasi_store', 'KonsultasiController@konsultasi_store')->name('konsultasi.konsultasi_store');
 Route::post('konsultasi/pertanyaan_store', 'KonsultasiController@pertanyaan_store')->name('konsultasi.pertanyaan_store');
 
-
 // Artikel
 Route::get('artikel', 'ArtikelController@artikel')->name('artikel');
 
@@ -51,6 +50,7 @@ Route::get('sub_kategori', 'KategoriController@sub_kategori')->name('sub_kategor
 Route::group(['middleware' => ['auth']], function () {
     // Profil
     Route::get('profil', 'ProfilController@index')->name('profil');
+    Route::get('edit-profil', 'ProfilController@edit_profil')->name('edit-profil');
 
     // Kirim Tulisan
     Route::get('kirim-tulisan', 'ArtikelController@index')->name('kirim-tulisan');

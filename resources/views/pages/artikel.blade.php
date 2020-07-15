@@ -2,7 +2,7 @@
 @section('content')
 @include('masterPages.headers.header')
 <!-- Navigation -->
-<div class="container m-t-25">
+<div class="container m-t-15">
     <span class="fa fa-home"></span>
     <a class="m-l-8 m-r-8 f-red fs-14 non-hover f-orange" href="{{ route('/') }}">
         <span>Home</span>

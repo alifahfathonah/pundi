@@ -10,7 +10,7 @@
                         @csrf
                         <div class="" >
                             <!-- Register Kontributor -->
-                            <p class="fs-30 f-b f-blk m-b-40">Register Kontributor</p>
+                            <p class="fs-30 f-b f-blk m-b-40">Edit Kontributor</p>
                             <!-- E-mail -->
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label" for="">EMAIL<span class="text-danger ml-1">*</span></label>
@@ -21,25 +21,6 @@
                                             <strong>E-mail sudah pernah terdaftar!</strong>
                                         </span>
                                     @endif
-                                </div>
-                            </div>
-                            <!-- Password -->
-                            <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label " for="">PASSWORD <span class="text-danger ml-1">*</span></label>
-                                <div class="col-sm-8">
-                                    <input type="password" class="input single-input-primary @error('password') is-invalid @enderror" name="password" required oninvalid="this.setCustomValidity('Password tidak boleh kosong!')" oninput="setCustomValidity('')"/>
-                                    @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>Konfirmasi password tidak cocok!</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <!-- Konfirmasi Passwrod -->
-                            <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label " for="">KONFIRMASI PASSWORD <span class="text-danger ml-1">*</span></label>
-                                <div class="col-sm-8">
-                                    <input type="password" class="input single-input-primary" name="password_confirmation" required oninvalid="this.setCustomValidity('Konfirmasi Password tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
                         </div>
