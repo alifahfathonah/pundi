@@ -6,8 +6,12 @@
         <div class="row">
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
-                    <form action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
-                        @csrf
+                    <!-- Alerts -->
+                    @include('masterPages.alerts')
+                    <form action="{{ route('edit-profil.update-profil') }}" method="POST">
+                        {{ csrf_field() }}
+                        {{ method_field('POST') }}
+                        <input type="hidden" name="id" value="{{ Auth::user()->id }}">
                         <div class="" >
                             <!-- Register Kontributor -->
                             <p class="fs-30 f-b f-blk m-b-40">Edit Kontributor</p>
@@ -15,12 +19,7 @@
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label" for="">EMAIL<span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
-                                    <input type="email" class="input single-input-primary {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required oninvalid="this.setCustomValidity('E-mail tidak boleh kosong / Format salah')" oninput="setCustomValidity('')"/>
-                                    @if ($errors->has('email'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>E-mail sudah pernah terdaftar!</strong>
-                                        </span>
-                                    @endif
+                                    <input type="email" class="input single-input-primary {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ Auth::user()->email }}" required oninvalid="this.setCustomValidity('E-mail tidak boleh kosong / Format salah')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
                         </div>
@@ -33,62 +32,49 @@
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label " for="">NAMA<span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="input single-input-primary" name="name" value="{{ old('name') }}" required oninvalid="this.setCustomValidity('Username tidak boleh kosong!')" oninput="setCustomValidity('')"/>
+                                    <input type="text" class="input single-input-primary" name="name" value="{{ Auth::user()->name }}" required oninvalid="this.setCustomValidity('Username tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
                             <!-- Nama Depan -->
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label " for="">NAMA DEPAN <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="input single-input-primary" name="nama_depan" value="{{ old('nama_depan') }}" required oninvalid="this.setCustomValidity('Nama Depan tidak boleh kosong!')" oninput="setCustomValidity('')"/>
+                                    <input type="text" class="input single-input-primary" name="nama_depan" value="{{ Auth::user()->nama_depan }}" required oninvalid="this.setCustomValidity('Nama Depan tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
                             <!-- Nama Belakang -->
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label " for="">NAMA BELAKANG <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="input single-input-primary" name="nama_belakang" value="{{ old('nama_belakang') }}" required oninvalid="this.setCustomValidity('Nama Belakang tidak boleh kosong!')" oninput="setCustomValidity('')"/>
+                                    <input type="text" class="input single-input-primary" name="nama_belakang" value="{{ Auth::user()->nama_belakang }}" required oninvalid="this.setCustomValidity('Nama Belakang tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
                             <!-- Nama Yang Ditampilkan -->
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label " for="">USERNAME <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="input single-input-primary" name="username" value="{{ old('username') }}" required oninvalid="this.setCustomValidity('Username tidak boleh kosong!')" oninput="setCustomValidity('')"/>
-                                </div>
-                            </div>
-                            <!-- Gambar User -->
-                            <div class="mt-10 form-group row">
-                                <label for="" class="col-sm-4 f-b col-form-label ">FOTO PROFIL <span class="text-danger ml-1">*</span></label>
-                                <div class="col-sm-8">
-                                    <input type="file" name="photo" id="photo" onchange="tampilkanPreview(this,'preview')" required oninvalid="this.setCustomValidity('Foto tidak boleh kosong!')" oninput="setCustomValidity('')"/>
-                                    <label for="file" class="js-labelFile">
-                                        <span class="js-fileName"></span>
-                                    </label>
-                                    <img width="300" class="rounded img-fluid d-block" id="preview" alt="" style="margin-top: 10px;"/>
-                                    <hr style="margin-top: -1px; margin-bottom: -1px">
-                                    <i class="fs-12 ">Gambar bisa berupa foto, logo, atau symbol icon. Maksimal 1 Mb.</i>
+                                    <input type="text" class="input single-input-primary" name="username" value="{{ Auth::user()->username }}" required oninvalid="this.setCustomValidity('Username tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
                             <!-- Biografi User -->
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label " for="">BIOGRAFI USER <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
-                                    <textarea type="text" class="input single-input-primary" name="bio" required oninvalid="this.setCustomValidity('Biografi tidak boleh kosong!')" oninput="setCustomValidity('')">{{ old('bio') }}</textarea>
+                                    <textarea type="text" class="input single-input-primary" name="bio" required oninvalid="this.setCustomValidity('Biografi tidak boleh kosong!')" oninput="setCustomValidity('')">{{ Auth::user()->bio }}</textarea>
                                 </div>
                             </div>
                             <!-- Nomor Handphone -->
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label " for="">NOMOR HANDPHONE <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="input single-input-primary" name="nomor_hp" value="{{ old('nomor_hp') }}" required="" oninvalid="this.setCustomValidity('Nomor Handphone tidak boleh kosong!')" oninput="setCustomValidity('')"/>
+                                    <input type="text" class="input single-input-primary" name="nomor_hp" value="{{ Auth::user()->nomor_hp }}" required="" oninvalid="this.setCustomValidity('Nomor Handphone tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
                             <!-- Fecebook -->
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label " for="">FACEBOOK</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="input single-input-primary" name="facebook" value="{{ old('facebook') }}"/>
+                                    <input type="text" class="input single-input-primary" name="facebook" value="{{ Auth::user()->facebook }}"/>
                                     {{-- <i class="fs-12 ">example: https://www.facebook.com/your-account-name</i> --}}
                                 </div>
                             </div>
@@ -96,7 +82,7 @@
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label " for="">TWITTER</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="input single-input-primary" name="twitter" value="{{ old('twitter') }}"/>
+                                    <input type="text" class="input single-input-primary" name="twitter" value="{{ Auth::user()->twitter }}"/>
                                     {{-- <i class="fs-12 ">example: https://twitter.com/your-account-name</i> --}}
                                 </div>
                             </div>
@@ -104,7 +90,7 @@
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label " for="">INSTAGRAM</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="input single-input-primary" name="instagram" value="{{ old('instagram') }}"/>
+                                    <input type="text" class="input single-input-primary" name="instagram" value="{{ Auth::user()->instagram }}"/>
                                     {{-- <i class="fs-12 ">example: https://instagram.com/your-account-name</i> --}}
                                 </div>
                             </div>
