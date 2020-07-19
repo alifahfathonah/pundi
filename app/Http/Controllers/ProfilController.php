@@ -74,7 +74,7 @@ class ProfilController extends Controller
     public function update_profil(Request $request)
     {
         $request->validate([
-            'email'    => 'required | string | email | unique:users,email,' . Auth::user()->id,
+            'email' => 'required|string|email|unique:users,email,' . Auth::user()->id,
             'name'  => 'required',
             'nama_depan'    => 'required',
             'nama_belakang' => 'required',

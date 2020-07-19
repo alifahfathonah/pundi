@@ -54,7 +54,7 @@ class ArtikelController extends Controller
             'judul'       => 'required',
             'kategori_id' => 'required',
             'gambar'      => 'required',
-            'isi'         => 'required',
+            'isi'         => 'required|min:500',
         ]);
 
         // Get data
