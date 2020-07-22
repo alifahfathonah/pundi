@@ -8,6 +8,9 @@
     <title>PUNDI</title>
 </head>
 <body>
+    @php
+        $image = App\Models\Images::select('id', 'footer', 'header', 'poster')->first();
+    @endphp
     <footer>
         <div class="footer-area footer-padding fix">
             <div class="container">

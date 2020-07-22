@@ -1,3 +1,6 @@
+@php
+$image = App\Models\Images::select('id', 'footer', 'header', 'poster')->first();
+@endphp
 <div class="col-lg-4">
     <div class="blog_right_sidebar">
         <aside>

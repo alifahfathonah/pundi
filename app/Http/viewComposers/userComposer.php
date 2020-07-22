@@ -22,11 +22,6 @@ class UserComposer
             ->get();
 
         /**
-         * Images
-         */
-        $image = Images::select('id', 'footer', 'header', 'poster')->first();
-
-        /**
          * View Right Sidebar
          */
         // Get data artikel
@@ -38,7 +33,6 @@ class UserComposer
 
         // Return
         $view->with('header', $header)
-            ->with('right_sideBar', $right_sideBar)
-            ->with('image', $image);
+            ->with('right_sideBar', $right_sideBar);
     }
 }

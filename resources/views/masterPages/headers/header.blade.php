@@ -1,3 +1,6 @@
+@php
+$image = App\Models\Images::select('id', 'footer', 'header', 'poster')->first();
+@endphp
 <header>
     <div class="header-area">
         <div class="main-header ">
