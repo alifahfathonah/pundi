@@ -50,7 +50,7 @@
                         <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="logo -mt-10">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ $path_url.'images/'.$image->header }}" width="150px" alt="header">
+                                    <img src="{{ config('app.path_url').$image->header }}" width="150px" alt="header">
                                 </a>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                         <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="sticky-logo">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ $path_url.'images/'.$image->header }}" width="150px" alt="header">
+                                    <img src="{{ config('app.path_url').$image->header }}" width="150px" alt="header">
                                 </a>
                             </div>
                         </div>

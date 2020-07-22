@@ -12,7 +12,7 @@
         <div class="footer-area footer-padding fix">
             <div class="container">
                 <div class="text-center">
-                    <img class="m-b-15" src="{{ $path_url.'images/'.$image->footer }}" width="100" alt="footer">
+                    <img class="m-b-15" src="{{ config('app.path_url').$image->footer }}" width="100" alt="footer">
                     <p class="f-wht">Tajam dan Mencerahkan</p>
                 </div>
             </div>

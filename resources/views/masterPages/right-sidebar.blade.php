@@ -2,7 +2,7 @@
     <div class="blog_right_sidebar">
         <aside>
             <div class="news-poster d-lg-block">
-                <img class="bdr-5" src="{{ $path_url.'images/'.$image->poster }}" width="350" alt="poster">
+                <img class="bdr-5" src="{{ config('app.path_url').$image->poster }}" width="350" alt="poster">
             </div>
         </aside>
         <div class="">
