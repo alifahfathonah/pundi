@@ -36,17 +36,9 @@ class UserComposer
             ->take(3)
             ->get();
 
-        /**
-         * Path 
-         */
-        $path = "/home/pung4221/public_html/storage/";
-        $path_url = "http://pundi.or.id/storage/";
-
         // Return
         $view->with('header', $header)
             ->with('right_sideBar', $right_sideBar)
-            ->with('path', $path)
-            ->with('path_url', $path_url)
             ->with('image', $image);
     }
 }

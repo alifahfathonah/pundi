@@ -10,7 +10,7 @@
                         @csrf
                         <div class="mb-5">
                             <p class="fs-30 f-b f-blk m-b-40">Register Kontributor</p>
-                            <P>{{ config('app.path_url') }}</P>
+                            <P>{{ config('app.image') }}</P>
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label" for="email">EMAIL<span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">

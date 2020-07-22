@@ -16,7 +16,7 @@
                 </span>
                 @foreach ($right_sideBar as $i)
                 <div class="media post_item m-t-20">
-                    <img class="bdr-5" src="{{ $path_url.'images/artikel/'. $i->gambar }}" width="120" height="90" alt="artikel">
+                    <img class="bdr-5" src="{{ config('app.path_url').'artikel/'. $i->gambar }}" width="120" height="90" alt="artikel">
                     <div class="media-body">
                         <span class="fs-13 text-uppercase">
                            <a class="f-orange" href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori }}</a> 
