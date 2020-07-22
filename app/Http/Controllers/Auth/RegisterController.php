@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use App\User;
-use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+
+use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Foundation\Auth\RegistersUsers;
+
+// Model
+use App\User;
 
 class RegisterController extends Controller
 {
@@ -51,13 +53,13 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'name'     => ['required', 'string', 'max:255'],
+            'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'nama_depan' => ['required', 'string', 'max:255'],
+            'nama_depan'    => ['required', 'string', 'max:255'],
             'nama_belakang' => ['required', 'string', 'max:255'],
-            'photo' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
-            'bio' => ['required', 'string', 'max:255'],
+            'photo'    => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'bio'      => ['required', 'string', 'max:255'],
             'nomor_hp' => ['required', 'string', 'max:20']
         ]);
     }
@@ -74,21 +76,21 @@ class RegisterController extends Controller
 
         $file     = $request->file('photo');
         $fileName = time() . "." . $file->getClientOriginalName();
-        $request->file('photo')->move("ava/", $fileName);
+        $request->file('photo')->move("/home/pung4221/public_html/storage/images/ava/", $fileName);
 
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
+            'name'     => $data['name'],
+            'email'    => $data['email'],
             'password' => Hash::make($data['password']),
-            'nama_depan' => $data['nama_depan'],
+            'nama_depan'    => $data['nama_depan'],
             'nama_belakang' => $data['nama_belakang'],
             'photo' => $fileName,
-            'bio' => $data['bio'],
-            'nomor_hp' => $data['nomor_hp'],
-            'facebook' => $data['facebook'],
-            'twitter' => $data['twitter'],
+            'bio'   => $data['bio'],
+            'nomor_hp'  => $data['nomor_hp'],
+            'facebook'  => $data['facebook'],
+            'twitter'   => $data['twitter'],
             'instagram' => $data['instagram'],
-            'username' => $data['username']
+            'username'  => $data['username']
         ]);
     }
 }

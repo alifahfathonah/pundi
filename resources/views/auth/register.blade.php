@@ -1,19 +1,17 @@
 @extends('layouts.app')
 @section('content')
 @include('masterPages.headers.header')
-<section class="blog_area section-padding" style="margin-top: -80px">
+<section class="blog_area section-padding">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
                     <form action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <div class="" >
-                            <!-- Register Kontributor -->
+                        <div class="mb-5">
                             <p class="fs-30 f-b f-blk m-b-40">Register Kontributor</p>
-                            <!-- E-mail -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label" for="">EMAIL<span class="text-danger ml-1">*</span></label>
+                                <label class="col-sm-4 f-b col-form-label" for="email">EMAIL<span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
                                     <input type="email" class="input single-input-primary {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required oninvalid="this.setCustomValidity('E-mail tidak boleh kosong / Format salah')" oninput="setCustomValidity('')"/>
                                     @if ($errors->has('email'))
@@ -23,9 +21,8 @@
                                     @endif
                                 </div>
                             </div>
-                            <!-- Password -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label " for="">PASSWORD <span class="text-danger ml-1">*</span></label>
+                                <label class="col-sm-4 f-b col-form-label" for="password">PASSWORD <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
                                     <input type="password" class="input single-input-primary @error('password') is-invalid @enderror" name="password" required oninvalid="this.setCustomValidity('Password tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                     @error('password')
@@ -35,107 +32,92 @@
                                     @enderror
                                 </div>
                             </div>
-                            <!-- Konfirmasi Passwrod -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label " for="">KONFIRMASI PASSWORD <span class="text-danger ml-1">*</span></label>
+                                <label class="col-sm-4 f-b col-form-label" for="password_confirmation">KONFIRMASI PASSWORD <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
                                     <input type="password" class="input single-input-primary" name="password_confirmation" required oninvalid="this.setCustomValidity('Konfirmasi Password tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
                         </div>
-                        <!-- Data Diri -->
-                        <div class="m-t-50">
+                        <div>
                             <p class="fs-30 f-b f-blk">Personal Data Kontributor</p>
-                            <p class="fs-12" style="margin-top: -10px">Data berikut digunakan untuk menampilkan Profil Kontributor</p>
-                            <hr style="margin-top: -10px">
-                            <!-- Name -->
+                            <p class="fs-12 -mt-10">Data berikut digunakan untuk menampilkan Profil Kontributor</p>
+                            <hr class="-mt-10">
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label " for="">NAMA<span class="text-danger ml-1">*</span></label>
+                                <label class="col-sm-4 f-b col-form-label" for="name">NAMA<span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
                                     <input type="text" class="input single-input-primary" name="name" value="{{ old('name') }}" required oninvalid="this.setCustomValidity('Username tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
-                            <!-- Nama Depan -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label " for="">NAMA DEPAN <span class="text-danger ml-1">*</span></label>
+                                <label class="col-sm-4 f-b col-form-label" for="nama_depan">NAMA DEPAN <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
                                     <input type="text" class="input single-input-primary" name="nama_depan" value="{{ old('nama_depan') }}" required oninvalid="this.setCustomValidity('Nama Depan tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
-                            <!-- Nama Belakang -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label " for="">NAMA BELAKANG <span class="text-danger ml-1">*</span></label>
+                                <label class="col-sm-4 f-b col-form-label" for="nama_belakang">NAMA BELAKANG <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
                                     <input type="text" class="input single-input-primary" name="nama_belakang" value="{{ old('nama_belakang') }}" required oninvalid="this.setCustomValidity('Nama Belakang tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
-                            <!-- Nama Yang Ditampilkan -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label " for="">USERNAME <span class="text-danger ml-1">*</span></label>
+                                <label class="col-sm-4 f-b col-form-label" for="username">USERNAME <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
                                     <input type="text" class="input single-input-primary" name="username" value="{{ old('username') }}" required oninvalid="this.setCustomValidity('Username tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
-                            <!-- Gambar User -->
                             <div class="mt-10 form-group row">
-                                <label for="" class="col-sm-4 f-b col-form-label ">FOTO PROFIL <span class="text-danger ml-1">*</span></label>
+                                <label class="col-sm-4 f-b col-form-label" for="photo">FOTO PROFIL <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
                                     <input type="file" name="photo" id="photo" onchange="tampilkanPreview(this,'preview')" required oninvalid="this.setCustomValidity('Foto tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                     <label for="file" class="js-labelFile">
                                         <span class="js-fileName"></span>
                                     </label>
-                                    <img width="300" class="rounded img-fluid d-block" id="preview" alt="" style="margin-top: 10px;"/>
-                                    <hr style="margin-top: -1px; margin-bottom: -1px">
+                                    <img width="300" class="rounded img-fluid d-block m-t-10 mb-1" id="preview" alt=""/>
+                                    <hr class="m-0">
                                     <i class="fs-12 ">Gambar bisa berupa foto, logo, atau symbol icon. Maksimal 1 Mb.</i>
                                 </div>
                             </div>
-                            <!-- Biografi User -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label " for="">BIOGRAFI USER <span class="text-danger ml-1">*</span></label>
+                                <label class="col-sm-4 f-b col-form-label" for="bio">BIOGRAFI USER <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
                                     <textarea type="text" class="input single-input-primary" name="bio" required oninvalid="this.setCustomValidity('Biografi tidak boleh kosong!')" oninput="setCustomValidity('')">{{ old('bio') }}</textarea>
                                 </div>
                             </div>
-                            <!-- Nomor Handphone -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label " for="">NOMOR HANDPHONE <span class="text-danger ml-1">*</span></label>
+                                <label class="col-sm-4 f-b col-form-label" for="nomor_hp">NOMOR HANDPHONE <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
                                     <input type="text" class="input single-input-primary" name="nomor_hp" value="{{ old('nomor_hp') }}" required="" oninvalid="this.setCustomValidity('Nomor Handphone tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                 </div>
                             </div>
-                            <!-- Fecebook -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label " for="">FACEBOOK</label>
+                                <label class="col-sm-4 f-b col-form-label" for="facebook">FACEBOOK</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="input single-input-primary" name="facebook" value="{{ old('facebook') }}"/>
-                                    {{-- <i class="fs-12 ">example: https://www.facebook.com/your-account-name</i> --}}
                                 </div>
                             </div>
-                            <!-- Twitter -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label " for="">TWITTER</label>
+                                <label class="col-sm-4 f-b col-form-label" for="twitter">TWITTER</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="input single-input-primary" name="twitter" value="{{ old('twitter') }}"/>
-                                    {{-- <i class="fs-12 ">example: https://twitter.com/your-account-name</i> --}}
                                 </div>
                             </div>
-                            <!-- Instagram -->
                             <div class="mt-10 form-group row">
-                                <label class="col-sm-4 f-b col-form-label " for="">INSTAGRAM</label>
+                                <label class="col-sm-4 f-b col-form-label" for="instagram">INSTAGRAM</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="input single-input-primary" name="instagram" value="{{ old('instagram') }}"/>
-                                    {{-- <i class="fs-12 ">example: https://instagram.com/your-account-name</i> --}}
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-4"></div>
                             <div class="col-sm-8">
-                                <button class="genric-btn primary bdr-5 m-t-20" type="submit">Register</button>
+                                <button class="genric-btn primary bdr-5" type="submit">Register</button>
                             </div>
                         </div>
                         <hr>
-                        <p class="m-t-20 f-blk" style="margin-top: -1%">Sudah punya akun? 
+                        <p class="m-t-20 f-blk -mt-10">Sudah punya akun? 
                             <a href="{{ route('login') }}">
                                 <u class="f-orange">Login!</u>
                             </a>
@@ -143,15 +125,12 @@
                     </form>
                 </div>
             </div>
-            <!-- sideBar -->
             @include('masterPages.right-sidebar')
         </div>
     </div>
 </section>
-<!-- Footer -->
 @include('masterPages.footers.footer')
 @endsection
-
 @section('script')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script type="text/javascript">

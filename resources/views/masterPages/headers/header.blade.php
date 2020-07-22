@@ -1,12 +1,10 @@
 <header>
     <div class="header-area">
         <div class="main-header ">
-            <!-- Header Top -->
             <div class="header-top black-bg d-none d-md-block color-gradient1">
                 <div class="container">
                     <div class="col-xl-12">
                         <div class="row d-flex justify-content-between align-items-center">
-                            <!-- Infor Left -->
                             <div class="header-info-left row" style="margin-bottom: -22px">
                                 <div class="fs-13 f-b m-l-15" style="margin-top: -3px !important">
                                     <i class="fa fa-bolt"></i>
@@ -21,7 +19,6 @@
                                     @endforeach
                                 </ul>
                             </div>
-                            <!-- Infro Right -->
                             <div class="header-info-right">
                                 <ul class="header-social">
                                     <i class="fas fa-calendar-check m-r-2"></i>
@@ -50,17 +47,15 @@
             <div class="header-mid d-none d-md-block color-gradient1">
                 <div class="container">
                     <div class="row d-flex align-items-center">
-                        <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-2">
-                            <div class="logo">
+                            <div class="logo -mt-10">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset('images\logo2.png') }}" style="margin-top: -10px" width="150px" alt="Logo">
+                                    <img src="{{ $path_url.'images/'.$image->header }}" width="150px" alt="header">
                                 </a>
                             </div>
                         </div>
-                        <!-- Nav Menu -->
                         <div class="col-xl-10 col-lg-10 col-md-10">
-                            <div class="header-banner f-right ">
+                            <div class="header-banner f-right">
                                 <div class="main-menu d-none d-md-block">
                                     @include('masterPages.headers.nav-menu')
                                 </div>
@@ -73,15 +68,13 @@
             <div class="header-sticky color-gradient1">
                 <div class="container">
                     <div class="row d-flex align-items-center">
-                        <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="sticky-logo">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset('images\logo2.png') }}" width="150px" alt="Logo">
+                                    <img src="{{ $path_url.'images/'.$image->header }}" width="150px" alt="header">
                                 </a>
                             </div>
                         </div>
-                        <!-- Navigation -->
                         <div class="col-xl-10 col-lg-10 col-md-10">
                             <div class="sticky-logo">
                                 <div class="header-banner f-right ">

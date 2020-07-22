@@ -6,6 +6,7 @@ use Illuminate\View\View;
 
 // Model
 use App\Models\Artikel;
+use App\Models\Images;
 
 class UserComposer
 {
@@ -21,16 +22,31 @@ class UserComposer
             ->get();
 
         /**
+         * Images
+         */
+        $image = Images::select('id', 'footer', 'header', 'poster')->first();
+
+        /**
          * View Right Sidebar
          */
         // Get data artikel
         $right_sideBar = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')
             ->wherestatus(1)
             ->orderBy('created_at', 'desc')
+            ->take(3)
             ->get();
+
+        /**
+         * Path 
+         */
+        $path = "/home/pung4221/public_html/storage/";
+        $path_url = "http://pundi.or.id/storage/";
 
         // Return
         $view->with('header', $header)
-            ->with('right_sideBar', $right_sideBar);
+            ->with('right_sideBar', $right_sideBar)
+            ->with('path', $path)
+            ->with('path_url', $path_url)
+            ->with('image', $image);
     }
 }

@@ -168,7 +168,6 @@
 }
 
 .color-gradient1 {
-    /* background: linear-gradient(to right, #F8476C, #FE7D3D) !important; */
     background-color: #FEBD01 !important;
 }
 
@@ -199,4 +198,22 @@
 .zoom-effect:hover .kotak img {
     -webkit-transform: scale(1.08);
     transform: scale(1.08);
+}
+
+.arrow {
+    transform: rotate(-45deg);
+    color: #FEBD01 !important
+}
+
+/* Margin */
+.-mt-10 {
+    margin-top: -10px !important;
+}
+
+.-mt-20 {
+    margin-top: -20px !important;
+}
+
+.-mb-13 {
+    margin-bottom: -13px !important;
 }
