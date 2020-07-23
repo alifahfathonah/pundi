@@ -1,14 +1,27 @@
 <?php
 
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of welcome
+ *
+ * @author Asip Hamdi
+ * Github : axxpxmd
+ */
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
+// Models
+use App\Models\Komen;
 use App\Models\Artikel;
 use App\Models\Kategori;
-use App\Models\Komen;
 use App\Models\Sub_Kategori;
 
 // Store
@@ -16,7 +29,9 @@ use App\Store\index;
 
 class ArtikelController extends Controller
 {
-    public function index(Request $request)
+    protected $view = 'pages.artikel.';
+
+    public function tambah_artikel(Request $request)
     {
         // Kategori
         $kategori = Kategori::select('id', 'n_kategori')->whereNotIn('id', [5])->get();
@@ -25,13 +40,13 @@ class ArtikelController extends Controller
         /**
          * Variabel for header
          */
-        $sub_headline = index::subHeadline();
-        $sub_indepth  = index::subIndepth();
-        $sub_kebijakan = index::subKebijakan();
+        $sub_headline   = index::subHeadline();
+        $sub_indepth    = index::subIndepth();
+        $sub_kebijakan  = index::subKebijakan();
         $sub_serbaSerbi = index::subSerbaSerbi();
         $sub_konsultasi = index::subKebijakan();
 
-        return view('pages.post-artikel', compact(
+        return view($this->view . 'post-artikel', compact(
             'kategori',
             'kategori_id',
             'sub_headline',
@@ -47,14 +62,14 @@ class ArtikelController extends Controller
         return Sub_Kategori::select('id', 'n_sub_kategori')->wherekategori_id($kategori_id)->get();
     }
 
-    public function tambah_artikel(Request $request)
+    public function tambahArtikel_store(Request $request)
     {
         // Validasi
         $request->validate([
             'judul'       => 'required',
             'kategori_id' => 'required',
             'gambar'      => 'required',
-            'isi'         => 'required|min:500',
+            'isi'         => 'required|min:700',
         ]);
 
         // Get data
@@ -67,7 +82,7 @@ class ArtikelController extends Controller
 
         $file     = $request->file('gambar');
         $fileName = time() . "." . $file->getClientOriginalName();
-        $request->file('gambar')->move("post/", $fileName);
+        $request->file('gambar')->move(config('app.path_local') . 'artikel/', $fileName);
 
         $artikel->gambar      = $fileName;
         $artikel->penulis_id  = Auth::user()->id;
@@ -81,24 +96,24 @@ class ArtikelController extends Controller
     public function artikel(Request $request)
     {
         // Artikel
-        $artikel = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'penulis_id', 'gambar', 'isi', 'tag', 'artikel_view', 'created_at')->whereid($request->post)->first();
+        $artikel = Artikel::whereid($request->post)->first();
 
-        // Counter pengungjung
+        // Counter Views
         DB::update('UPDATE artikel SET artikel_view = artikel_view + 1 WHERE id = "' . $request->post . '"');
 
-        // Komen
-        $komen = Komen::select('id', 'artikel_id', 'user_id', 'nama', 'email', 'website', 'comment', 'created_at')->where('artikel_id', $request->post)->get();
+        // Comments
+        $komen = Komen::where('artikel_id', $request->post)->get();
 
         /**
          * Variabel for header
          */
-        $sub_headline = index::subHeadline();
-        $sub_indepth  = index::subIndepth();
-        $sub_kebijakan = index::subKebijakan();
+        $sub_headline   = index::subHeadline();
+        $sub_indepth    = index::subIndepth();
+        $sub_kebijakan  = index::subKebijakan();
         $sub_serbaSerbi = index::subSerbaSerbi();
         $sub_konsultasi = index::subKebijakan();
 
-        return view('pages.artikel', compact(
+        return view($this->view . 'artikel', compact(
             'artikel',
             'komen',
             'sub_headline',

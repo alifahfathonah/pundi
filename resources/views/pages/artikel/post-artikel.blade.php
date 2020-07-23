@@ -1,25 +1,21 @@
 @extends('layouts.app')
 @section('content')
 @include('masterPages.headers.header')
-<section class="blog_area section-padding" style="margin-top: -80px ">
+<section class="blog_area section-padding">
     <div class="container">
         <div class="row">
-            <!-- Left Sidebar -->
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
-                    <!-- Alerts -->
                     @include('masterPages.alerts')
                     <div>
                         <form action="{{ route('kirim-tulisan.tambah', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             {{ method_field('POST') }}
                             <p class="f-blk fs-30 f-b">Upload Tulisan</p>
-                            <!-- Judul -->
                             <div class="m-t-30">
                                 <label for="" class="f-b fs-17">JUDUL ARTIKEL<span class="text-danger ml-1">*</span></label>
                                 <input type="text" class="input single-input-primary border bdr-5 col-md-12" name="judul" id="judul" value="{{ old('judul') }}" required="" oninvalid="this.setCustomValidity('Judul artikel tidak boleh kosong')" oninput="setCustomValidity('')"/>
                             </div>
-                            <!-- Kategori -->
                             <div class="m-t-15">
                                 <label for="" class="f-b fs-17">KATEGORI<span class="text-danger ml-1">*</span></label><br>
                                 <div class="row">
@@ -35,13 +31,11 @@
                                     </select>
                                 </div>
                             </div>
-                            <!-- Isi -->
                             <div class="m-t-15">
                                 <label for="" class="f-b fs-17">ISI ARTIKEL<span class="text-danger ml-1">*</span></label>
                                 @include('masterPages.summernote')
                             </div>
-                            <!-- Gambar -->
-                            <div class="alert alert-dismissible" id="message" data-target="#exampleModal" role="alert"></div>
+                            <div class="alert alert-dismissible" id="message" role="alert"></div>
                             <div style="margin-top: -20px">
                                 <label for="" class="f-b fs-17">GAMBAR UNGGULAN <span class="text-danger ml-1">*</span></label><br>
                                 <input type="file" name="gambar" id="gambar" onchange="tampilkanPreview(this,'preview')">
@@ -51,20 +45,17 @@
                                 <br>
                                 <img width="300" class="rounded img-fluid d-block" id="preview" alt="" style="margin-top: 10px"/>
                             </div>
-                            <!-- Tag -->
                             <div class="m-t-10">
                                 <label for="" class="f-b fs-17">TAGS</label>
                                 <input type="text" class="input single-input-primary border bdr-5 col-md-12" value="{{ old('tag') }}" name="tag" id="tag"/>
                                 <i class="fs-12 f-red">Pisahkan dengan koma ( , )</i>
                             </div>
-                            <!-- Button -->
                             <button class="genric-btn primary bdr-5 m-t-20 " type="submit"  value="Log in">KirimTulisan</button>
                             <hr>
                         </form>
                     </div>
                 </div>
             </div>
-            <!-- Right Sidebar -->
             @include('masterPages.right-sidebar')
         </div>
     </div>

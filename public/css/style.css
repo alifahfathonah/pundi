@@ -147,6 +147,13 @@
     font-size: 13px !important
 }
 
+.ktg-artikel {
+    background-color: #FEBD01 !important;
+    color: white !important;
+    padding: 3px 10px 3px 10px;
+    text-transform: uppercase
+}
+
 .info-trendingTop {
     background-color: transparent !important;
     color: white

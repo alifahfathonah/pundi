@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
 @include('masterPages.headers.header')
-<!-- Navigation -->
 <div class="container m-t-15">
     <span class="fa fa-home"></span>
     <a class="m-l-8 m-r-8 f-red fs-14 non-hover f-orange" href="{{ route('/') }}">
@@ -14,70 +13,55 @@
     <span class="fa fa-angle-right"></span>
     <span class="m-l-8 m-r-8 fs-14 f-orange">{{substr($artikel->judul, 0, 20)}}...</span>
 </div>
-<section class="blog_area section-padding" style="margin-top: -90px">
+<section class="blog_area section-padding">
     <div class="container">
         <div class="row">
-            <!-- Left Sidebar -->
             <div class="col-lg-8 posts-list">
-                <!-- Isi Artikel -->
                 <div class="single-post">
                     <div class="blog_detail">
                         <h3 class="f-b m-b-20">{{ $artikel->judul }}</h3>
-                        <!-- Kategori -->
                         <span class="bdr-5 fs-12 f-b" style="background-color: #FEBD01 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
                             <a href="{{ route('sub_kategori','sub_kategori='.$artikel->sub_kategori->id) }}">{{ $artikel->sub_kategori->n_sub_kategori }}</a>
                         </span>
-                        <!-- Photo User -->
-                        <img src="{{ asset('ava/'.$artikel->user->photo) }}" class="rounded-circle m-l-30" width="45" alt="">
-                        <!-- Nama Penulis -->
+                        <img src="{{ config('app.path_url').'ava/'.$artikel->user->photo }}" class="rounded-circle m-l-30" width="45" alt="photo">
                         <span class="fs-14 f-b m-l-10">{{ $artikel->user->name }}</span>
-                        <!-- Waktu -->
-                        <i class="fas fa-clock m-l-15" style="color:gray"></i>
+                        <i class="fas fa-clock m-l-15 text-grey"></i>
                         <span class="fs-14">{{ substr($artikel->created_at, 0, 40) }}</span>
-                        <!-- Info Komen -->
-                        <i class="fa fa-comments m-l-15" style="color:gray"></i>
+                        <i class="fa fa-comments m-l-15 text-grey"></i>
                         <span class="fs-14">{{ $komen->count() }} Komen</span>
-                        <!-- Info Artikel dilihat -->
-                        <i class="fa fa-eye m-l-15" style="color: #FEBD01"></i>
+                        <i class="fa fa-eye m-l-15 f-orange"></i>
                         <span class="fs-14">{{ $artikel->artikel_view }}</span>
-                        <!-- Gambar Artikel -->
                         <div class="m-b-25 m-t-30">
-                            <img class="img-fluid bdr-5" width="800" height="" src="{{ asset('post/'. $artikel->gambar) }}" alt="">
+                            <img class="img-fluid bdr-5" width="800" height="" src="{{ config('app.path_url').'artikel/'.$artikel->gambar }}" alt="photo">
                         </div>
                         <div class="m-b-10">
-                            <!-- Share Facebook -->
-                            <a href="http://www.facebook.com/sharer.php?u=http://103.219.112.114/pundi/public/artikel?post={{$artikel->id}}" target="_blank">
+                            <a href="http://www.facebook.com/sharer.php?u=http://pundi.or.id/public/artikel?post={{$artikel->id}}" target="_blank">
                                 <img src="https://image.flaticon.com/icons/svg/1384/1384053.svg" width="30" alt="Facebook" />
                             </a>
-                            <!-- Share Twitter -->
-                            <a href="https://twitter.com/share?url=http://103.219.112.114/pundi/public/artikel?post={{$artikel->id}}&text={{$artikel->judul}}" target="_blank">
+                            <a href="https://twitter.com/share?url=http://pundi.or.id/public/artikel?post={{$artikel->id}}&text={{$artikel->judul}}" target="_blank">
                                 <img src="https://image.flaticon.com/icons/svg/124/124021.svg" width="30" alt="Twitter" />
                             </a>
-                            <!-- Share Whatsapp -->
-                            <a href="whatsapp://send?text={{$artikel->judul}}%0Ahttp://103.219.112.114/pundi/public/artikel?post={{$artikel->id}}" target="blank" data-action="share/whatsapp/share">
+                            <a href="whatsapp://send?text={{$artikel->judul}}%0Ahttp://pundi.or.id/public/artikel?post={{$artikel->id}}" target="blank" data-action="share/whatsapp/share">
                                 <img src="https://image.flaticon.com/icons/svg/124/124034.svg" width="30" alt="Twitter" />
                             </a>
-                            <!-- Share Telegram -->
                             <a href="#" data-action="share/whatsapp/share">
                                 <img src="https://image.flaticon.com/icons/svg/124/124019.svg" width="30" alt="Twitter" />
                             </a>
                         </div>
-                        <!-- Isi Artikel -->
-                        <div id="less" style="font-size: 17px !important;">{{ substr(strip_tags($artikel->isi), 0, 800) }} [...]</div>
+                        <div id="less" style="font-size: 17px !important; line-height: 33px">{{ substr(strip_tags($artikel->isi), 0, 800) }} [...]</div>
                         <div id="more" style="display: none">{!! $artikel->isi !!}</div>
-                        <!-- Button Hide And Show -->
                         <div class="m-t-20 m-b-20 text-center">
                             <button class="genric-btn warning bdr-5 m-r-5" id="tombol_show">Lebih Sedikit</button>
                             <button class="genric-btn primary bdr-5" id="tombol_hide">Baca Selengkapnya</button><br>
                         </div>
-                        <!-- Editor -->
                         <span class="f-b f-blk">
-                            <i>Editor: </i>
-                            <i class="f-orange">Fauzul Adim</i>    
+                            <label>Editor : </label>
+                            <label class="f-orange">
+                                <a class="f-orange text-uppercase" href="#">{{ $artikel->editor->name }}</a>
+                            </label>    
                         </span>
                     </div>
                 </div>
-                <!-- Tags -->
                 <div class="m-t-10">
                     <span class="bdr-20 fs-17" style="background-color: #FEBD01 !important; color: white !important; padding:4px 12px">
                         Tags :
@@ -89,10 +73,9 @@
                     @endforeach
                 </div>
                 <hr>
-                <!-- Info Penulis -->
                 <div class="blog-author" style="margin-top: -20px; margin-bottom: -25px">
                     <div class="media align-items-center">
-                        <img class="rounded-circle" src="{{ asset('ava/'. $artikel->user->photo) }}" width="70" alt="">
+                        <img class="rounded-circle" src="{{ config('app.path_url').'ava/'.$artikel->user->photo }}" width="70" alt="photo">
                         <div class="media-body m-l-40 m-t-20">
                             <a href="#">
                                 <span class="fs-15 f-b non-hover f-blk">{{ $artikel->user->name }}</span>
@@ -101,18 +84,21 @@
                         </div>
                     </div>
                 </div>
-                <!-- Komen -->
+                {{-- <hr>
+                <div>
+                    <p class="fs-24 f-b f-blk" style="margin-top: -20px">Related Post</p>
+                </div> --}}
                 <div class="comments-area" style="margin-bottom: -50px">
-                    <p class="fs-24 f-b f-blk" style="margin-top: -20px">{{ $komen->count() }} komen</p>
+                    <p class="fs-24 f-b f-blk" style="margin-top: -30px">{{ $komen->count() }} komen</p>
                     @foreach ($komen as $i)
                     <div class="comment-list">
                         <div class="single-comment justify-content-between d-flex">
                             <div class="user justify-content-between d-flex">
                                 <div class="thumb">
                                     @if ($i->user_id != null)
-                                    <img src="{{ asset('ava/' .$i->user->photo) }}" alt="">
+                                    <img src="{{ asset('ava/' .$i->user->photo) }}" alt="photo">
                                     @else
-                                    <img src="{{ asset('images/boy.png') }}" alt="">
+                                    <img src="{{ config('app.path_url').'ava/user.png' }}" alt="photo">
                                     @endif
                                 </div>
                                 <div class="desc">
@@ -128,7 +114,7 @@
                                             <span class="date" >{{ $i->created_at }}</span>
                                         </div>
                                         <div class="reply-btn">
-                                            {{-- <a href="#" class="btn-reply text-uppercase">reply</a> --}}
+                                            <a href="#" class="btn-reply text-uppercase">reply</a>
                                         </div>
                                     </div>
                                 </div>
@@ -137,9 +123,8 @@
                     </div>
                     @endforeach
                 </div>
-                <!-- Insert Komen -->
                 <div class="comment-form">
-                    <p class="fs-24 f-b f-blk" style="margin-top: -20px">Tinggalkan Balasan</p>
+                    <p class="fs-24 f-b f-blk" style="margin-top: -30px">Tinggalkan Balasan</p>
                     <i>Alamat email Anda tidak akan dipublikasikan. Ruas yang wajib ditandai *</i>
                     <form class="form-contact comment_form m-t-20" action="{{ route('komen.store') }}" method="post">
                         {{ csrf_field() }}
@@ -167,7 +152,6 @@
                     </form>
                 </div>
             </div>
-            <!-- Right Sidebar -->
             @include('masterPages.right-sidebar')
         </div>
     </div>

@@ -54,7 +54,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('edit-profil/update-profil', 'ProfilController@update_profil')->name('edit-profil.update-profil');
 
     // Kirim Tulisan
-    Route::get('kirim-tulisan', 'ArtikelController@index')->name('kirim-tulisan');
+    Route::get('kirim-tulisan', 'ArtikelController@tambah_artikel')->name('kirim-tulisan');
     Route::get('kirim-tulisan/subKegiatanByKegiatan/{id}', 'ArtikelController@subKegiatanByKegiatan')->name('kirim-tulisan.subKegiatanByKegiatan');
-    Route::post('kirim-tulisan', 'ArtikelController@tambah_artikel')->name('kirim-tulisan.tambah');
+    Route::post('kirim-tulisan', 'ArtikelController@tambahArtikel_store')->name('kirim-tulisan.tambah');
 });
