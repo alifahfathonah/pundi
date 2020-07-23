@@ -6,7 +6,6 @@ use Illuminate\View\View;
 
 // Model
 use App\Models\Artikel;
-use App\Models\Images;
 
 class UserComposer
 {
@@ -16,7 +15,7 @@ class UserComposer
          * View Header
          */
         // Get data post terbaru
-        $header = Artikel::select('id', 'judul', 'status')
+        $header_news = Artikel::select('id', 'judul', 'status')
             ->wherestatus(1)
             ->orderBy('created_at', 'desc')
             ->get();
@@ -32,7 +31,7 @@ class UserComposer
             ->get();
 
         // Return
-        $view->with('header', $header)
+        $view->with('header_news', $header_news)
             ->with('right_sideBar', $right_sideBar);
     }
 }

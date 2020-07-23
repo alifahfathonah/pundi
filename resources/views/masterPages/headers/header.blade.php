@@ -15,7 +15,7 @@ $image = App\Models\Images::select('id', 'footer', 'header', 'poster')->first();
                                     <span class="vertical-line"></span>
                                 </div>
                                 <ul id="js-news" class="js-hidden">
-                                    @foreach ($header as $i)
+                                    @foreach ($header_news as $i)
                                     <li class="news-item">
                                         <a style="color: black !important" href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a>
                                     </li>
