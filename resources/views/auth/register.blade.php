@@ -16,9 +16,9 @@
                                 <div class="col-sm-8">
                                     <input type="email" class="input single-input-primary {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required oninvalid="this.setCustomValidity('E-mail tidak boleh kosong / Format salah')" oninput="setCustomValidity('')"/>
                                     @if ($errors->has('email'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>E-mail sudah pernah terdaftar!</strong>
-                                        </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>E-mail sudah pernah terdaftar!</strong>
+                                    </span>
                                     @endif
                                 </div>
                             </div>
@@ -27,9 +27,9 @@
                                 <div class="col-sm-8">
                                     <input type="password" class="input single-input-primary @error('password') is-invalid @enderror" name="password" required oninvalid="this.setCustomValidity('Password tidak boleh kosong!')" oninput="setCustomValidity('')"/>
                                     @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>Konfirmasi password tidak cocok!</strong>
-                                        </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>Konfirmasi password tidak cocok!</strong>
+                                    </span>
                                     @enderror
                                 </div>
                             </div>

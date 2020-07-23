@@ -1,3 +1,4 @@
+<!-- Alert Errors -->
 @if (session()->has('success'))
 <div class="alert alert-success alert-dismissible fade show text-center bdr-5 col-md-12 container" role="alert">
     {{ session('success') }}
