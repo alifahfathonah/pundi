@@ -76,7 +76,7 @@ class RegisterController extends Controller
 
         $file     = $request->file('photo');
         $fileName = time() . "." . $file->getClientOriginalName();
-        $request->file('photo')->move(config('app.path_url') . 'ava/', $fileName);
+        $request->file('photo')->move(config('app.path_local') . 'ava/', $fileName);
 
         return User::create([
             'name'     => $data['name'],
