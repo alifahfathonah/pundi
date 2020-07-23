@@ -27,7 +27,7 @@ class UserComposer
         $right_sideBar = Artikel::select('id', 'judul', 'kategori_id', 'sub_kategori_id', 'gambar', 'penulis_id', 'created_at')
             ->wherestatus(1)
             ->orderBy('created_at', 'desc')
-            ->take(3)
+            ->take(4)
             ->get();
 
         // Return

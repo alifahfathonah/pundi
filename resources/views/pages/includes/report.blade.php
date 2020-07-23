@@ -1,39 +1,35 @@
-<div class="weekly2-news-area mb-30">
+<div class="weekly2-news-area m-b-30">
     <div class="container">
-        <div class="weekly2-wrapper" style="margin-top: -30px !important">
-            <!-- Section Tittle -->
+        <div class="weekly2-wrapper -mt-10">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle mb-30">
-                        <div style="margin-bottom: -15px">
-                            <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FEBD01 !important"></i>
+                        <div class="-mb-13">
+                            <i class="fas fa-angle-up fa-lg arrow"></i>
                         </div>
-                        <span class="fs-18 m-l-15" style="color: #FEBD01 !important; font-weight: 700 !important "> 
+                        <span class="fs-18 m-l-15 title-card"> 
                             REPORT
                         </span>
                     </div>
                 </div>
             </div>
-            <!-- Section Content -->
-            <div class="row" style="margin-top: -10px !important">
-                <div class="col-12">
+            <div class="row">
+                <div class="col-12 -mt-15">
                     <div class="weekly2-news-active dot-style d-flex dot-style">
                         @foreach ($report as $i)
                             <div class="weekly2-single">
-                                <!-- Gambar -->
                                 <div class="weekly2-img">
-                                    <img src="{{ asset('post/'. $i->gambar) }}" height="200" alt="">
+                                    <img src="{{ config('app.path_url').'artikel/'.$i->gambar }}" height="200" alt="photo">
                                 </div>
                                 <div class="weekly2-caption">
-                                    <!-- Kategori -->
                                     <span class="bdr-5" style="background-color: #FEBD01; color: white">
                                         <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
                                     </span><br>
-                                    <!-- Waktu -->
-                                    <i class="fas fa-clock fa-xs" style="color: gray"></i>
-                                    <span style="margin-left: -10px !important" style="color: gray">{{ $i->created_at }}</span>
-                                    <!-- Judul -->
-                                    <h4 style="margin-top: -15px !important"><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
+                                    <div class="-mt-10">
+                                        <i class="fas fa-clock fa-xs text-grey"></i>
+                                        <span style="color: grey; margin-left: -10px">{{ substr($i->created_at, 0, 10) }}</span>
+                                    </div>
+                                    <h4 class="-mt-15"><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
                                 </div>
                             </div> 
                         @endforeach

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,6 +7,7 @@
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- Title -->
     <link rel="icon" href="{{ asset('images/logo-round.png') }}" type="image/x-icon">
     <title>PUNDI</title>
 
@@ -35,11 +35,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-
 <body style="background-color: white">
     <!-- Preloader -->
     @include('masterPages.preloader')
-
     <main>
         @yield('content')
     </main>

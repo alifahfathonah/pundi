@@ -1,215 +1,180 @@
-<section class="whats-news-area pt-40 pb-20">
+<section class="whats-news-area m-t-30">
     <div class="container">
         <div class="row">
-        <div class="col-lg-8" style="margin-top: -10px">
-            <div class="row d-flex justify-content-between">
-                <!-- Section Title -->
-                <div class="col-lg-3 col-md-3">
-                    <div class="section-tittle mb-30">
-                        <div style="margin-bottom: -15px">
-                            <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FEBD01 !important"></i>
+            <div class="col-lg-8 -mt-10">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-3 col-md-3">
+                        <div class="section-tittle">
+                            <div class="-mb-13">
+                                <i class="fas fa-angle-up fa-lg arrow"></i>
+                            </div>
+                            <span class="fs-18 m-l-15 title-card"> 
+                                BERITA TERBARU
+                            </span>
                         </div>
-                        <span class="fs-18 m-l-15" style="color: #FEBD01 !important; font-weight: 700 !important "> 
-                            BERITA TERBARU
-                        </span>
+                    </div>
+                    <div class="col-lg-9 col-md-9 m-t-5">
+                        <div class="properties__button">                                       
+                            <nav>                                                                     
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <a class="nav-item nav-link active fs-14i text-uppercase" id="nav-home-tab" data-toggle="tab" href="#semua">Semua</a>
+                                    <a class="nav-item nav-link fs-14i text-uppercase" id="nav-profile-tab" data-toggle="tab" href="#card1">{{ $satu->n_kategori }}</a>
+                                    <a class="nav-item nav-link fs-14i text-uppercase" id="nav-contact-tab" data-toggle="tab" href="#card2">{{ $dua->n_kategori }}</a>
+                                    <a class="nav-item nav-link fs-14i text-uppercase" id="nav-last-tab" data-toggle="tab" href="#card3">{{ $tiga->n_kategori }}</a>
+                                    <a class="nav-item nav-link fs-14i text-uppercase" id="nav-Sports" data-toggle="tab" href="#card4">{{ $empat->n_kategori }}</a>
+                                    {{-- <a class="nav-item nav-link" id="nav-technology" data-toggle="tab" href="#nav-techno">Konsultasi</a> --}}
+                                </div>
+                            </nav>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-9">
-                    <div class="properties__button">
-                        <!--Nav Button  -->                                            
-                        <nav>                                                                     
-                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" style="font-size: 15px !important" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">All</a>
-                                <a class="nav-item nav-link" style="font-size: 15px !important" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Headline</a>
-                                <a class="nav-item nav-link" style="font-size: 15px !important" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Indepth</a>
-                                <a class="nav-item nav-link" style="font-size: 15px !important" id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab" aria-controls="nav-contact" aria-selected="false">Kebijakan</a>
-                                <a class="nav-item nav-link" style="font-size: 15px !important" id="nav-Sports" data-toggle="tab" href="#nav-nav-Sport" role="tab" aria-controls="nav-contact" aria-selected="false">Serba Serbi</a>
-                                <a class="nav-item nav-link" style="font-size: 15px !important" id="nav-technology" data-toggle="tab" href="#nav-techno" role="tab" aria-controls="nav-contact" aria-selected="false">Konsultasi</a>
+                <div class="row -mt-15">
+                    <div class="col-12">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="semua">           
+                                <div class="whats-news-caption">
+                                    <div class="row">
+                                        @foreach ($semua as $i)
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-what-news m-b-30">
+                                                <div class="what-img">
+                                                    <img src="{{ config('app.path_url').'artikel/'.$i->gambar }}" height="300" alt="photo"">
+                                                </div>
+                                                <div class="what-cap">
+                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
+                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
+                                                    </span>
+                                                    <i class="fas fa-clock fa-xs m-l-10 text-grey"></i>
+                                                    <span style="color: grey; margin-left: -10px">{{ substr($i->created_at, 0, 10) }}</span>
+                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                </div>
                             </div>
-                        </nav>
-                        <!--End Nav Button  -->
+                            <div class="tab-pane fade" id="card1">
+                                <div class="whats-news-caption">
+                                    <div class="row">
+                                        @foreach ($headline as $i)
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-what-news mb-100">
+                                                <div class="what-img">
+                                                    <img src="{{ config('app.path_url').'artikel/'.$i->gambar }}" height="300" alt="photo"">
+                                                </div>
+                                                <div class="what-cap">
+                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
+                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
+                                                    </span>
+                                                    <i class="fas fa-clock fa-xs m-l-10 text-grey"></i>
+                                                    <span style="color: grey; margin-left: -10px">{{ substr($i->created_at, 0, 10) }}</span>
+                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="card2">
+                                <div class="whats-news-caption">
+                                    <div class="row">
+                                        @foreach ($indepth as $i)
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-what-news mb-100">
+                                                <div class="what-img">
+                                                    <img src="{{ config('app.path_url').'artikel/'.$i->gambar }}" height="300" alt="photo"">
+                                                </div>
+                                                <div class="what-cap">
+                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
+                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
+                                                    </span>
+                                                    <i class="fas fa-clock fa-xs m-l-10 text-grey"></i>
+                                                    <span style="color: grey; margin-left: -10px">{{ substr($i->created_at, 0, 10) }}</span>
+                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="card3">
+                                <div class="whats-news-caption">
+                                    <div class="row">
+                                        @foreach ($kebijakan as $i)
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-what-news mb-100">
+                                                <div class="what-img">
+                                                    <img src="{{ config('app.path_url').'artikel/'.$i->gambar }}" height="300" alt="photo"">
+                                                </div>
+                                                <div class="what-cap">
+                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
+                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
+                                                    </span>
+                                                    <i class="fas fa-clock fa-xs m-l-10 text-grey"></i>
+                                                    <span style="color: grey; margin-left: -10px">{{ substr($i->created_at, 0, 10) }}</span>
+                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="card4">
+                                <div class="whats-news-caption">
+                                    <div class="row">
+                                        @foreach ($serbaSerbi as $i)
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-what-news mb-100">
+                                                <div class="what-img">
+                                                    <img src="{{ config('app.path_url').'artikel/'.$i->gambar }}" height="300" alt="photo"">
+                                                </div>
+                                                <div class="what-cap">
+                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
+                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
+                                                    </span>
+                                                    <i class="fas fa-clock fa-xs m-l-10 text-grey"></i>
+                                                    <span style="color: grey; margin-left: -10px">{{ substr($i->created_at, 0, 10) }}</span>
+                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- <div class="tab-pane fade" id="nav-techno">
+                                <div class="whats-news-caption">
+                                    <div class="row">
+                                        @foreach ($konsultasi as $i)            
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-what-news mb-100">
+                                                <div class="what-img">
+                                                    <img src="{{ config('app.path_url').'artikel/'.$i->gambar }}" height="300" alt="photo"">
+                                                </div>
+                                                <div class="what-cap">
+                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
+                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
+                                                    </span>
+                                                    <i class="fas fa-clock fa-xs m-l-10 text-grey"></i>
+                                                    <span style="color: grey; margin-left: -10px">{{ substr($i->created_at, 0, 10) }}</span>
+                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div> --}}
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Section Content -->
-            <div class="row">
-                <div class="col-12">
-                    <!-- Nav Card -->
-                    <div class="tab-content" id="nav-tabContent">
-                        <!-- All -->
-                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">           
-                            <div class="whats-news-caption">
-                                <div class="row">
-                                    @foreach ($all as $i)
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <!-- Gambar -->
-                                                <div class="what-img">
-                                                    <img src="{{ asset('post/'. $i->gambar) }}" height="300" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <!-- Kategori -->
-                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
-                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
-                                                    </span>
-                                                    <!-- Waktu -->
-                                                    <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
-                                                    <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
-                                                    <!-- Judul -->
-                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Headline -->
-                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            <div class="whats-news-caption">
-                                <div class="row">
-                                    @foreach ($headline->take(4) as $i)
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <!-- Gambar -->
-                                                <div class="what-img">
-                                                    <img src="{{ asset('post/'. $i->gambar) }}" height="300" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <!-- Kategori -->
-                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
-                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
-                                                    </span>
-                                                    <!-- Waktu -->
-                                                    <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
-                                                    <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
-                                                    <!-- Judul -->
-                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Indepth -->
-                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                            <div class="whats-news-caption">
-                                <div class="row">
-                                    @foreach ($indepth as $i)
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <!-- Gambar -->
-                                                <div class="what-img">
-                                                    <img src="{{ asset('post/'. $i->gambar) }}" height="300" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <!-- Kategori -->
-                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
-                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
-                                                    </span>
-                                                    <!-- Waktu -->
-                                                    <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
-                                                    <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
-                                                    <!-- Judul -->
-                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Kebijakan -->
-                        <div class="tab-pane fade" id="nav-last" role="tabpanel" aria-labelledby="nav-last-tab">
-                            <div class="whats-news-caption">
-                                <div class="row">
-                                    @foreach ($kebijakan as $i)
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <!-- Gambar -->
-                                                <div class="what-img">
-                                                    <img src="{{ asset('post/'. $i->gambar) }}" height="300" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <!-- Kategori -->
-                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
-                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
-                                                    </span>
-                                                    <!-- Waktu -->
-                                                    <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
-                                                    <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
-                                                    <!-- Judul -->
-                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Serba Serbi -->
-                        <div class="tab-pane fade" id="nav-nav-Sport" role="tabpanel" aria-labelledby="nav-Sports">
-                            <div class="whats-news-caption">
-                                <div class="row">
-                                    @foreach ($serbaSerbi as $i)
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <!-- Gambar -->
-                                                <div class="what-img">
-                                                    <img src="{{ asset('post/'. $i->gambar) }}" height="300" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <!-- Kategori -->
-                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
-                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
-                                                    </span>
-                                                    <!-- Waktu -->
-                                                    <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
-                                                    <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
-                                                    <!-- Judul -->
-                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Konsultasi -->
-                        <div class="tab-pane fade" id="nav-techno" role="tabpanel" aria-labelledby="nav-technology">
-                            <div class="whats-news-caption">
-                                <div class="row">
-                                    @foreach ($konsultasi as $i)
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <!-- Gambar -->
-                                                <div class="what-img">
-                                                    <img src="{{ asset('post/'. $i->gambar) }}" height="300" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <!-- Kategori -->
-                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
-                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
-                                                    </span>
-                                                    <!-- Waktu -->
-                                                    <i class="fas fa-clock fa-xs m-l-10" style="color: gray"></i>
-                                                    <span style="margin-left: -10px !important" style="color: gray">{{ substr($i->created_at, 0, 10) }}</span>
-                                                    <!-- Judul -->
-                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <!-- End Nav Card -->
-                </div>
-            </div>
+            @include('masterPages.right-sidebar')
         </div>
-        <!-- Right SideBar -->
-        @include('masterPages.right-sidebar')
+        <hr width="100%" class="-mt-10" style="color: #ddd">
     </div>
 </section>

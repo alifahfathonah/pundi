@@ -16,7 +16,7 @@
         <!-- Section 4 : Report -->
         @include('pages.includes.report')
         
-        <!-- Foote -->
+        <!-- Footer -->
         @include('masterPages.footers.footer')
     </div>
 @endsection
