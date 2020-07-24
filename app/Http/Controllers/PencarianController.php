@@ -1,5 +1,18 @@
 <?php
 
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of welcome
+ *
+ * @author Asip Hamdi
+ * Github : axxpxmd
+ */
+
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -28,7 +41,7 @@ class PencarianController extends Controller
 
         $artikel = Artikel::where('judul', 'like', '%' . $hasil_search . '%')
             ->wherestatus(1)
-            ->paginate(10);
+            ->paginate(5);
 
         return view('pages.hasil-pencarian', compact(
             'sub_headline',

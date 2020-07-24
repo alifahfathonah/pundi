@@ -5248,6 +5248,7 @@ input[type=button].btn-block {
 .pagination {
   display: flex;
   padding-left: 0;
+  margin: 0 auto;
   list-style: none;
   border-radius: 0.25rem;
 }
@@ -5291,8 +5292,8 @@ input[type=button].btn-block {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #FC4A00;
-  border-color: #FC4A00;
+  background-color: #FEBD01;
+  border-color: #FEBD01;
 }
 
 .page-item.disabled .page-link {

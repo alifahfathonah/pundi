@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 @include('masterPages.headers.header')
-<section class="blog_area section-padding" style="margin-top: -80px">
+<section class="blog_area section-padding">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mb-5 mb-lg-0">

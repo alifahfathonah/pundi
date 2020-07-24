@@ -6082,6 +6082,7 @@ del {
 
 .ordered-list li {
     list-style-type: decimal;
+    line-height: 1.82em !important
 }
 
 .ordered-list li span {
@@ -6090,10 +6091,8 @@ del {
 }
 
 .ordered-list-alpha li {
-    margin-left: 30px;
     list-style-type: lower-alpha;
     color: #222;
-    font-weight: 500;
     line-height: 1.82em !important
 }
 

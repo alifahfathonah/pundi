@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 @include('masterPages.headers.header')
-<section class="blog_area section-padding" style="margin-top: -80px">
+<section class="blog_area section-padding">
     <div class="container">
         <div class="row">
             <!-- Left Sidebar -->
@@ -12,7 +12,7 @@
                     <div>
                         <p class="f-blk fs-30 f-b">Konsultasi</p>
                         <div class="m-t-30">
-                            <img class="d-block m-auto img-fluid" src="{{ asset('images/logo.png') }}" width="400" alt="">
+                            <img class="d-block m-auto img-fluid" src="{{ asset('images/logo.png') }}" width="400" alt="photo">
                         </div>
                         <div class="m-t-40">
                             <div class="m-b-5">

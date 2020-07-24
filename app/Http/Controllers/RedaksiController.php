@@ -17,7 +17,7 @@ namespace App\Http\Controllers;
 // Store
 use App\Store\index;
 
-class KetentuanTulisanController extends Controller
+class RedaksiController extends Controller
 {
     public function index()
     {
@@ -30,7 +30,7 @@ class KetentuanTulisanController extends Controller
         $sub_serbaSerbi = index::subSerbaSerbi();
         $sub_konsultasi = index::subKebijakan();
 
-        return view('pages.ketentuan-tulisan', compact(
+        return view('pages.redaksi', compact(
             'sub_headline',
             'sub_indepth',
             'sub_kebijakan',

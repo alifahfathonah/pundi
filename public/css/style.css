@@ -16,6 +16,10 @@
     font-weight: bolder;
 }
 
+.f-b700{
+    font-weight: 700 !important;
+}
+
 .f-blk {
     color: black !important;
 }
@@ -264,4 +268,17 @@
 .title-card {
     color: #FEBD01 !important;
     font-weight: 700 !important
+}
+
+.sub-kategori-card {
+    background-color: #FEBD01 !important;
+    color: white !important;
+    padding: 3px 10px 3px 10px;
+    text-transform: uppercase
+}
+
+.kategori-title {
+    color: #FEBD01 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important
 }

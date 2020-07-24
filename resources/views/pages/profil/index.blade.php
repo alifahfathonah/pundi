@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 @include('masterPages.headers.header')
-<section class="blog_area section-padding" style="margin-top: -80px">
+<section class="blog_area section-padding">
     <div class="container">
         <div class="row">
             <!-- Left Sidebar -->
@@ -35,8 +35,8 @@
                         <div class="p-2 m-l-10">
                             <div class="row">
                                 <div class="col-2">
-                                    {{-- <img class="rounded-circle" src="{{ asset('ava/' . Auth::user()->photo) }}" width="45" alt=""> --}}
-                                    <img class="rounded-circle" src="{{ asset('images/boy.png') }}" width="45" alt="">
+                                    {{-- <img class="rounded-circle" src="{{ asset('ava/' . Auth::user()->photo) }}" width="45" alt="photo"> --}}
+                                    <img class="rounded-circle" src="{{ asset('images/boy.png') }}" width="45" alt="photo">
                                 </div>
                                 <div class="col m-t-5 m-l-15r" style="margin-left: -8%">
                                     <span class="m-t- f-blk f-b fs-20">{{ Auth::user()->name }}</span>

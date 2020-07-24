@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
 @include('masterPages.headers.header')
-<!-- Navigation -->
 <div class="container m-t-15">
     <i class="fa fa-home"></i>
     <a class="m-l-8 m-r-8 f-red fs-14 non-hover f-orange" href="{{ route('/') }}">
@@ -12,47 +11,40 @@
         <span>{{ $sub_kategori->n_sub_kategori }}</span>
     </a>
     <div class="m-t-10">
-        <div style="margin-bottom: -15px">
-            <i class="fas fa-angle-up fa-lg" style="transform: rotate(-45deg); color: #FEBD01 !important"></i>
+        <div class="-mb-13">
+            <i class="fas fa-angle-up fa-lg arrow"></i>
         </div>
-        <span class="fs-18 m-l-15" style="color: #FEBD01 !important; font-weight: 700 !important;text-transform: uppercase !important"> 
+        <span class="fs-18 m-l-15 kategori-title"> 
             KATEGORI : {{ $sub_kategori->n_sub_kategori }}
         </span>
     </div>
 </div>
-<section class="blog_area section-padding" style="margin-top: -100px">
+<section class="blog_area section-padding">
     <div class="container">
         <div class="row">
-            <!-- Left Sidebar -->
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
                     @foreach ($artikel as $i)
                     <div class="row m-b-30">
-                        <!-- Gambar -->
                         <div class="col-sm-6">
-                            <img class="bdr-5 m-b-10" src="{{ asset('post/'.$i->gambar) }}" width="350" alt="">
+                            <img class="bdr-5 m-b-10" src="{{ config('app.path_url').'artikel/'.$i->gambar }}" width="350" alt="photo">
                         </div>
                         <div class="col-sm-6">
-                            <!-- Kategori -->
-                            <span class="bdr-5 fs-11 f-b" style="background-color: #FEBD01 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
+                            <span class="bdr-5 fs-11 f-b sub-kategori-card">
                                 <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->sub_kategori->n_sub_kategori}}</a>
                             </span>
-                            <!-- Judul -->
                             <p class="fs-19 f-b f-blk m-t-10">
                                 <a href="{{ route('artikel') .'?post='.$i->id}}" class="text-black">{{ $i->judul }}</a>
                             </p>
-                            <!-- Penulis dan Waktu -->
-                            <div style="color: gray; margin-top: -10px ">
+                            <div class="-mt-10 text-grey">
                                 <i class="fa fa-user"></i>
                                 <span class="fs-13">{{ $i->user->name }}</span>
                                 <i class="fas fa-clock m-l-10"></i>
                                 <span class="fs-13">{{ substr($i->created_at,0,10) }}</span>
                             </div>
-                            <!-- Isi Artikel -->
                             <div class="m-t-10 fs-16 text-justify">
-                                {{  substr(strip_tags($i->isi),0,500) }} […]
+                                {{  substr(strip_tags($i->isi),0,350) }} […]
                             </div>
-                            <!-- Read More -->
                             <a href="{{ route('artikel') .'?post='.$i->id}}" class="f-blk fs-13 f-b m-t-5">
                                 <span>READ MORE</span>
                                 <i class="fas fa-arrow-right"></i>
@@ -65,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Right Sidebar -->
+
             @include('masterPages.right-sidebar')
         </div>
     </div>

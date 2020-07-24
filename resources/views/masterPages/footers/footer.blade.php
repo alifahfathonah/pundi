@@ -33,9 +33,9 @@
                             <div class="footer-menu f-right -mt-20">
                                 <ul>
                                     <li><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
-                                    <li><a href="#">Disclaimer</a></li>
-                                    <li><a href="#">Redaksi</a></li>
-                                    <li><a href="#">Media Siber</a></li>
+                                    <li><a href="{{ route('disclaimer') }}">Disclaimer</a></li>
+                                    <li><a href="{{ route('redaksi') }}">Redaksi</a></li>
+                                    <li><a href="{{ route('media-siber') }}">Media Siber</a></li>
                                 </ul>
                             </div>
                         </div>

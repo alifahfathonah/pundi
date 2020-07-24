@@ -75,7 +75,7 @@
                                     <label for="file" class="js-labelFile">
                                         <span class="js-fileName"></span>
                                     </label>
-                                    <img width="300" class="rounded img-fluid d-block m-t-10 mb-1" id="preview" alt=""/>
+                                    <img width="300" class="rounded img-fluid d-block m-t-10 mb-1" id="preview" alt="photo"/>
                                     <hr class="m-0">
                                     <i class="fs-12 ">Gambar bisa berupa foto, logo, atau symbol icon. Maksimal 1 Mb.</i>
                                 </div>

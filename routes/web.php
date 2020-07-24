@@ -25,6 +25,15 @@ Auth::routes();
 // Ketentuan Tulisan
 Route::get('ketentuan-tulisan', 'KetentuanTulisanController@index');
 
+// Diclaimer
+Route::get('disclaimer', 'DisclaimerController@index')->name('disclaimer');
+
+// Redaksi
+Route::get('redaksi', 'RedaksiController@index')->name('redaksi');
+
+// Media Siber
+Route::get('media-siber', 'MediaSiberController@index')->name('media-siber');
+
 // Tentang Kami
 Route::get('tentang-kami', 'TentangKamiController@index')->name('tentang-kami');
 
