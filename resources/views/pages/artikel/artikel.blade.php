@@ -20,7 +20,7 @@
                 <div class="single-post">
                     <div class="blog_detail">
                         <h3 class="f-b m-b-20">{{ $artikel->judul }}</h3>
-                        <span class="bdr-5 fs-12 f-b" style="background-color: #FEBD01 !important; color: white !important; padding: 3px 10px 3px 10px; text-transform: uppercase">
+                        <span class="bdr-5 fs-12 f-b sub-kategori-card">
                             <a href="{{ route('sub_kategori','sub_kategori='.$artikel->sub_kategori->id) }}">{{ $artikel->sub_kategori->n_sub_kategori }}</a>
                         </span>
                         <img src="{{ config('app.path_url').'ava/'.$artikel->user->photo }}" class="rounded-circle m-l-30" width="45" alt="photo">
@@ -48,32 +48,35 @@
                                 <img src="https://image.flaticon.com/icons/svg/124/124019.svg" width="30" alt="Twitter" />
                             </a>
                         </div>
-                        <div id="less" style="font-size: 17px !important; line-height: 33px">{{ substr(strip_tags($artikel->isi), 0, 800) }} [...]</div>
+                        <div id="less" style="font-size: 17px !important; line-height: 33px;">{{ substr(strip_tags($artikel->isi), 0, 800) }}</div>
+                        <div id="less1" class="blur-text"></div>
                         <div id="more" style="display: none">{!! $artikel->isi !!}</div>
-                        <div class="m-t-20 m-b-20 text-center">
-                            <button class="genric-btn warning bdr-5 m-r-5" id="tombol_show">Lebih Sedikit</button>
-                            <button class="genric-btn primary bdr-5" id="tombol_hide">Baca Selengkapnya</button><br>
-                        </div>
-                        <span class="f-b f-blk">
-                            <label>Editor : </label>
-                            <label class="f-orange">
-                                <a class="f-orange text-uppercase" href="#">{{ $artikel->editor->name }}</a>
-                            </label>    
-                        </span>
                     </div>
                 </div>
+                <div>
+                    <div class="m-t-20 m-b-20 text-center">
+                        <button class="genric-btn warning bdr-5 m-r-5" id="tombol_show">Lebih Sedikit</button>
+                        <button class="genric-btn primary bdr-5" id="tombol_hide">Baca Selengkapnya</button><br>
+                    </div>
+                    <span class="f-b f-blk">
+                        <label>Editor : </label>
+                        <label class="f-orange">
+                            <a class="f-orange text-uppercase" href="#">{{ $artikel->editor->name }}</a>
+                        </label>    
+                    </span>
+                </div>
                 <div class="m-t-10">
-                    <span class="bdr-20 fs-17" style="background-color: #FEBD01 !important; color: white !important; padding:4px 12px">
+                    <span class="bdr-20 fs-17 tag-card1">
                         Tags :
                     </span>
                     @foreach (explode(',', $artikel->tag) as $tags)
-                    <span class="bdr-20 fs-17 m-l-15" style="background-color: white !important; color: #AAAAAA !important; border: 1px solid #AAAAAA !important; padding:4px 12px">
+                    <span class="bdr-20 fs-17 m-l-15 tag-card">
                         {{ $tags }}
                     </span>
                     @endforeach
                 </div>
                 <hr>
-                <div class="blog-author" style="margin-top: -20px; margin-bottom: -25px">
+                <div class="blog-author -mt-20 -mb-20">
                     <div class="media align-items-center">
                         <img class="rounded-circle" src="{{ config('app.path_url').'ava/'.$artikel->user->photo }}" width="70" alt="photo">
                         <div class="media-body m-l-40 m-t-20">
@@ -88,8 +91,8 @@
                 <div>
                     <p class="fs-24 f-b f-blk" style="margin-top: -20px">Related Post</p>
                 </div> --}}
-                <div class="comments-area" style="margin-bottom: -50px">
-                    <p class="fs-24 f-b f-blk" style="margin-top: -30px">{{ $komen->count() }} komen</p>
+                <div class="comments-area -mb-50">
+                    <p class="fs-24 f-b f-blk -mt-30">{{ $komen->count() }} komen</p>
                     @foreach ($komen as $i)
                     <div class="comment-list">
                         <div class="single-comment justify-content-between d-flex">
@@ -110,7 +113,7 @@
                                             <h5>
                                                 <a href="#">{{ $i->nama }}</a>
                                             </h5>
-                                            <i class="fas fa-clock fa-xs m-l-20" style="margin-right: -10px; color: gray"></i>
+                                            <i class="fas fa-clock fa-xs m-l-20 text-grey -mr-10"></i>
                                             <span class="date" >{{ $i->created_at }}</span>
                                         </div>
                                         <div class="reply-btn">
@@ -124,7 +127,7 @@
                     @endforeach
                 </div>
                 <div class="comment-form">
-                    <p class="fs-24 f-b f-blk" style="margin-top: -30px">Tinggalkan Balasan</p>
+                    <p class="fs-24 f-b f-blk -mt-30">Tinggalkan Balasan</p>
                     <i>Alamat email Anda tidak akan dipublikasikan. Ruas yang wajib ditandai *</i>
                     <form class="form-contact comment_form m-t-20" action="{{ route('komen.store') }}" method="post">
                         {{ csrf_field() }}
@@ -165,11 +168,13 @@
         $("#tombol_hide").click(function () {
             $("#more").show();
             $("#less").hide();
+            $("#less1").hide();
         })
 
         $("#tombol_show").click(function () {
             $("#more").hide();
             $("#less").show();
+            $("#less1").show();
         })
     });
 </script>

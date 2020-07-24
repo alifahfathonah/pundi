@@ -24,9 +24,9 @@ class MediaSiberController extends Controller
         /**
          * Variabel for header
          */
-        $sub_headline = index::subHeadline();
-        $sub_indepth  = index::subIndepth();
-        $sub_kebijakan = index::subKebijakan();
+        $sub_headline   = index::subHeadline();
+        $sub_indepth    = index::subIndepth();
+        $sub_kebijakan  = index::subKebijakan();
         $sub_serbaSerbi = index::subSerbaSerbi();
         $sub_konsultasi = index::subKebijakan();
 
