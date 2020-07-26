@@ -2,7 +2,7 @@
 $image = App\Models\Images::select('id', 'footer', 'header', 'poster')->first();
 @endphp
 <div class="col-lg-4">
-    <div class="blog_right_sidebar make-me-sticky ">
+    <div class="blog_right_sidebar">
         <aside>
             <div class="news-poster d-lg-block">
                 <img class="bdr-5" src="{{ config('app.path_url').$image->poster }}" width="350" alt="poster">
@@ -11,12 +11,6 @@ $image = App\Models\Images::select('id', 'footer', 'header', 'poster')->first();
         <div class="">
             <p class="text-center m-t-15 fs-14 text-grey"><i>- Advertisement -</i></p>
             <aside class="single_sidebar_widget popular_post_widget bg-transparent">
-                <div class="-mb-13">
-                    <i class="fas fa-angle-up fa-lg arrow"></i>
-                </div>
-                <span class="f-b m-l-15 widget_title f-orange"> 
-                    BERITA & ARTIKEL TERBARU
-                </span>
                 @foreach ($right_sideBar as $i)
                 <div class="media post_item m-t-20">
                     <img class="bdr-5" src="{{ config('app.path_url').'artikel/'. $i->gambar }}" width="120" height="90" alt="artikel">
@@ -32,22 +26,6 @@ $image = App\Models\Images::select('id', 'footer', 'header', 'poster')->first();
                     </div>
                 </div>
                 @endforeach
-            </aside>
-            <aside class="single_sidebar_widget tag_cloud_widget " style="background-color: transparent !important">
-                <div class="-mb-13">
-                    <i class="fas fa-angle-up fa-lg arrow"></i>
-                </div>
-                <span class="f-b m-l-15 widget_title f-orange"> 
-                    PUNDI.ID – TAJAM DAN MENCERAHKAN
-                </span>
-                <div class="mt-2 ml-3">
-                    <p class="text-black">PUNDI.OR.ID - Tajam dan Mencerahkan</p>
-                    <p class="text-black">Jl. Kebun Raya, RT. 18/RW 6, Gg. Melati, Rejosari KG. I, Yogyakarta, 55171</p>
-                    <p><a class="text-black" href="{{ route('tentang-kami') }}">Tentang Kami</a></p>
-                    <p><a class="text-black" href="{{ route('disclaimer') }}">Disclaimer</a></p>
-                    <p><a class="text-black" href="{{ route('redaksi') }}">Redaksi</a></p>
-                    <p><a class="text-black" href="{{ route('media-siber') }}">Media Siber</a></p>
-                </div>
             </aside>
         </div>
     </div>

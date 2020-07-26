@@ -12,7 +12,7 @@
                     <div>
                         <p class="f-blk fs-30 f-b">Konsultasi</p>
                         <div class="m-t-30">
-                            <img class="d-block m-auto img-fluid" src="{{ asset('images/logo.png') }}" width="400" alt="photo">
+                            <img class="d-block m-auto img-fluid" src="{{ config('app.path_url').'logo.png' }}" width="350" alt="photo">
                         </div>
                         <div class="m-t-40">
                             <div class="m-b-5">

@@ -22,7 +22,6 @@
                                     <a class="nav-item nav-link fs-14i text-uppercase" id="nav-contact-tab" data-toggle="tab" href="#card2">{{ $dua->n_kategori }}</a>
                                     <a class="nav-item nav-link fs-14i text-uppercase" id="nav-last-tab" data-toggle="tab" href="#card3">{{ $tiga->n_kategori }}</a>
                                     <a class="nav-item nav-link fs-14i text-uppercase" id="nav-Sports" data-toggle="tab" href="#card4">{{ $empat->n_kategori }}</a>
-                                    {{-- <a class="nav-item nav-link" id="nav-technology" data-toggle="tab" href="#nav-techno">Konsultasi</a> --}}
                                 </div>
                             </nav>
                         </div>
@@ -146,34 +145,11 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- <div class="tab-pane fade" id="nav-techno">
-                                <div class="whats-news-caption">
-                                    <div class="row">
-                                        @foreach ($konsultasi as $i)            
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="{{ config('app.path_url').'artikel/'.$i->gambar }}" height="300" alt="photo"">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="bdr-5" style="background-color: #FEBD01; color: white">
-                                                        <a href="{{ route('sub_kategori','sub_kategori='.$i->sub_kategori->id) }}">{{ $i->kategori->n_kategori }}</a>
-                                                    </span>
-                                                    <i class="fas fa-clock fa-xs m-l-10 text-grey"></i>
-                                                    <span style="color: grey; margin-left: -10px">{{ substr($i->created_at, 0, 10) }}</span>
-                                                    <h4><a href="{{ route('artikel') .'?post='.$i->id}}">{{ $i->judul }}</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div> --}}
                         </div>
                     </div>
                 </div>
             </div>
-            @include('masterPages.right-sidebar')
+            @include('pages.includes.rightSidebar-home')
         </div>
         <hr width="100%" class="-mt-10" style="color: #ddd">
     </div>

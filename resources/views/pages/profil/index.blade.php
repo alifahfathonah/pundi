@@ -4,7 +4,6 @@
 <section class="blog_area section-padding">
     <div class="container">
         <div class="row">
-            <!-- Left Sidebar -->
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
                     <div>
@@ -12,7 +11,6 @@
                         <p class="f-blk fs-25 f-b m-t-30">{{ Auth::user()->name }} Dashboard </p>
                         <span>You have created {{ $post->count() }} article</span>
                     </div>
-                    <!-- Post -->
                     <div class="card p-2 m-t-10" style="background-color: #FCF8E3; border-color: #8A6D3B; color: #9C6D76">
                         <?php $no = 0;?>
                         @foreach ($post as $i)
@@ -29,19 +27,16 @@
                         </div>
                         @endforeach
                     </div>
-                    <!-- Author info -->
                     <div class="card m-t-20">
                         <p class="card-header f-blk fs-25 f-b">Author Info</p>
                         <div class="p-2 m-l-10">
                             <div class="row">
                                 <div class="col-2">
-                                    {{-- <img class="rounded-circle" src="{{ asset('ava/' . Auth::user()->photo) }}" width="45" alt="photo"> --}}
-                                    <img class="rounded-circle" src="{{ asset('images/boy.png') }}" width="45" alt="photo">
+                                    <img class="rounded-circle" src="{{ config('app.path_url').'ava/'.Auth::user()->photo }}" width="45" alt="photo">
                                 </div>
                                 <div class="col m-t-5 m-l-15r" style="margin-left: -8%">
                                     <span class="m-t- f-blk f-b fs-20">{{ Auth::user()->name }}</span>
                                     <i type="button" class="fa fa-caret-down" data-toggle="dropdown"></i>
-                                    <!-- DropDown -->
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item fs-15" href="{{ route('edit-profil') }}">Edit Profil</a>
                                         <a class="dropdown-item fs-15" href="{{ route('kirim-tulisan') }}">Kirim Tulisan</a>
@@ -77,7 +72,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Right Sidebar -->
             @include('masterPages.right-sidebar')
         </div>
     </div>

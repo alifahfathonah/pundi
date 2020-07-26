@@ -84,7 +84,8 @@
                             <p class="text-black m-l-17">Penilaian akhir atas sengketa mengenai pelaksanaan Pedoman Pemberitaan Media Siber ini diselesaikan oleh Dewan Pers.</p>
                             <p class="text-black">Jakarta, 3 Februari 2012</p>
                             <p class="text-black">(Pedoman ini ditandatangani oleh Dewan Pers dan komunitas pers di Jakarta, 3 Februari 2012).</p>
-                            <p><a class="hover-blk f-orange" href="http://pundi.or.id/">pundi.or.id</a></p>
+                            {{-- <p><a class="hover-blk f-orange" href="http://pundi.or.id/">pundi.or.id</a></p> --}}
+                            <p class="text-black"><strong>PUNDI.OR.ID</strong></p>
                         </div>
                     </div>
                 </div>

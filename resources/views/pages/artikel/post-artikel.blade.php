@@ -43,7 +43,7 @@
                                     <span class="js-fileName"></span>
                                 </label>
                                 <br>
-                                <img width="300" class="rounded img-fluid d-block" id="preview" alt="photo" style="margin-top: 10px"/>
+                                <img width="300" class="rounded img-fluid d-block" id="preview" style="margin-top: 10px"/>
                             </div>
                             <div class="m-t-10">
                                 <label for="" class="f-b fs-17">TAGS</label>

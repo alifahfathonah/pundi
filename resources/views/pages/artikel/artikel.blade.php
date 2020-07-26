@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 posts-list">
-                <div class="single-post">
+                <div class="single-post" style="position: -webkit-sticky">
                     <div class="blog_detail">
                         <h3 class="f-b m-b-20">{{ $artikel->judul }}</h3>
                         <span class="bdr-5 fs-12 f-b sub-kategori-card">
@@ -28,7 +28,7 @@
                         <i class="fas fa-clock m-l-15 text-grey"></i>
                         <span class="fs-14">{{ substr($artikel->created_at, 0, 40) }}</span>
                         <i class="fa fa-comments m-l-15 text-grey"></i>
-                        <span class="fs-14">{{ $komen->count() }} Komen</span>
+                        <span class="fs-14">{{ $komen->count() }} Komentar</span>
                         <i class="fa fa-eye m-l-15 f-orange"></i>
                         <span class="fs-14">{{ $artikel->artikel_view }}</span>
                         <div class="m-b-25 m-t-30">
@@ -76,84 +76,11 @@
                     @endforeach
                 </div>
                 <hr>
-                <div class="blog-author -mt-20 -mb-20">
-                    <div class="media align-items-center">
-                        <img class="rounded-circle" src="{{ config('app.path_url').'ava/'.$artikel->user->photo }}" width="70" alt="photo">
-                        <div class="media-body m-l-40 m-t-20">
-                            <a href="#">
-                                <span class="fs-15 f-b non-hover f-blk">{{ $artikel->user->name }}</span>
-                            </a>
-                            <p>{{ $artikel->user->bio }}</p>
-                        </div>
-                    </div>
-                </div>
-                {{-- <hr>
-                <div>
-                    <p class="fs-24 f-b f-blk" style="margin-top: -20px">Related Post</p>
-                </div> --}}
-                <div class="comments-area -mb-50">
-                    <p class="fs-24 f-b f-blk -mt-30">{{ $komen->count() }} komen</p>
-                    @foreach ($komen as $i)
-                    <div class="comment-list">
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="thumb">
-                                    @if ($i->user_id != null)
-                                    <img src="{{ asset('ava/' .$i->user->photo) }}" alt="photo">
-                                    @else
-                                    <img src="{{ config('app.path_url').'ava/user.png' }}" alt="photo">
-                                    @endif
-                                </div>
-                                <div class="desc">
-                                    <p class="comment">
-                                        {{ $i->comment }}
-                                    </p>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex align-items-center">
-                                            <h5>
-                                                <a href="#">{{ $i->nama }}</a>
-                                            </h5>
-                                            <i class="fas fa-clock fa-xs m-l-20 text-grey -mr-10"></i>
-                                            <span class="date" >{{ $i->created_at }}</span>
-                                        </div>
-                                        <div class="reply-btn">
-                                            <a href="#" class="btn-reply text-uppercase">reply</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-                <div class="comment-form">
-                    <p class="fs-24 f-b f-blk -mt-30">Tinggalkan Balasan</p>
-                    <i>Alamat email Anda tidak akan dipublikasikan. Ruas yang wajib ditandai *</i>
-                    <form class="form-contact comment_form m-t-20" action="{{ route('komen.store') }}" method="post">
-                        {{ csrf_field() }}
-                        <input type="hidden" name="artikel_id" value="{{ $artikel->id }}">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input class="form-control" type="text" name="nama" id="nama" placeholder="Enter Name *" required>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input class="form-control" type="email" name="email" id="email" placeholder="Enter E-mail *" required>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9" placeholder="Enter Comment *" required></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="button button-contactForm btn_1 boxed-btn">Post Komen</button>
-                        </div>
-                    </form>
-                </div>
+                @include('pages.artikel.info-penulis')
+                @include('pages.artikel.komen')
+                @include('pages.artikel.post-komen')
+                <hr>
+                @include('pages.artikel.related-artikel')
             </div>
             @include('masterPages.right-sidebar')
         </div>

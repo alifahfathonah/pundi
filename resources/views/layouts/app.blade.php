@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Title -->
-    <link rel="icon" href="{{ asset('images/logo-round.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ config('app.path_url').'logo-round.png' }}" type="image/x-icon">
     <title>PUNDI</title>
 
     <!-- CSS -->

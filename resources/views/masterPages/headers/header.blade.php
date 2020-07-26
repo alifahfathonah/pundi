@@ -68,7 +68,7 @@ $image = App\Models\Images::select('id', 'footer', 'header', 'poster')->first();
                 </div>
             </div>
             <!-- Sticky Header -->
-            <div class="header-sticky color-gradient1">
+            <div class="header-sticky color-gradient1" style="position: fixed">
                 <div class="container">
                     <div class="row d-flex align-items-center">
                         <div class="col-xl-2 col-lg-2 col-md-2">

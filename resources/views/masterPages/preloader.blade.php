@@ -17,7 +17,7 @@
                 <div class="preloader-inner position-relative">
                     <div class="preloader-circle"></div>
                     <div class="preloader-img pere-text">
-                        <img src="{{ asset('images/logo-round.png') }}" width="120px" alt="photo" style="margin-bottom: 18%">
+                        <img src="{{ config('app.path_url').'logo-round.png' }}" width="120px" alt="photo" style="margin-bottom: 18%">
                     </div>
                 </div>
             </div>
