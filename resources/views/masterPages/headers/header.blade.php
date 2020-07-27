@@ -3,7 +3,7 @@ $image = App\Models\Images::select('id', 'footer', 'header', 'poster')->first();
 @endphp
 <header>
     <div class="header-area">
-        <div class="main-header ">
+        <div class="main-header">
             <div class="header-top black-bg d-none d-md-block color-gradient1">
                 <div class="container">
                     <div class="col-xl-12">
@@ -68,7 +68,7 @@ $image = App\Models\Images::select('id', 'footer', 'header', 'poster')->first();
                 </div>
             </div>
             <!-- Sticky Header -->
-            <div class="header-sticky color-gradient1" style="position: fixed">
+            <div class="header-sticky color-gradient1">
                 <div class="container">
                     <div class="row d-flex align-items-center">
                         <div class="col-xl-2 col-lg-2 col-md-2">
