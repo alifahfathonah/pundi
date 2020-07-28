@@ -71,11 +71,12 @@
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-4 f-b col-form-label" for="photo">FOTO PROFIL <span class="text-danger ml-1">*</span></label>
                                 <div class="col-sm-8">
-                                    <input type="file" name="photo" id="photo" onchange="tampilkanPreview(this,'preview')" required oninvalid="this.setCustomValidity('Foto tidak boleh kosong!')" oninput="setCustomValidity('')"/>
-                                    <label for="file" class="js-labelFile">
-                                        <span class="js-fileName"></span>
+                                    <input type="file" name="photo" id="file" class="input-file" onchange="tampilkanPreview(this,'preview')" required oninvalid="this.setCustomValidity('Foto tidak boleh kosong!')" oninput="setCustomValidity('')"/>
+                                    <label for="file" class="genric-btn primary-border bdr-5 js-labelFile">
+                                        <i class="icon fa fa-image"></i>
+                                        <span class="js-fileName">Pilih File</span>
                                     </label>
-                                    <img width="300" class="rounded img-fluid d-block m-t-10 mb-1" id="preview" alt="photo"/>
+                                    <img width="300" class="rounded img-fluid d-block mb-1" id="preview"/>
                                     <hr class="m-0">
                                     <i class="fs-12 ">Gambar bisa berupa foto, logo, atau symbol icon. Maksimal 1 Mb.</i>
                                 </div>

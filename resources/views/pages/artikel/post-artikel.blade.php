@@ -38,9 +38,10 @@
                             <div class="alert alert-dismissible" id="message" role="alert"></div>
                             <div style="margin-top: -20px">
                                 <label for="" class="f-b fs-17">GAMBAR UNGGULAN <span class="text-danger ml-1">*</span></label><br>
-                                <input type="file" name="gambar" id="gambar" onchange="tampilkanPreview(this,'preview')">
-                                <label for="file" class="js-labelFile">
-                                    <span class="js-fileName"></span>
+                                <input type="file" name="gambar" id="file" class="input-file" onchange="tampilkanPreview(this,'preview')">
+                                <label for="file" class="genric-btn primary-border bdr-5 js-labelFile">
+                                    <i class="icon fa fa-image"></i>
+                                    <span class="js-fileName">Pilih File</span>
                                 </label>
                                 <br>
                                 <img width="300" class="rounded img-fluid d-block" id="preview" style="margin-top: 10px"/>

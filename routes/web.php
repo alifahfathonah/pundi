@@ -61,6 +61,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('profil', 'ProfilController@index')->name('profil');
     Route::get('edit-profil', 'ProfilController@edit_profil')->name('edit-profil');
     Route::post('edit-profil/update-profil', 'ProfilController@update_profil')->name('edit-profil.update-profil');
+    Route::post('edit-profil/update-photo', 'ProfilController@update_photo')->name('edit-profil.update-photo');
 
     // Kirim Tulisan
     Route::get('kirim-tulisan', 'ArtikelController@tambah_artikel')->name('kirim-tulisan');

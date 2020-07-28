@@ -92,4 +92,32 @@ class ProfilController extends Controller
             ->route('edit-profil', Auth::user()->id)
             ->withSuccess('Selamat! Data berhasil diperbaharui.');
     }
+
+    public function update_photo(Request $request)
+    {
+        $request->validate([
+            'photo' => 'required | image | mimes:jpeg,png,jpg|max:2048',
+        ]);
+
+        // save to storage
+        $id       = $request->id;
+        $file     = $request->file('photo');
+        $fileName = time() . "." . $file->getClientOriginalName();
+        $request->file('photo')->move(config('app.path_local') . 'ava/', $fileName);
+
+        // delete from storage
+        $data = User::findOrFail($id);
+        $file1 = $data->photo;
+        $filename1 = config('app.path_local') . 'ava/' . $file1;
+        \File::delete($filename1);
+
+        $updatePhoto = User::findOrFail($id);
+        $updatePhoto->update([
+            'photo' => $fileName
+        ]);
+
+        return redirect()
+            ->route('profil', Auth::user()->id)
+            ->withSuccess('Selamat! Foto Profil berhasil diperbaharui.');
+    }
 }
