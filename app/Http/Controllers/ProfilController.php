@@ -30,7 +30,7 @@ class ProfilController extends Controller
 
     public function index()
     {
-        $post = Artikel::where('penulis_id', Auth::user()->id)->get();
+        $post = Artikel::where('penulis_id', Auth::user()->id)->with('user')->get();
 
         /**
          * Variabel for header

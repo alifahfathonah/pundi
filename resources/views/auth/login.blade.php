@@ -13,7 +13,7 @@
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-2 f-b col-form-label" for="email">E-MAIL</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="input single-input-primary @error('email') is-invalid @enderror" name="email" placeholder="E-mail"/>
+                                    <input type="email" class="input single-input-primary @error('email') is-invalid @enderror" name="email" placeholder="E-mail" autocomplete=""/>
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>Email / Password salah</strong>
@@ -24,7 +24,7 @@
                             <div class="mt-10 form-group row">
                                 <label class="col-sm-2 f-b col-form-label" for="password">PASSWORD</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="input single-input-primary @error('password') is-invalid @enderror" name="password" placeholder="Password"/>
+                                    <input type="password" class="input single-input-primary @error('password') is-invalid @enderror" name="password" placeholder="Password" autocomplete=""/>
                                     <a href="{{ route('password.request') }}">
                                         <p class="f-blk text-right fs-15 f-red mt-2">Lupa password?</p>
                                     </a>

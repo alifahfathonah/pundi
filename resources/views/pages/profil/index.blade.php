@@ -23,7 +23,7 @@
                                     <a class="f-blk" href="https://web.facebook.com/{{ Auth::user()->facebook }}" target="blank">
                                         <i class="fa fa-facebook-square fa-lg mr-2"></i>
                                     </a>
-                                    <a class="f-blk" href="https://twitter.com/{{Auth::user()->twitter}}" target="blank">
+                                    <a class="f-blk" href="https://twitter.com/{{ Auth::user()->twitter }}" target="blank">
                                         <i class="fa fa-twitter-square fa-lg mr-2"></i>
                                     </a>
                                     <a class="f-blk" href="https://www.instagram.com/{{ Auth::user()->instagram }}" target="blank"> 
@@ -31,39 +31,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="modal fade" id="editPhoto" tabindex="-1" role="dialog"aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content text-center">
-                                        <div class="modal-header">
-                                            <h6 class="modal-title">Ganti Photo Profil</h6>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <form action="{{ route('edit-profil.update-photo', Auth::user()->id) }}" method="POST" enctype="multipart/form-data">
-                                            {{ csrf_field() }}
-                                            {{ method_field('POST') }}
-                                            <div class="mt-3">
-                                                <img class="rounded-circle" src="{{ config('app.path_url').'ava/'.Auth::user()->photo }}" width="100" alt="photo"> 
-                                                <div class="mt-3">
-                                                    <input type="hidden" name="id" value="{{ Auth::user()->id }}">
-                                                    <input type="file" name="photo" id="file" class="input-file" value="{{ Auth::user()->photo }} " onchange="tampilkanPreview(this,'preview')">
-                                                    <label for="file" class="genric-btn primary-border bdr-5 js-labelFile">
-                                                        <i class="icon fa fa-check"></i>
-                                                        <span class="js-fileName">Ganti Foto Profil</span>
-                                                    </label>
-                                                    <img width="300" class="rounded img-fluid mx-auto d-block m-t-10 mb-3" id="preview"/>
-                                                    <hr class="m-0">
-                                                    <i class="fs-12 ">Gambar bisa berupa foto, logo, atau symbol icon. Maksimal 1 Mb.</i>
-                                                </div>   
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="submit" class="genric-btn primary-border bdr-5">Simpan</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+                            @include('pages.profil.ganti-foto')
                             <div class="modal fade" id="editProfil" tabindex="-1" role="dialog"aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content text-center">
@@ -80,39 +48,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-5">
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active f-orange" id="home-tab" data-toggle="tab" href="#artikel">Artikel</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link f-orange" id="profile-tab" data-toggle="tab" href="#info">Info</a>
-                                    </li>
-                                </ul>
-                                <div class="tab-content" id="myTabContent">
-                                    <div class="tab-pane fade show active" id="artikel" role="tabpanel">
-                                        <ul class="list-group list-group-flush">
-                                            <?php $no = 0;?>
-                                            @foreach ($post->take(10) as $i)
-                                            <?php $no++ ;?>
-                                            <li class="list-group-item">
-                                                <a class="text-black" style="margin-left: -20px !important" href="{{ route('artikel') .'?post='.$i->id}}">
-                                                {{ $no }}. &nbsp;{{ $i->judul }}
-                                                </a>
-                                            </li>
-                                            @endforeach
-                                        </ul>
-                                        @if ($post->count() > 10)
-                                        <span class="bdr-5 fs-11 f-b m-r-10 sub-kategori-card">
-                                            <a class="text-center" href="#">Lihat Semua Artikel</a>
-                                        </span>
-                                        @endif
-                                    </div>
-                                    <div class="tab-pane fade" id="info" role="tabpanel">
-                                        info
-                                    </div>
-                                </div>
-                            </div>
+                            @include('pages.profil.navigation')
                         </div>
                     </div>
                 </div>
