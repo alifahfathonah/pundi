@@ -15,7 +15,7 @@
                             <li>Tulisan Terdiri dari 700-1500 kata.</li>
                             <li>Kirim tulisanmu dengan pilih menu kirim tulisan di bagian header.</li>
                             <li>Penulis/Kontributor yang belum pernah mendaftar, silahkan daftar dengan klik link berikut <a class="f-orange" href="{{ route('kirim-tulisan') }}">“Daftar sekarang!”</a>.</li>
-                            <li>Penulis yang karyanya mencapai 500 views dalam waktu 3 x 24 jam, bisa menghubungi PUNDI.ID untuk mendapatkan honorarium melalui CP berikut: 0821-2226-9993.</li>
+                            <li>Penulis yang karyanya mencapai 500 views dalam waktu 3 x 24 jam, bisa menghubungi pundi.or.id untuk mendapatkan honorarium melalui CP berikut: 0821-2226-9993.</li>
                         </ol>
                     </div>
                     <div class="m-t-30">
@@ -29,7 +29,7 @@
                             <li>Tidak menulis judul dua kali. Judul cukup ditulis di kolom yang tersedia.</li>
                             <li>Setiap tulisan harus disertakan foto/gambar yang standar, yakni sebesar 450 piksel (atau maksimal 730X489) dengan menuliskan sumber gambar/foto tersebut diambil.</li>
                             <li>Pilih kategori tulisan sesuai dengan tema yang Anda tulis.</li>
-                            <li>Penulis dilarang mengirimkan artikel yang pernah diterbitkan di media lain, baik media daring atau cetak tanpa sepengetahuan tim redaksi PUNDI.ID. Penulis juga dilarang mengirim satu tulisan pada saat bersamaan ke media lain.</li>
+                            <li>Penulis dilarang mengirimkan artikel yang pernah diterbitkan di media lain, baik media daring atau cetak tanpa sepengetahuan tim redaksi pundi.or.id. Penulis juga dilarang mengirim satu tulisan pada saat bersamaan ke media lain.</li>
                         </ol>
                     </div>
                 </div>

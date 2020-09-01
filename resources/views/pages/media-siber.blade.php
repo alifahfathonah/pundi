@@ -20,7 +20,7 @@
                            <p class="text-black">Media Siber adalah segala bentuk media yang menggunakan wahana Internet dan melaksanakan kegiatan jurnalistik, serta memenuhi persyaratan Undang-Undang Pers dan Standar Perusahaan Pers yang ditetapkan Dewan Pers. Isi Buatan Pengguna (User Generated Content) adalah segala isi yang dibuat dan atau dipublikasikan oleh pengguna media siber, antara lain, artikel, gambar, komentar, suara, video dan berbagai bentuk unggahan yang melekat pada media siber, seperti blog, forum, komentar pembaca atau pemirsa, dan bentuk lain.</p>
                            <p class="text-black f-b700">2. Verifikasi dan keberimbangan berita</p>
                            <ol class="ordered-list-alpha fs-16">
-                                <li>Seluruh layanan yang di berikan di situs PUNDI.ID ditunjukkan untuk kebutuhan pribadi Anda bukan untuk dikomersialkan.</li>
+                                <li>Seluruh layanan yang di berikan di situs pundi.or.id ditunjukkan untuk kebutuhan pribadi Anda bukan untuk dikomersialkan.</li>
                                 <li>Berita yang dapat merugikan pihak lain memerlukan verifikasi pada berita yang sama untuk memenuhi prinsip akurasi dan keberimbangan</li>
                                 <li>Ketentuan dalam butir (a) di atas dikecualikan, dengan syarat:</li>
                             </ol>

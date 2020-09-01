@@ -38,7 +38,7 @@ $image = App\Models\Images::select('id', 'footer', 'header', 'poster')->first();
                     <i class="fas fa-angle-up fa-lg arrow"></i>
                 </div>
                 <span class="f-b m-l-15 widget_title f-orange"> 
-                    PUNDI.ID – TAJAM DAN MENCERAHKAN
+                    pundi.or.id – TAJAM DAN MENCERAHKAN
                 </span>
                 <div class="mt-2 ml-3">
                     <p class="text-black">PUNDI.OR.ID - Tajam dan Mencerahkan</p>

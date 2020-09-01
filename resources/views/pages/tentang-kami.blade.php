@@ -11,10 +11,10 @@
                         <p class="f-blk fs-30 f-b">Tentang Kami</p>
                         <div class="m-t-30 m-b-30">
                             <img class="d-block m-auto img-fluid" src="{{ config('app.path_url').'logo.png' }}" width="350" alt="photo">
-                            {{--    <p class="text-center m-t-10">PUNDI.ID - Pegiat Pendidikan Indonesia</p> --}}
+                            {{--    <p class="text-center m-t-10">pundi.or.id - Pegiat Pendidikan Indonesia</p> --}}
                         </div>
-                        <p class="text-black">Pundi.id merupakan portal berita pendidikan, dikelola oleh yayasan Pegiat Pendidikan Indonesia (PUNDI) yang berkedudukan di Yogyakarta. Surat kabar online, menyajikan berita terkini, trending topik sesuai fakta. Kami hadir untuk menambah referensi bagi masyarakat di Indonesia terhadap informasi yang terkini, akurat, dan teraktual.</p>
-                        <p class="text-black">Produk berita yang dikeluarkan Pundi.id telah melalui proses verifikasi dan kami melaksanakan tugas sesuai Kode Etik Jurnalistik (KEJ) dan dengan asas-asas jurnalistik yang baik. Berada di era arus informasi yang serba cepat, tidak sedikit muncul informasi yang tidak jelas sumber dan faktanya.</p>
+                        <p class="text-black">pundi.or.id merupakan portal berita pendidikan, dikelola oleh yayasan Pegiat Pendidikan Indonesia (PUNDI) yang berkedudukan di Yogyakarta. Surat kabar online, menyajikan berita terkini, trending topik sesuai fakta. Kami hadir untuk menambah referensi bagi masyarakat di Indonesia terhadap informasi yang terkini, akurat, dan teraktual.</p>
+                        <p class="text-black">Produk berita yang dikeluarkan pundi.or.id telah melalui proses verifikasi dan kami melaksanakan tugas sesuai Kode Etik Jurnalistik (KEJ) dan dengan asas-asas jurnalistik yang baik. Berada di era arus informasi yang serba cepat, tidak sedikit muncul informasi yang tidak jelas sumber dan faktanya.</p>
                         <p class="text-black">Kami berusaha untuk menjadi sumber informasi pendidikan yang akurat dan sesuai fakta. Memperoleh data yang akurat sangat penting bagi kami sebagai bagian dari tujuan memberikan informasi yang tajam dan mencerahkan.</p>
                         <p class="text-black">Untuk mengetahui Pundi lebih detail silahkan mengunjungi kami di media sosial</p>
                         <span class="text-black">Instagram &nbsp;&nbsp; : pundi@official</span><br> 
