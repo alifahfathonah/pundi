@@ -37,7 +37,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-what-news m-b-30">
                                                 <div class="what-img">
-                                                    <img src="{{ config('app.path_url').'artikel/'.$i->gambar }}" height="300" alt="photo"">
+                                                    <img style="height: 300px; object-fit: cover; object-position: center" src="{{ config('app.path_url').'artikel/'.$i->gambar }}" alt="photo"">
                                                 </div>
                                                 <div class="what-cap">
                                                     <span class="bdr-5" style="background-color: #FEBD01; color: white">
