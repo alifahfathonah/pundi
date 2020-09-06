@@ -19,7 +19,7 @@
                         @foreach ($indepth_of_issues as $i)
                         <div class="weekly-single">
                             <div class="weekly-img">
-                                <img class="" src="{{ config('app.path_url').'artikel/'.$i->gambar }}" height="300" alt="photo">
+                                <img style="height: 300px; object-fit: cover; object-position: center" src="{{ config('app.path_url').'artikel/'.$i->gambar }}" height="300" alt="photo">
                             </div>
                             <div class="weekly-caption">
                                 <span class="bdr-5" style="background-color: #FEBD01 !important; color: white !important">
