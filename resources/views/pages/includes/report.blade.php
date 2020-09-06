@@ -19,7 +19,7 @@
                         @foreach ($report as $i)
                             <div class="weekly2-single">
                                 <div class="weekly2-img">
-                                    <img src="{{ config('app.path_url').'artikel/'.$i->gambar }}" height="200" alt="photo">
+                                    <img style="object-fit: cover; object-position: center" src="{{ config('app.path_url').'artikel/'.$i->gambar }}" height="200" alt="photo">
                                 </div>
                                 <div class="weekly2-caption">
                                     <span class="bdr-5" style="background-color: #FEBD01; color: white">

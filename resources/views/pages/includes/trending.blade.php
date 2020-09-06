@@ -59,7 +59,7 @@
                             <div class="col-lg-4">
                                 <div class="single-bottom mb-30">
                                     <div class="trend-bottom-img mb-10">
-                                        <img src="{{ config('app.path_url').'artikel/'.$i->gambar }}" width="223" height="159" alt="photo">
+                                        <img style="object-fit: cover; object-position: center" src="{{ config('app.path_url').'artikel/'.$i->gambar }}" width="223" height="159" alt="photo">
                                     </div>
                                     <div class="trend-bottom-cap">
                                         <p class="fs-13 capital">
@@ -87,7 +87,7 @@
                     @foreach ($trending_right as $i)
                     <div class="trand-right-single d-flex">
                         <div class="trand-right-img">
-                            <img src="{{ config('app.path_url').'artikel/'.$i->gambar }}" width="150" height="100" alt="photo">
+                            <img style="object-fit: cover; object-position: center" src="{{ config('app.path_url').'artikel/'.$i->gambar }}" width="150" height="100" alt="photo">
                         </div>
                         <div class="trand-right-cap -mt-7">
                             <p class="fs-13 capital">
