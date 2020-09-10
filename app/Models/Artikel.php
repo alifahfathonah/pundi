@@ -32,6 +32,6 @@ class Artikel extends Model
 
     public function editor()
     {
-        return $this->belongsTo(User::class, 'editor_id');
+        return $this->belongsTo(Admins::class, 'editor_id');
     }
 }

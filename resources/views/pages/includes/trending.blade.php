@@ -16,7 +16,7 @@
                                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                                         <div class="zoom-effect">
                                             <div class="kotak">
-                                                <img class="bdr-5" style="width: 730px; height: 530px; object-fit: cover; object-position: center" src="{{ config('app.path_url').'artikel/'.$i->gambar }}">
+                                                <img class="bdr-5" style="width: 730px; height: 530px; object-fit: cover; object-position: center;-o-object-fit: cover" src="{{ config('app.path_url').'artikel/'.$i->gambar }}">
                                             </div>
                                             <div class="carousel-caption">
                                                 <div class="">
