@@ -49,7 +49,7 @@
                             </a>
                         </div>
                         <div id="less" style="font-size: 17px !important; line-height: 33px;">
-                            {!! substr($artikel->isi, 0, 800) !!}
+                            {!! substr($artikel->isi, 0, 500) !!}
                         </div>
                         <div id="less1" class="blur-text"></div>
                         <div id="more" style="display: none">{!! $artikel->isi !!}</div>
