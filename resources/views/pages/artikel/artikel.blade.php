@@ -48,7 +48,9 @@
                                 <img src="https://image.flaticon.com/icons/svg/124/124019.svg" width="30" alt="Twitter" />
                             </a>
                         </div>
-                        <div id="less" style="font-size: 17px !important; line-height: 33px;">{{ substr(strip_tags($artikel->isi), 0, 800) }}</div>
+                        <div id="less" style="font-size: 17px !important; line-height: 33px;">
+                            {!! substr($artikel->isi, 0, 800) !!}
+                        </div>
                         <div id="less1" class="blur-text"></div>
                         <div id="more" style="display: none">{!! $artikel->isi !!}</div>
                     </div>
@@ -61,7 +63,7 @@
                     <span class="f-b f-blk">
                         <label>Editor : </label>
                         <label class="f-orange">
-                            <a class="f-orange text-uppercase" href="#">{{ $artikel->editor->name }}</a>
+                            <a class="f-orange text-uppercase" href="#">{{ $artikel->editor->nama }}</a>
                         </label>    
                     </span>
                 </div>
