@@ -23,7 +23,7 @@
                         <span class="bdr-5 fs-12 f-b sub-kategori-card">
                             <a href="{{ route('sub_kategori','sub_kategori='.$artikel->sub_kategori->id) }}">{{ $artikel->sub_kategori->n_sub_kategori }}</a>
                         </span>
-                        <img src="{{ config('app.path_url').'ava/'.$artikel->user->photo }}" class="rounded-circle m-l-30" width="45" alt="photo">
+                        <img src="{{ config('app.path_url').'ava/'.$artikel->user->photo }}" class="rounded-circle img-circular m-l-30" height="45" width="45" alt="photo">
                         <span class="fs-14 f-b m-l-10">{{ $artikel->user->name }}</span>
                         <i class="fas fa-clock m-l-15 text-grey"></i>
                         <span class="fs-14">{{ substr($artikel->created_at, 0, 40) }}</span>
@@ -35,13 +35,13 @@
                             <img class="img-fluid bdr-5" width="800" height="" src="{{ config('app.path_url').'artikel/'.$artikel->gambar }}" alt="photo">
                         </div>
                         <div class="m-b-10">
-                            <a href="http://www.facebook.com/sharer.php?u=http://pundi.or.id/public/artikel?post={{$artikel->id}}" target="_blank">
+                            <a href="http://www.facebook.com/sharer.php?u=http://pundi.or.id/pundi/public/artikel?post={{$artikel->id}}" target="_blank">
                                 <img src="https://image.flaticon.com/icons/svg/1384/1384053.svg" width="30" alt="Facebook" />
                             </a>
-                            <a href="https://twitter.com/share?url=http://pundi.or.id/public/artikel?post={{$artikel->id}}&text={{$artikel->judul}}" target="_blank">
+                            <a href="https://twitter.com/share?url=http://pundi.or.id/pundi/public/artikel?post={{$artikel->id}}&text={{$artikel->judul}}" target="_blank">
                                 <img src="https://image.flaticon.com/icons/svg/124/124021.svg" width="30" alt="Twitter" />
                             </a>
-                            <a href="whatsapp://send?text={{$artikel->judul}}%0Ahttp://pundi.or.id/public/artikel?post={{$artikel->id}}" target="blank" data-action="share/whatsapp/share">
+                            <a href="whatsapp://send?text={{$artikel->judul}}%0Ahttp://pundi.or.id/pundi/public/artikel?post={{$artikel->id}}" target="blank" data-action="share/whatsapp/share">
                                 <img src="https://image.flaticon.com/icons/svg/124/124034.svg" width="30" alt="Twitter" />
                             </a>
                             <a href="#" data-action="share/whatsapp/share">
@@ -63,7 +63,7 @@
                     <span class="f-b f-blk">
                         <label>Editor : </label>
                         <label class="f-orange">
-                            <a class="f-orange text-uppercase" href="#">{{ $artikel->editor->nama }}</a>
+                            <a class="f-orange text-uppercase" href="#">{{ $editor->nama }}</a>
                         </label>    
                     </span>
                 </div>

@@ -14,6 +14,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AdminDetails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -97,6 +98,7 @@ class ArtikelController extends Controller
     {
         // Artikel
         $artikel = Artikel::whereid($request->post)->first();
+        $editor  = AdminDetails::select('id', 'nama')->where('admin_id', $artikel->editor_id)->first();
 
         // Counter Views
         DB::update('UPDATE artikel SET artikel_view = artikel_view + 1 WHERE id = "' . $request->post . '"');
@@ -120,7 +122,8 @@ class ArtikelController extends Controller
             'sub_indepth',
             'sub_kebijakan',
             'sub_serbaSerbi',
-            'sub_konsultasi'
+            'sub_konsultasi',
+            'editor'
         ));
     }
 }
