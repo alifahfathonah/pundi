@@ -101,7 +101,7 @@ class ArtikelController extends Controller
         $editor  = AdminDetails::select('id', 'nama')->where('admin_id', $artikel->editor_id)->first();
 
         // Counter Views
-        DB::update('UPDATE artikel SET artikel_view = artikel_view + 1 WHERE id = "' . $request->post . '"');
+        DB::update('UPDATE artikel SET artikel_view = artikel_view + 10 WHERE id = "' . $request->post . '"');
 
         // Comments
         $komen = Komen::where('artikel_id', $request->post)->get();

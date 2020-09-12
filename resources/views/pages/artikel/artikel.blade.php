@@ -72,7 +72,7 @@
                         Tags :
                     </span>
                     @foreach (explode(',', $artikel->tag) as $tags)
-                    <span class="bdr-20 fs-17 m-l-15 tag-card">
+                    <span class="bdr-20 fs-17 m-l-10 tag-card">
                         {{ $tags }}
                     </span>
                     @endforeach
